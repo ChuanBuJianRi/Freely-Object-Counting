@@ -1,0 +1,19 @@
+{
+  "name": "quantum-reading-skill",
+  "version": "2.0.0",
+  "description": "量子阅读 Quantum Reading - AI Agent 智能速读技能，通过人眼式扫描策略平均节省 ~40% Token",
+  "author": "SPA3K",
+  "skills": [
+    "quantum-reading"
+  ],
+  "triggers": {
+    "file_extensions": [".pdf", ".docx", ".txt", ".md", ".doc", ".rtf"],
+    "file_size_threshold": 51200,
+    "auto_invoke": true
+  },
+  "settings": {
+    "prefer_subagent": true,
+    "max_initial_read_lines": 500,
+    "enable_structure_index": true
+  }
+}

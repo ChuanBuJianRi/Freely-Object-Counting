@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>量子阅读 Quantum Reading - Demo</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a1a;
+  --surface:#12122a;
+  --surface2:#1a1a3a;
+  --border:#2a2a5a;
+  --text:#e0e0ff;
+  --text-dim:#5a5a8a;
+  --accent:#7c3aed;
+  --accent2:#3b82f6;
+  --glow:rgba(124,58,237,.3);
+  --green:#10b981;
+  --red:#ef4444;
+  --gold:#f59e0b;
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+  background:var(--bg);color:var(--text);min-height:100vh;
+  background-image:radial-gradient(ellipse at 20% 50%,rgba(124,58,237,.08) 0%,transparent 50%),
+                   radial-gradient(ellipse at 80% 20%,rgba(59,130,246,.06) 0%,transparent 50%);
+}
+
+header{
+  text-align:center;padding:48px 20px 32px;position:relative;
+}
+header::after{
+  content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+  width:80%;max-width:600px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent);
+}
+.logo{font-size:48px;font-weight:900;letter-spacing:-1px;
+  background:linear-gradient(135deg,#7c3aed,#3b82f6,#06b6d4);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.logo .atom{display:inline-block;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.subtitle{color:var(--text-dim);font-size:16px;margin-top:8px;letter-spacing:2px}
+.tagline{color:var(--accent);font-size:14px;margin-top:12px;font-style:italic;opacity:.8}
+
+.stats-bar{
+  display:flex;justify-content:center;gap:24px;padding:24px 20px;flex-wrap:wrap;
+}
+.stat{text-align:center;min-width:120px}
+.stat-value{
+  font-size:32px;font-weight:900;font-variant-numeric:tabular-nums;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  transition:all .6s ease;
+}
+.stat-label{font-size:11px;color:var(--text-dim);margin-top:4px;text-transform:uppercase;letter-spacing:1px}
+.stat-saved .stat-value{
+  background:linear-gradient(135deg,var(--green),#34d399);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.stat-money .stat-value{
+  background:linear-gradient(135deg,var(--gold),#fbbf24);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+.container{max-width:1200px;margin:0 auto;padding:0 20px 60px}
+
+.examples-bar{
+  display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;
+}
+.example-btn{
+  padding:8px 16px;border-radius:8px;border:1px solid var(--border);
+  background:var(--surface);color:var(--text-dim);cursor:pointer;
+  font-size:13px;transition:all .2s;
+}
+.example-btn:hover{border-color:var(--accent);color:var(--text)}
+.example-btn.active{
+  border-color:var(--accent);color:#fff;
+  background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(59,130,246,.2));
+}
+
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:768px){.panels{grid-template-columns:1fr}}
+
+.panel{
+  background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  overflow:hidden;display:flex;flex-direction:column;
+}
+.panel-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 16px;border-bottom:1px solid var(--border);
+  background:var(--surface2);
+}
+.panel-title{font-size:13px;font-weight:600;color:var(--text-dim);letter-spacing:1px}
+.panel-badge{
+  font-size:11px;padding:2px 8px;border-radius:4px;
+  background:rgba(124,58,237,.15);color:var(--accent);
+}
+
+.input-area{
+  width:100%;min-height:500px;padding:16px;border:none;resize:vertical;
+  background:transparent;color:var(--text);font-size:14px;line-height:1.8;
+  font-family:inherit;outline:none;
+}
+.input-area::placeholder{color:var(--text-dim)}
+
+.output-area{
+  padding:16px;min-height:500px;font-size:14px;line-height:1.8;
+  overflow-y:auto;position:relative;
+}
+.output-area .kept{color:#fff;font-weight:700}
+.output-area .dimmed{color:var(--text-dim);font-weight:300;opacity:.35}
+.output-area .paragraph{margin-bottom:12px}
+.output-area .rule-tag{
+  display:inline;font-size:9px;padding:1px 4px;border-radius:3px;
+  margin-left:2px;vertical-align:super;font-weight:400;opacity:.7;
+}
+.output-area .rule-tag.p0{background:rgba(124,58,237,.25);color:#a78bfa}
+.output-area .rule-tag.p1{background:rgba(59,130,246,.25);color:#60a5fa}
+.output-area .rule-tag.p2{background:rgba(16,185,129,.25);color:#34d399}
+
+.copy-bar{
+  display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--border);
+  background:var(--surface2);
+}
+.copy-btn{
+  padding:8px 20px;border-radius:8px;border:none;cursor:pointer;
+  font-size:13px;font-weight:600;transition:all .2s;
+}
+.copy-btn.primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+}
+.copy-btn.primary:hover{transform:translateY(-1px);box-shadow:0 4px 20px var(--glow)}
+.copy-btn.secondary{
+  background:var(--surface);border:1px solid var(--border);color:var(--text-dim);
+}
+.copy-btn.secondary:hover{border-color:var(--accent);color:var(--text)}
+
+.toast{
+  position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(100px);
+  background:var(--green);color:#fff;padding:10px 24px;border-radius:8px;
+  font-size:14px;font-weight:600;transition:transform .3s ease;z-index:999;
+  box-shadow:0 4px 20px rgba(16,185,129,.3);
+}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+footer{
+  text-align:center;padding:32px 20px;color:var(--text-dim);font-size:12px;
+  border-top:1px solid var(--border);
+}
+footer a{color:var(--accent);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+.rules-legend{
+  display:flex;gap:16px;justify-content:center;margin-bottom:20px;flex-wrap:wrap;
+}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-dim)}
+.legend-dot{width:8px;height:8px;border-radius:50%}
+.legend-dot.p0{background:#a78bfa}
+.legend-dot.p1{background:#60a5fa}
+.legend-dot.p2{background:#34d399}
+.legend-dot.dim{background:var(--text-dim);opacity:.4}
+
+.price-note{
+  text-align:center;font-size:11px;color:var(--text-dim);margin-top:4px;opacity:.6;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="atom">&#x269B;</span> 量子阅读</div>
+  <div class="subtitle">QUANTUM READING</div>
+  <div class="tagline">跳过噪音，直达信息核心 &mdash; Skip the noise, reach the core</div>
+</header>
+
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-value" id="stat-original">0</div>
+    <div class="stat-label">原文 Tokens</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value" id="stat-quantum">0</div>
+    <div class="stat-label">量子阅读后</div>
+  </div>
+  <div class="stat stat-saved">
+    <div class="stat-value" id="stat-saved">0%</div>
+    <div class="stat-label">Token 节省</div>
+  </div>
+  <div class="stat stat-money">
+    <div class="stat-value" id="stat-money">$0</div>
+    <div class="stat-label">节省费用</div>
+  </div>
+</div>
+<div class="price-note">基于 Claude Opus 4.7 定价: Input $15/MTok, Output $75/MTok</div>
+
+<div class="container">
+  <div class="rules-legend">
+    <div class="legend-item"><span class="legend-dot p0"></span>P0 总结/标题/章节</div>
+    <div class="legend-item"><span class="legend-dot p1"></span>P1 数据/逻辑/首尾句</div>
+    <div class="legend-item"><span class="legend-dot p2"></span>P2 引用/标签</div>
+    <div class="legend-item"><span class="legend-dot dim"></span>低价值（置灰）</div>
+  </div>
+
+  <div class="examples-bar">
+    <button class="example-btn active" onclick="loadExample(0)">&#x1F4DA; 学术论文 (GAPS)</button>
+    <button class="example-btn" onclick="loadExample(1)">&#x1F4F1; 微信推送文</button>
+    <button class="example-btn" onclick="loadExample(2)">&#x1F48C; 表白小作文</button>
+  </div>
+
+  <div class="panels">
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">&#x1F4DD; 原文输入</span>
+        <span class="panel-badge">粘贴或编辑</span>
+      </div>
+      <textarea class="input-area" id="input" placeholder="粘贴一段长文本，体验量子阅读的威力..."></textarea>
+    </div>
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">&#x26A1; 量子阅读结果</span>
+        <span class="panel-badge" id="kept-ratio">--</span>
+      </div>
+      <div class="output-area" id="output"></div>
+      <div class="copy-bar">
+        <button class="copy-btn primary" onclick="copyKept()">&#x1F4CB; 复制精华内容</button>
+        <button class="copy-btn secondary" onclick="copyFull()">&#x1F4C4; 复制全文（含标记）</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">已复制到剪贴板</div>
+
+<footer>
+  <p><strong>量子阅读 Quantum Reading</strong> &mdash; 让 AI 像人类一样智能阅读大文档</p>
+  <p style="margin-top:8px">
+    <a href="https://github.com/SPA3K/quantum-reading-skill">GitHub</a> &middot;
+    MIT License &middot; Made with &#x269B; by SPA3K
+  </p>
+</footer>
+
+<script>
+const EXAMPLES = [
+{
+  name: '学术论文 (GAPS)',
+  text: `The General Antiparticle Spectrometer (GAPS) Antarctic Balloon Payload
+
+Abstract
+
+The General Antiparticle Spectrometer (GAPS) is an Antarctic stratospheric balloon mission designed to provide unmatched sensitivity to low-energy (< 0.25 GeV/n) cosmic-ray antiprotons, antideuterons, and antihelium nuclei as signatures of dark matter. The distinctive GAPS particle identification technique relies on measuring the energy loss along the track of an incoming antinucleus as it slows down and is captured into an exotic atom, and then detecting the de-excitation X-rays and the nuclear annihilation products. This measurement is realized using a Tracker composed of more than 1000 custom silicon strip detectors and a plastic scintillator time-of-flight (TOF) system instrumenting more than 40 m2. Together, these subsystems provide the velocity and energy resolution, stopping power, particle tracking, and X-ray identification necessary to distinguish rare antinucleus signals from the abundant positive-nucleus backgrounds, all within the constraints of a high-altitude mission. A multi-loop capillary heat pipe system has been developed to maintain the tracker operating temperature with significant mass and power savings over a conventional pump-based system. The first GAPS science payload flew for 25 days during the 2025/26 NASA Antarctic balloon campaign. We detail the design, integration, and commissioning of the payload prior to flight.
+
+Keywords: Balloon instrumentation, Scintillation detectors, Silicon detectors, Passive temperature control, Cosmic ray, Dark matter detector
+
+1. Introduction
+
+The General Antiparticle Spectrometer (GAPS) is the first experiment optimized to detect low-energy cosmic-ray antideuterons. The discovery of cosmic-ray antideuterons by GAPS would be a smoking-gun signature of new physics such as dark matter (DM). GAPS will also measure the cosmic-ray antiproton spectrum in a lower energy regime than any other experiment and deliver unprecedented sensitivity to low-energy antihelium-3 nuclei. In addition to antinuclei, GAPS will also produce spectra for low-energy cosmic-ray positive nuclei including protons, deuterons, and helium-3. The GAPS program consists of several flights on NASA's Antarctic long-duration balloon (LDB) platform.
+
+The unique strength of low-energy cosmic-ray antideuterons as a DM signal lies in the ultra-low astrophysical background. Astrophysical antideuteron production is strongly kinematically suppressed — especially at energies below a few GeV/n — and is predicted to be several orders of magnitude below the signal expected from realistic DM models. The GAPS Antarctic flight program will provide nearly two orders-of-magnitude improvement in antideuteron sensitivity compared to the current limits, extending into an unprobed energy range where the significant DM signals would exist.
+
+GAPS uses a novel particle identification technique based on the formation, de-excitation, and annihilation of antinucleonic exotic atoms, which provides robust rejection of positive nuclei and discrimination between antinucleus species. This detection technique was demonstrated in an antiproton beam at the KEK accelerator in 2004. In 2012, a prototype GAPS balloon payload demonstrated critical hardware performance from a high-altitude platform. Elements of the thermal system were demonstrated in two additional test flights.
+
+2. GAPS Design Principles
+
+Identification of low-energy cosmic-ray antinuclei requires:
+
+1. a high-altitude polar platform, as these particles are strongly deflected by the Earth's magnetic field and attenuated by the atmosphere,
+2. a combination of large instrument acceptance and long observation time for sensitivity to rare antideuteron fluxes of the order 10^-6 [m2 s sr (GeV/n)]^-1 at the top of the atmosphere, and
+3. rejection of the positive nucleus backgrounds, which exceed the predicted antideuteron signals by a factor of > 10^9 in the energy band of interest, as well as robust discrimination between antiproton and rare antideuteron or antihelium-3 signals.
+
+When an antinucleus in the GAPS energy range interacts with matter, it loses energy via ionization and excitation, slowing down until its kinetic energy is comparable to its binding energy with the target material. Then, a target nucleus captures the antinucleus, forming an exotic atom in an excited state. The exotic atom de-excites, with the lower-level atomic transitions producing X-rays, followed by nuclear capture and annihilation to hadrons (primarily pions). Each antinucleus species can be distinguished based on the combination of its incident energy-loss patterns and the resulting X-ray energies and hadron multiplicity.
+
+3. Engineering Design
+
+3.1 Gondola Mechanical Design
+
+The gondola frame is divided into three substructures: the Top-frame, Mid-frame, and Electronics bay (E-bay). This frame must withstand shocks up to ~8g vertical and ~4g horizontal on the total instrument weight of 2875 kg. It is primarily composed of 7.62 cm-wide 0.32 cm-thick 6061-T6 Al square tubing, selected for its strength to weight ratio. The Top-frame measures ~370 cm x 370 cm and supports the TOF Umbrella, antenna boom, solar array, and radiator. The Mid-frame is the central ~229 cm x 225 cm x 170 cm structure which supports the Tracker, TOF Cube, and TOF Cortina.
+
+3.2 Thermal Design
+
+The Tracker Si(Li) detectors operate at a nominal temperature of < -35 C. A novel MCHP thermal system was developed to transport, with minimal mass, up to 300 W of heat over horizontal and vertical distances of >1 m away from the Tracker to a radiator oriented towards space. In principle, the system can operate indefinitely and with minimal power. GAPS uses 36 MCHP loops connected in series, which enter the Tracker as a 6 x 6 array. Each loop is made from a 3 mm outer diameter, 1.3 mm inner diameter stainless steel tube.
+
+7. Conclusion
+
+GAPS is an Antarctic LDB mission specifically designed to meet the challenges of low-energy cosmic-ray antinucleus detection. The payload is the first instrument capable of enabling cosmic-ray antinucleus science spanning the kinetic energy range of 0.10 - 0.25 GeV/n, including sensitivity to the cosmic-ray antideuteron fluxes predicted from dark matter. The Tracker provides a high-acceptance target that can stop cosmic-ray particles in this energy range while resolving the exotic atom de-excitation X-rays and annihilation products. The TOF provides a high-speed system trigger with a wide-angle acceptance and a velocity measurement as additional tracking information. The GAPS sensitivity is possible on a balloon platform thanks to the novel exotic atom-based particle identification method that delivers robust background rejection without a magnet.
+
+The first GAPS science payload was integrated, tested, and calibrated on the ground from 2022 - 2024, with the final integration at the Long-duration Balloon facility at McMurdo Station, Antarctica during NASA's 2024/25 Antarctic balloon campaign. Because weather conditions precluded launch during the 2024/25 campaign, the payload flew during NASA's 2025/26 Antarctic balloon campaign. This publication details the sensitive detector systems and engineering design of the GAPS Antarctic balloon payload.`
+},
+{
+  name: '微信推送文',
+  text: `OpenAI发布ChatGPT Images 2.0：下一代AI图像生成模型
+
+编辑：Panda、Youli
+
+北京时间凌晨3点，直播准时开始，OpenAI发布了ChatGPT Images 2.0。据介绍，「ChatGPT Images 2.0是下一步进化：一个最先进的模型，能够处理复杂的视觉任务，并生成精确、可直接使用的视觉内容。」
+
+似乎也正因为此，OpenAI发布的官方博客内容还提供了两个版本（图像模式与经典模式），其中图像模式下的内容完全是由该模型生成的！
+
+在博客中，OpenAI表示：「图像是一种语言，而不是装饰。好的图像，就像好的句子一样，会进行选择、组织与呈现。它可以解释机制，营造氛围，验证想法，或构建论证。」
+
+ChatGPT Images 2.0模型在细致遵循指令方面实现了质的跃迁，能够准确放置与关联对象，并渲染高密度文本，同时支持多种宽高比生成。它在构图与视觉审美上的能力，使输出不再像「AI生成」，而更像「有意设计」。
+
+并且其在多语言环境下同样表现准确，并能利用扩展的视觉与世界知识为你补全细节，从而以更少提示词获得更智能的图像。
+
+为应对最复杂的任务，Images 2.0首次引入「思考能力」。在ChatGPT中选择thinking或pro模型时，Images 2.0可以联网获取实时信息，从一个提示生成多张不同图像，并对自身输出进行复核。借助「思考」，模型能够承担从想法到图像之间更多的工作，尤其在准确性、时效性、一致性与视觉统一性至关重要时。
+
+结合OpenAI推理模型的智能与对视觉世界的深刻理解，这一模型将图像生成从「渲染」提升为「策略性设计」，从工具进化为视觉系统，帮助人们将想法转化为可理解、可分享、可教学、可构建的成果。
+
+该能力已从今日起向ChatGPT、Codex与API的所有用户开放。
+
+更高的精度与控制力
+
+Images 2.0为图像创作带来了前所未有的具体性与还原度。它不仅能构思更复杂的图像，还能有效将其实现，能够严格遵循指令，保留关键细节，并渲染以往模型容易失真的精细元素：小文本、图标、UI元素、高密度构图以及细微风格约束。在API中最高支持2K分辨率。结果不再是「差不多」，而是「可以直接使用」。
+
+更强的多语言能力
+
+以往图像生成模型在英语及拉丁字母语言中表现更稳定，但在其他语言，尤其是复杂或密集文本时精度较低。Images 2.0突破了这一限制，在多语言理解上显著增强，尤其是在日语、韩语、中文、印地语与孟加拉语的文本渲染方面有明显提升。它不仅能正确生成非英语文本，还能保证语言表达自然流畅。
+
+这不仅意味着翻译标签，而是让语言本身成为设计的一部分，从海报、说明图，到图解与漫画，都能实现视觉与语言的统一。这使模型具备更强的全球适用性，让用户能够在真实使用的语言环境中创作视觉内容。
+
+更成熟的风格表达与真实感
+
+Images 2.0在多种视觉风格上的还原度显著提升。它更擅长捕捉照片的关键特征，包括那些增强真实感的微小瑕疵，同时也能稳定呈现电影感画面、像素艺术、漫画等多种视觉语言，在纹理、光影、构图与细节上更一致。因此，模型输出更贴近指定风格，而非近似模仿。这对于游戏原型设计、分镜制作、营销创意，以及特定媒介或类型的资产创作尤为有价值。
+
+视觉思考伙伴
+
+在ChatGPT中启用thinking模型后，系统会在后台进行更深入的理解与执行。它可以联网检索信息，将上传材料转化为清晰的视觉说明，并在生成前对图像结构进行推理。在这种模式下，Images 2.0更像一个视觉思考伙伴，帮助你将初步概念推进为完整成品，大幅降低工作量。
+
+它还支持一次生成多张不同图像，这在ChatGPT图像生成中尚属首次。这使得诸如多页漫画、整屋设计方案、系列海报或多语言多尺寸社交素材等工作流变得高效可行。你无需逐张生成再手动拼接，只需一次请求，即可获得最多八张在角色与元素上保持一致、且具有连续性的输出。
+
+局限性
+
+OpenAI也在博客中提到了该模型的局限性：尽管Images 2.0是重要进步，但仍不完美。对于需要完整物理世界建模的任务（如折纸教程、魔方等复杂结构），以及隐藏面、倾斜面或反向表面的精确细节，模型仍可能表现不足。极高密度或重复性细节（如细沙）也可能带来挑战。标签与图示在涉及精确箭头或部件标注时，仍建议人工校对。
+
+定价与可用性
+
+ChatGPT Images 2.0今日起已向所有ChatGPT与Codex用户开放。具备「思考」能力的高级输出对ChatGPT Plus、Pro与Business用户提供。gpt-image-2模型已在API中提供，价格根据图像质量与分辨率有所不同。
+
+整体体验下来，我们感觉ChatGPT Images 2.0确实比目前的Nano Banana 2强大不少；看看接下来谷歌如何接招。`
+},
+{
+  name: '表白小作文',
+  text: `致我最亲爱的你
+
+我不知道该从何说起，也不知道这些笨拙的文字能否承载我心中万千的情绪和波澜。但我知道，如果我再不说出来，这些话就会像被困在瓶中的信，永远漂浮在沉默的海面上，等不到靠岸的那一天。所以，请允许我鼓起全部的勇气，在这个平凡的日子里，对你说一些不太平凡的话。
+
+我记得第一次见到你的那个下午。阳光从窗户斜斜地照进来，把教室分成了明暗两半，而你刚好站在光影的交界处。你在跟旁边的人说着什么，嘴角带着一个不经意的微笑，那个微笑像是一颗小小的石子投入了我心里那片一直很平静的湖面。从那一刻起，涟漪就再也没有停下来过。我承认，我的心里从那个下午开始，就悄悄地为你腾出了一个位置。
+
+后来的日子里，我开始不由自主地注意你的一切。注意你走路的姿态，有时候很匆忙，书包在肩上一颠一颠的；有时候很悠闲，手里拿着一杯奶茶，慢悠悠地晃着。注意你笑起来的样子，眼睛会弯成两道月牙，整个世界仿佛都跟着明亮了几分。注意你认真看书时微微蹙起的眉头，那种专注的神情让我觉得时间都不忍心打扰你。
+
+我也记得每一次和你说话时我心跳加速的感觉。明明在脑子里排练了无数遍的开场白，到了你面前就全部忘光了，只剩下干巴巴的几个字和一颗快要跳出胸腔的心脏。然后回去之后就开始后悔，后悔自己为什么不能再从容一点、再有趣一点。那些辗转反侧的夜晚，天花板上好像都映着你的影子。
+
+你知道吗？喜欢一个人的感觉很奇妙。因为你，我开始尝试去了解那些我以前完全不感兴趣的东西——你提到过的那本书，我第二天就去买了；你说好听的那首歌，我单曲循环了整整一个星期；你喜欢去的那家咖啡店，我一个人偷偷去过三次，坐在靠窗的位置，想象着如果你也在对面该多好。
+
+我知道这封信可能显得很突兀，也可能会让你感到为难。但我想让你知道，我喜欢你，不是一时冲动，而是在无数个平凡的日子里，一点一点积攒起来的确定。不管你的回答是什么，遇见你这件事本身，就已经是我这一年里最好的事情了。
+
+因此，无论结果如何，我都不会后悔写下这些文字。
+
+谢谢你，让我知道了心动的感觉。
+
+一个暗恋你很久的人`
+}
+];
+
+// Opus 4.7 pricing (USD per million tokens)
+const PRICE_INPUT = 15;  // $15/MTok input
+const PRICE_OUTPUT = 75; // $75/MTok output
+
+// --- Quantum Reading Rules (from SKILL.md) ---
+
+const RULES_P0 = [
+  { name: '总结词', pattern: /(?:总结|概述|结论|综上|摘要|关键词[：:])/ },
+  { name: 'Summary', pattern: /(?:summary|conclusion|abstract)/i },
+  { name: '标题', pattern: /^#{1,6}\s+/ },
+  { name: '章节', pattern: /^(?:第[一二三四五六七八九十百千]+[章节条款项]|[一二三四五六七八九十]+[、.])/ },
+  { name: '编号段', pattern: /^[0-9]+\.[0-9]*\s+\S/ },
+];
+
+const RULES_P1 = [
+  { name: '粗体', pattern: /\*\*.+?\*\*/ },
+  { name: '列表', pattern: /^[\*\-]\s+/ },
+  { name: '编号项', pattern: /^[0-9]+[\.、\)]\s+/ },
+  { name: '数据', pattern: /[0-9]+\.?[0-9]*\s*%/ },
+  { name: '逻辑词', pattern: /(?:因此|综上所述|然而|但是|不过|虽然|尽管|导致|所以|因为)/ },
+  { name: 'Logic', pattern: /(?:because|however|although|therefore|nevertheless)/i },
+  { name: '举例', pattern: /(?:例如|比如|具体而言|for example|such as)/i },
+  { name: '关键词', pattern: /关键词[：:]/ },
+];
+
+const RULES_P2 = [
+  { name: '引用', pattern: /^>\s+/ },
+  { name: '标签', pattern: /^#\S/ },
+];
+
+function matchRule(sentence) {
+  const s = sentence.trim();
+  if (!s) return null;
+  for (const r of RULES_P0) {
+    if (r.pattern.test(s)) return { rule: r.name, priority: 'p0' };
+  }
+  for (const r of RULES_P1) {
+    if (r.pattern.test(s)) return { rule: r.name, priority: 'p1' };
+  }
+  for (const r of RULES_P2) {
+    if (r.pattern.test(s)) return { rule: r.name, priority: 'p2' };
+  }
+  return null;
+}
+
+function splitToSentences(text) {
+  const lines = text.split('\n');
+  const result = [];
+  for (let li = 0; li < lines.length; li++) {
+    const line = lines[li];
+    if (line.trim() === '') {
+      result.push({ text: '', isBlank: true, lineIdx: li });
+      continue;
+    }
+    const sentences = line.split(/(?<=[。！？；\.\!\?;])\s*/);
+    const filtered = sentences.filter(s => s.trim() !== '');
+    if (filtered.length === 0) {
+      result.push({ text: line, isBlank: false, lineIdx: li });
+    } else {
+      for (const s of filtered) {
+        result.push({ text: s, isBlank: false, lineIdx: li });
+      }
+    }
+  }
+  return result;
+}
+
+function groupSentencesByParagraph(sentences) {
+  const paragraphs = [];
+  let current = [];
+  for (const s of sentences) {
+    if (s.isBlank) {
+      if (current.length > 0) { paragraphs.push(current); current = []; }
+      paragraphs.push([s]);
+    } else {
+      current.push(s);
+    }
+  }
+  if (current.length > 0) paragraphs.push(current);
+  for (const para of paragraphs) {
+    const nonBlank = para.filter(s => !s.isBlank);
+    if (nonBlank.length > 0) {
+      nonBlank[0]._paraRole = 'first';
+      if (nonBlank.length > 1) nonBlank[nonBlank.length - 1]._paraRole = 'last';
+    }
+  }
+  return paragraphs;
+}
+
+function classifySentence(sent, sentIdx, totalSents) {
+  if (sent.isBlank) return { kept: false, rule: null, priority: null };
+  const ruleMatch = matchRule(sent.text);
+  if (ruleMatch) return { kept: true, ...ruleMatch };
+  const ratio = sentIdx / Math.max(totalSents, 1);
+  if (ratio < 0.12) return { kept: true, rule: '首部', priority: 'p1' };
+  if (ratio > 0.88) return { kept: true, rule: '尾部', priority: 'p1' };
+  if (sent._paraRole === 'first') return { kept: true, rule: '段首句', priority: 'p1' };
+  if (sent._paraRole === 'last') return { kept: true, rule: '段尾句', priority: 'p1' };
+  return { kept: false, rule: null, priority: null };
+}
+
+function estimateTokens(text) {
+  let tokens = 0;
+  for (const ch of text) {
+    if (/[一-鿿㐀-䶿]/.test(ch)) tokens += 1.5;
+    else if (/[a-zA-Z]/.test(ch)) tokens += 0.3;
+    else if (/[0-9]/.test(ch)) tokens += 0.25;
+    else if (/\s/.test(ch)) tokens += 0.1;
+    else tokens += 0.5;
+  }
+  return Math.round(tokens);
+}
+
+function animateValue(el, end, suffix, prefix) {
+  const startVal = parseFloat(el.dataset.current || '0');
+  const duration = 600;
+  const startTime = performance.now();
+  suffix = suffix || '';
+  prefix = prefix || '';
+  el.dataset.current = end;
+  function tick(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = startVal + (end - startVal) * eased;
+    if (suffix === '%') el.textContent = prefix + Math.round(current) + suffix;
+    else if (prefix === '$') el.textContent = prefix + current.toFixed(4);
+    else el.textContent = prefix + Math.round(current).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+let keptTexts = [];
+
+function processText(text) {
+  const sentences = splitToSentences(text);
+  const paragraphs = groupSentencesByParagraph(sentences);
+  const totalNonBlank = sentences.filter(s => !s.isBlank).length;
+  const output = document.getElementById('output');
+  let html = '';
+  let keptCount = 0, totalCount = 0;
+  let keptChars = '';
+  keptTexts = [];
+  let sentIdx = 0;
+
+  for (const para of paragraphs) {
+    if (para.length === 1 && para[0].isBlank) {
+      html += '<div class="paragraph">&nbsp;</div>';
+      continue;
+    }
+    html += '<div class="paragraph">';
+    for (const sent of para) {
+      if (sent.isBlank) continue;
+      const result = classifySentence(sent, sentIdx, totalNonBlank);
+      totalCount++;
+      if (result.kept) {
+        keptCount++;
+        html += `<span class="kept">${escapeHtml(sent.text)}</span><span class="rule-tag ${result.priority}">${result.rule}</span>`;
+        keptChars += sent.text;
+        keptTexts.push(sent.text);
+      } else {
+        html += `<span class="dimmed">${escapeHtml(sent.text)}</span>`;
+      }
+      sentIdx++;
+    }
+    html += '</div>';
+  }
+
+  output.innerHTML = html;
+  const originalTokens = estimateTokens(text);
+  const quantumTokens = estimateTokens(keptChars);
+  const savedTokens = originalTokens - quantumTokens;
+  const savedPct = originalTokens > 0 ? Math.round((1 - quantumTokens / originalTokens) * 100) : 0;
+  const savedMoney = (savedTokens / 1_000_000) * PRICE_INPUT;
+
+  animateValue(document.getElementById('stat-original'), originalTokens);
+  animateValue(document.getElementById('stat-quantum'), quantumTokens);
+  animateValue(document.getElementById('stat-saved'), savedPct, '%');
+  animateValue(document.getElementById('stat-money'), savedMoney, '', '$');
+  document.getElementById('kept-ratio').textContent =
+    `${keptCount}/${totalCount} 句保留 (${totalCount > 0 ? Math.round(keptCount/totalCount*100) : 0}%)`;
+}
+
+function loadExample(idx) {
+  document.querySelectorAll('.example-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', i === idx);
+  });
+  document.getElementById('input').value = EXAMPLES[idx].text;
+  processText(EXAMPLES[idx].text);
+}
+
+function copyKept() {
+  navigator.clipboard.writeText(keptTexts.join('')).then(() => showToast('精华内容已复制到剪贴板'));
+}
+
+function copyFull() {
+  navigator.clipboard.writeText(document.getElementById('input').value).then(() => showToast('全文已复制到剪贴板'));
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+document.getElementById('input').addEventListener('input', function() {
+  processText(this.value);
+});
+
+loadExample(0);
+</script>
+</body>
+</html>
