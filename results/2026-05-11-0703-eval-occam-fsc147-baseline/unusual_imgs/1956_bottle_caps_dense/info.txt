@@ -1,0 +1,7 @@
+image       : 1956.jpg
+label       : bottle_caps_dense
+gt_count    : 1229
+pred_count  : 575
+abs_error   : 654
+num_clusters: 1
+cluster_counts: [575]

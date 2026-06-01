@@ -1,0 +1,7 @@
+image       : 1915.jpg
+label       : bottle_caps_spilled
+gt_count    : 684
+pred_count  : 260
+abs_error   : 424
+num_clusters: 6
+cluster_counts: [255, 1, 1, 1, 1, 1]

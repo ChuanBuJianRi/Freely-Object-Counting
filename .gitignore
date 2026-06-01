@@ -20,3 +20,12 @@ Thumbs.db
 
 # Deep research outputs
 tmp/deep-research/
+
+# Large local data / model symlinks (point to absolute machine paths; must not be committed)
+/datasets
+/checkpoints/
+/codes/checkpoints
+
+# Screenshots / scratch images
+Screenshot *.png
+*.screenshot.png

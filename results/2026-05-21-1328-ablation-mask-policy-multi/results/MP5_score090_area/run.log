@@ -1,0 +1,103 @@
+Building SAM2 AMG model …
+Model ready. Mode=multi, crop=500, thresholds=(5.0, 4.0, 3.0)
+Mask area filter: min=0.0005, max=0.1
+Mask policy: p5  (score_thresh=0.9, topk=100, iqr_k=1.5)
+Cluster method: finch (eps=10, delta=3 for sng)  PRED strategy: max
+
+============================================================
+  Split: val  (428 images)
+============================================================
+/tmp/sam2_repo/sam2/sam2_image_predictor.py:431: UserWarning: cannot import name '_C' from 'sam2' (/tmp/sam2_repo/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  masks = self._transforms.postprocess_masks(
+  [   1/428]  1897.jpg                       GT=  12 PRED=   8 AE=   4  5.1s
+  [   2/428]  1901.jpg                       GT=  17 PRED=   9 AE=   8  4.5s
+  [   3/428]  1906.jpg                       GT=  70 PRED=  41 AE=  29  6.2s
+  [   4/428]  1907.jpg                       GT=  28 PRED=  15 AE=  13  5.2s
+  [   5/428]  1912.jpg                       GT=  46 PRED=  19 AE=  27  5.8s
+  [   7/428]  1915.jpg                       GT= 684 PRED=  84 AE= 600  6.2s
+  [  15/428] ERROR 1936.jpg: CUDA out of memory. Tried to allocate 6.14 GiB. GPU 0 has a total capacity of 23.99 GiB of which 6.31 GiB is free. 20.39 GiB allowed; Of the allocated memory 16.03 GiB is allocated by PyTorch, and 37.78 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [  21/428]  1956.jpg                       GT=1229 PRED=  58 AE=1171  6.5s
+  [  22/428]  1960.jpg                       GT= 163 PRED=  72 AE=  91  6.2s
+  [  28/428]  1977.jpg                       GT= 132 PRED=  51 AE=  81  7.2s
+  [  31/428]  1983.jpg                       GT= 172 PRED=  56 AE= 116  6.0s
+  [  33/428]  1990.jpg                       GT= 476 PRED= 141 AE= 335  7.6s
+  [  50/428]  running MAE=62.51  total_time=264s  last: 2406.jpg GT=17 PRED=6
+  [  61/428]  2818.jpg                       GT= 252 PRED=  91 AE= 161  6.1s
+  [  66/428]  2842.jpg                       GT= 124 PRED=  26 AE=  98  5.1s
+  [  70/428]  2858.jpg                       GT= 131 PRED=  15 AE= 116  4.6s
+  [  77/428]  2879.jpg                       GT= 150 PRED=  40 AE= 110  5.8s
+  [  84/428]  3433.jpg                       GT= 538 PRED=   2 AE= 536  4.7s
+  [  85/428]  3435.jpg                       GT= 116 PRED=  35 AE=  81  5.0s
+  [  87/428]  3482.jpg                       GT= 315 PRED=   2 AE= 313  4.9s
+  [  88/428]  3484.jpg                       GT= 356 PRED=   4 AE= 352  4.3s
+  [  89/428]  3485.jpg                       GT= 174 PRED=  10 AE= 164  5.2s
+  [  90/428]  3487.jpg                       GT= 321 PRED=   1 AE= 320  4.9s
+  [  91/428]  3488.jpg                       GT= 431 PRED=   1 AE= 430  4.9s
+  [ 100/428]  running MAE=66.34  total_time=513s  last: 3547.jpg GT=21 PRED=21
+  [ 115/428]  3665.jpg                       GT= 907 PRED=  14 AE= 893  4.9s
+  [ 142/428]  4556.jpg                       GT= 133 PRED=   3 AE= 130  4.5s
+  [ 150/428]  running MAE=54.17  total_time=764s  last: 4569.jpg GT=21 PRED=13
+  [ 152/428]  4572.jpg                       GT= 141 PRED=   1 AE= 140  4.4s
+  [ 153/428]  4574.jpg                       GT= 402 PRED=   0 AE= 402  4.5s
+  [ 156/428]  4580.jpg                       GT= 165 PRED=   3 AE= 162  4.4s
+  [ 186/428]  4796.jpg                       GT= 196 PRED= 102 AE=  94  5.8s
+  [ 194/428]  4809.jpg                       GT= 306 PRED= 177 AE= 129  6.5s
+  [ 195/428]  4811.jpg                       GT= 213 PRED=  15 AE= 198  4.5s
+  [ 200/428]  running MAE=48.67  total_time=1021s  last: 4821.jpg GT=90 PRED=85
+  [ 215/428]  5044.jpg                       GT= 100 PRED=   2 AE=  98  5.0s
+  [ 250/428]  running MAE=41.23  total_time=1276s  last: 569.jpg GT=17 PRED=7
+  [ 251/428]  5743.jpg                       GT= 270 PRED=   5 AE= 265  4.9s
+  [ 252/428]  5747.jpg                       GT= 100 PRED=   2 AE=  98  5.1s
+  [ 258/428]  5860.jpg                       GT= 757 PRED=  20 AE= 737  4.9s
+  [ 268/428]  5902.jpg                       GT= 209 PRED=  24 AE= 185  5.1s
+  [ 269/428]  5905.jpg                       GT= 147 PRED=  31 AE= 116  5.8s
+  [ 300/428]  running MAE=40.84  total_time=1529s  last: 615.jpg GT=23 PRED=18
+  [ 313/428]  6729.jpg                       GT= 251 PRED=  15 AE= 236  5.1s
+  [ 321/428]  6835.jpg                       GT= 138 PRED=  22 AE= 116  7.0s
+  [ 329/428]  6969.jpg                       GT= 949 PRED=   1 AE= 948  4.4s
+  [ 333/428]  7013.jpg                       GT= 139 PRED=  47 AE=  92  6.5s
+  [ 350/428]  running MAE=41.25  total_time=1802s  last: 7301.jpg GT=36 PRED=0
+  [ 362/428]  7436.jpg                       GT= 283 PRED=  98 AE= 185  9.7s
+  [ 382/428]  7593.jpg                       GT= 274 PRED= 160 AE= 114  7.8s
+  [ 390/428]  7659.jpg                       GT= 198 PRED=  72 AE= 126  8.3s
+  [ 398/428]  808.jpg                        GT= 182 PRED=  60 AE= 122  8.0s
+  [ 400/428]  running MAE=39.73  total_time=2067s  last: 813.jpg GT=185 PRED=36
+  [ 401/428] ERROR 820.jpg: CUDA out of memory. Tried to allocate 6.60 GiB. GPU 0 has a total capacity of 23.99 GiB of which 5.17 GiB is free. 20.39 GiB allowed; Of the allocated memory 17.16 GiB is allocated by PyTorch, and 44.79 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [ 408/428]  840.jpg                        GT= 637 PRED=  66 AE= 571  5.5s
+  [ 409/428]  850.jpg                        GT= 183 PRED=  55 AE= 128  5.3s
+  [ 410/428]  851.jpg                        GT= 320 PRED=  47 AE= 273  5.5s
+  [ 413/428]  860.jpg                        GT= 240 PRED=  65 AE= 175  5.5s
+  [ 418/428]  920.jpg                        GT=  12 PRED=  96 AE=  84  7.0s
+  [ 428/428]  running MAE=41.59  total_time=2222s  last: 979.jpg GT=108 PRED=14
+
+  Per-image detail saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_mask_policy_multi/results/MP5_score090_area/per_image_val.json
+
+  [val] MAE=41.5939  MSE=14700.8803  RMSE=121.2472  NAE=0.4717
+
+======================================================================
+  OCCAM Origin-Simulation — FSC-147 Full Evaluation Summary
+======================================================================
+  Mode        : OCCAM-MULTI (fraction=0.333, seed=42)
+  SAM2 config : configs/sam2.1/sam2.1_hiera_l.yaml
+  SAM2 ckpt   : /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM/checkpoints/sam2.1_hiera_large.pt
+  Started     : 2026-05-21 17:02:09
+  Finished    : 2026-05-21 17:40:13
+  Total time  : 38.1 min
+
+  ── val split (n=426)
+     MAE   = 41.5939
+     MSE   = 14700.8803
+     RMSE  = 121.2472
+     NAE   = 0.4717
+     avg_time = 5.22 s/img
+     by GT count range:
+       [   1-10]  n=  46  MAE=   4.61  RMSE=  11.30
+       [  11-50]  n= 251  MAE=  10.19  RMSE=  14.51
+       [ 51-200]  n= 105  MAE=  51.40  RMSE=  64.89
+       [   201+]  n=  24  MAE= 398.04  RMSE= 489.97
+
+======================================================================
+
+Summary saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_mask_policy_multi/results/MP5_score090_area/summary.txt

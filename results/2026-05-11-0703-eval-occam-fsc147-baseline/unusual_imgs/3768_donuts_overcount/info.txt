@@ -1,0 +1,7 @@
+image       : 3768.jpg
+label       : donuts_overcount
+gt_count    : 9
+pred_count  : 233
+abs_error   : 224
+num_clusters: 4
+cluster_counts: [10, 220, 2, 1]

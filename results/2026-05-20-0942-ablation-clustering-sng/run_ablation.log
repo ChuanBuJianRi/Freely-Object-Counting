@@ -1,0 +1,226 @@
+============================================================
+  Clustering Ablation (FINCH vs SNG, PRED=max-cluster)
+  FSC-147 val (fraction=0.333, seed=42)
+  Tue May 19 14:27:04 CST 2026
+============================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Experiment: A6_FINCH_max
+  mode=single  cluster=finch  eps=10  delta=3
+  min_mask=0.0005  max_mask=0.10  PRED=max-cluster
+  Started: Tue May 19 14:27:04 CST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Building SAM2 AMG model …
+Model ready. Mode=single, crop=224, thresholds=(12.0, 9.0, 7.75)
+Mask area filter: min=0.0005, max=0.1
+Cluster method: finch (eps=10, delta=3 for sng)  PRED strategy: max
+
+============================================================
+  Split: val  (428 images)
+============================================================
+/tmp/sam2_repo/sam2/sam2_image_predictor.py:431: UserWarning: cannot import name '_C' from 'sam2' (/tmp/sam2_repo/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  masks = self._transforms.postprocess_masks(
+  [   1/428]  1897.jpg                       GT=  12 PRED=  21 AE=   9  5.1s
+  [   2/428]  1901.jpg                       GT=  17 PRED=  12 AE=   5  4.5s
+  [   3/428]  1906.jpg                       GT=  70 PRED=  98 AE=  28  5.8s
+  [   4/428]  1907.jpg                       GT=  28 PRED=  14 AE=  14  5.2s
+  [   5/428]  1912.jpg                       GT=  46 PRED=  59 AE=  13  5.5s
+  [   7/428]  1915.jpg                       GT= 684 PRED= 255 AE= 429  5.1s
+  [  21/428]  1956.jpg                       GT=1229 PRED= 575 AE= 654  6.2s
+  [  33/428]  1990.jpg                       GT= 476 PRED= 373 AE= 103  5.7s
+  [  50/428]  running MAE=34.94  total_time=255s  last: 2406.jpg GT=17 PRED=6
+  [  84/428]  3433.jpg                       GT= 538 PRED=   4 AE= 534  4.8s
+  [  87/428]  3482.jpg                       GT= 315 PRED=   2 AE= 313  5.1s
+  [  88/428]  3484.jpg                       GT= 356 PRED=   3 AE= 353  4.4s
+  [  89/428]  3485.jpg                       GT= 174 PRED=  66 AE= 108  5.2s
+  [  90/428]  3487.jpg                       GT= 321 PRED=   2 AE= 319  4.8s
+  [  91/428]  3488.jpg                       GT= 431 PRED=   3 AE= 428  4.7s
+  [ 100/428]  running MAE=44.74  total_time=497s  last: 3547.jpg GT=21 PRED=30
+  [ 115/428]  3665.jpg                       GT= 907 PRED= 115 AE= 792  4.9s
+  [ 123/428]  3768.jpg                       GT=   9 PRED= 220 AE= 211  5.4s
+  [ 150/428]  running MAE=39.31  total_time=742s  last: 4569.jpg GT=21 PRED=21
+  [ 152/428]  4572.jpg                       GT= 141 PRED=  53 AE=  88  4.4s
+  [ 153/428]  4574.jpg                       GT= 402 PRED=  12 AE= 390  4.5s
+  [ 195/428]  4811.jpg                       GT= 213 PRED=  80 AE= 133  4.4s
+  [ 200/428]  running MAE=35.56  total_time=991s  last: 4821.jpg GT=90 PRED=100
+  [ 215/428]  5044.jpg                       GT= 100 PRED=  10 AE=  90  5.0s
+  [ 250/428]  running MAE=30.71  total_time=1238s  last: 569.jpg GT=17 PRED=20
+  [ 251/428]  5743.jpg                       GT= 270 PRED=  76 AE= 194  5.1s
+  [ 252/428]  5747.jpg                       GT= 100 PRED=   3 AE=  97  5.1s
+  [ 258/428]  5860.jpg                       GT= 757 PRED= 144 AE= 613  4.9s
+  [ 268/428]  5902.jpg                       GT= 209 PRED=  72 AE= 137  4.8s
+  [ 300/428]  running MAE=30.81  total_time=1481s  last: 615.jpg GT=23 PRED=31
+  [ 313/428]  6729.jpg                       GT= 251 PRED=  62 AE= 189  5.1s
+  [ 329/428]  6969.jpg                       GT= 949 PRED=   1 AE= 948  4.3s
+  [ 350/428]  running MAE=31.97  total_time=1734s  last: 7301.jpg GT=36 PRED=1
+  [ 400/428]  running MAE=30.31  total_time=1980s  last: 813.jpg GT=185 PRED=204
+  [ 408/428]  840.jpg                        GT= 637 PRED= 166 AE= 471  4.7s
+  [ 410/428]  851.jpg                        GT= 320 PRED= 143 AE= 177  4.8s
+  [ 413/428]  860.jpg                        GT= 240 PRED= 136 AE= 104  4.7s
+  [ 418/428]  920.jpg                        GT=  12 PRED= 291 AE= 279  5.5s
+  [ 428/428]  running MAE=32.10  total_time=2122s  last: 979.jpg GT=108 PRED=41
+
+  Per-image detail saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_clustering/results/A6_FINCH_max/per_image_val.json
+
+  [val] MAE=32.0958  MSE=9744.1145  RMSE=98.7123  NAE=0.5588
+
+======================================================================
+  OCCAM Origin-Simulation — FSC-147 Full Evaluation Summary
+======================================================================
+  Mode        : OCCAM-SINGLE (fraction=0.333, seed=42)
+  SAM2 config : configs/sam2.1/sam2.1_hiera_l.yaml
+  SAM2 ckpt   : /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM/checkpoints/sam2.1_hiera_large.pt
+  Started     : 2026-05-19 14:27:08
+  Finished    : 2026-05-19 15:03:14
+  Total time  : 36.1 min
+
+  ── val split (n=428)
+     MAE   = 32.0958
+     MSE   = 9744.1145
+     RMSE  = 98.7123
+     NAE   = 0.5588
+     avg_time = 4.96 s/img
+     by GT count range:
+       [   1-10]  n=  46  MAE=  10.61  RMSE=  32.87
+       [  11-50]  n= 251  MAE=  11.20  RMSE=  22.42
+       [ 51-200]  n= 105  MAE=  28.16  RMSE=  36.98
+       [   201+]  n=  26  MAE= 287.77  RMSE= 384.86
+
+======================================================================
+
+Summary saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_clustering/results/A6_FINCH_max/summary.txt
+  Finished: Tue May 19 15:03:15 CST 2026
+  GPU temp: 56°C
+  [inter-exp] Cooling 30s between experiments...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Experiment: A6_SNG_max
+  mode=single  cluster=sng  eps=10  delta=3
+  min_mask=0.0005  max_mask=0.10  PRED=max-cluster
+  Started: Tue May 19 15:03:45 CST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Building SAM2 AMG model …
+Model ready. Mode=single, crop=224, thresholds=(12.0, 9.0, 7.75)
+Mask area filter: min=0.0005, max=0.1
+Cluster method: sng (eps=10, delta=3 for sng)  PRED strategy: max
+
+============================================================
+  Split: val  (428 images)
+============================================================
+/tmp/sam2_repo/sam2/sam2_image_predictor.py:431: UserWarning: cannot import name '_C' from 'sam2' (/tmp/sam2_repo/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  masks = self._transforms.postprocess_masks(
+  [   1/428]  1897.jpg                       GT=  12 PRED=  28 AE=  16  4.9s
+  [   2/428]  1901.jpg                       GT=  17 PRED=  31 AE=  14  4.4s
+  [   3/428]  1906.jpg                       GT=  70 PRED= 100 AE=  30  5.9s
+  [   4/428]  1907.jpg                       GT=  28 PRED=  46 AE=  18  5.2s
+  [   5/428]  1912.jpg                       GT=  46 PRED=  87 AE=  41  5.8s
+  [   7/428]  1915.jpg                       GT= 684 PRED= 257 AE= 427  5.4s
+  [  21/428]  1956.jpg                       GT=1229 PRED= 566 AE= 663  6.0s
+  [  33/428]  1990.jpg                       GT= 476 PRED= 368 AE= 108  5.8s
+  [  50/428]  running MAE=44.12  total_time=256s  last: 2406.jpg GT=17 PRED=20
+  [  84/428]  3433.jpg                       GT= 538 PRED=   1 AE= 537  4.7s
+  [  87/428]  3482.jpg                       GT= 315 PRED=   1 AE= 314  5.0s
+  [  88/428]  3484.jpg                       GT= 356 PRED=   9 AE= 347  4.4s
+  [  90/428]  3487.jpg                       GT= 321 PRED=   1 AE= 320  4.8s
+  [  91/428]  3488.jpg                       GT= 431 PRED=   7 AE= 424  4.7s
+  [ 100/428]  running MAE=53.02  total_time=499s  last: 3547.jpg GT=21 PRED=62
+  [ 115/428]  3665.jpg                       GT= 907 PRED= 156 AE= 751  4.8s
+  [ 123/428]  3768.jpg                       GT=   9 PRED= 220 AE= 211  5.4s
+  [ 150/428]  running MAE=48.45  total_time=745s  last: 4569.jpg GT=21 PRED=21
+  [ 152/428]  4572.jpg                       GT= 141 PRED=  54 AE=  87  4.5s
+  [ 153/428]  4574.jpg                       GT= 402 PRED=  16 AE= 386  4.5s
+  [ 195/428]  4811.jpg                       GT= 213 PRED=  94 AE= 119  4.5s
+  [ 200/428]  running MAE=43.95  total_time=996s  last: 4821.jpg GT=90 PRED=133
+  [ 215/428]  5044.jpg                       GT= 100 PRED=  13 AE=  87  5.2s
+  [ 250/428]  running MAE=40.56  total_time=1246s  last: 569.jpg GT=17 PRED=29
+  [ 251/428]  5743.jpg                       GT= 270 PRED=  76 AE= 194  4.9s
+  [ 252/428]  5747.jpg                       GT= 100 PRED=   1 AE=  99  4.9s
+  [ 258/428]  5860.jpg                       GT= 757 PRED= 176 AE= 581  4.8s
+  [ 268/428]  5902.jpg                       GT= 209 PRED=  72 AE= 137  5.0s
+  [ 300/428]  running MAE=39.59  total_time=1495s  last: 615.jpg GT=23 PRED=34
+  [ 312/428]  6728.jpg                       GT=  99 PRED= 182 AE=  83  5.6s
+  [ 313/428]  6729.jpg                       GT= 251 PRED= 107 AE= 144  5.2s
+  [ 318/428]  6784.jpg                       GT=  52 PRED= 134 AE=  82  5.6s
+  [ 327/428]  6927.jpg                       GT=  32 PRED= 143 AE= 111  5.6s
+  [ 329/428]  6969.jpg                       GT= 949 PRED=   1 AE= 948  4.5s
+  [ 335/428]  7069.jpg                       GT= 142 PRED= 245 AE= 103  5.9s
+  [ 340/428]  7155.jpg                       GT=  69 PRED= 154 AE=  85  5.1s
+  [ 345/428]  7228.jpg                       GT=  63 PRED= 170 AE= 107  5.6s
+  [ 350/428]  running MAE=41.95  total_time=1759s  last: 7301.jpg GT=36 PRED=1
+  [ 356/428]  7388.jpg                       GT= 134 PRED= 218 AE=  84  5.7s
+  [ 400/428]  running MAE=40.10  total_time=2034s  last: 813.jpg GT=185 PRED=209
+  [ 408/428]  840.jpg                        GT= 637 PRED= 177 AE= 460  4.9s
+  [ 410/428]  851.jpg                        GT= 320 PRED= 178 AE= 142  5.0s
+  [ 412/428]  859.jpg                        GT=  97 PRED= 184 AE=  87  5.2s
+  [ 413/428]  860.jpg                        GT= 240 PRED= 146 AE=  94  5.1s
+  [ 417/428]  916.jpg                        GT=   9 PRED=  91 AE=  82  5.2s
+  [ 418/428]  920.jpg                        GT=  12 PRED= 315 AE= 303  5.5s
+  [ 428/428]  running MAE=41.67  total_time=2178s  last: 979.jpg GT=108 PRED=41
+
+  Per-image detail saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_clustering/results/A6_SNG_max/per_image_val.json
+
+  [val] MAE=41.6729  MSE=9983.5841  RMSE=99.9179  NAE=1.0629
+
+======================================================================
+  OCCAM Origin-Simulation — FSC-147 Full Evaluation Summary
+======================================================================
+  Mode        : OCCAM-SINGLE (fraction=0.333, seed=42)
+  SAM2 config : configs/sam2.1/sam2.1_hiera_l.yaml
+  SAM2 ckpt   : /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM/checkpoints/sam2.1_hiera_large.pt
+  Started     : 2026-05-19 15:03:49
+  Finished    : 2026-05-19 15:40:53
+  Total time  : 37.1 min
+
+  ── val split (n=428)
+     MAE   = 41.6729
+     MSE   = 9983.5841
+     RMSE  = 99.9179
+     NAE   = 1.0629
+     avg_time = 5.09 s/img
+     by GT count range:
+       [   1-10]  n=  46  MAE=  20.76  RMSE=  38.83
+       [  11-50]  n= 251  MAE=  22.88  RMSE=  33.48
+       [ 51-200]  n= 105  MAE=  36.89  RMSE=  45.03
+       [   201+]  n=  26  MAE= 279.38  RMSE= 377.71
+
+======================================================================
+
+Summary saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_clustering/results/A6_SNG_max/summary.txt
+  Finished: Tue May 19 15:40:54 CST 2026
+  GPU temp: 55°C
+  [inter-exp] Cooling 30s between experiments...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Experiment: M6_FINCH_max
+  mode=multi  cluster=finch  eps=10  delta=3
+  min_mask=0.0005  max_mask=0.10  PRED=max-cluster
+  Started: Tue May 19 15:41:24 CST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Building SAM2 AMG model …
+Model ready. Mode=multi, crop=500, thresholds=(5.0, 4.0, 3.0)
+Mask area filter: min=0.0005, max=0.1
+Cluster method: finch (eps=10, delta=3 for sng)  PRED strategy: max
+
+============================================================
+  Split: val  (428 images)
+============================================================
+/tmp/sam2_repo/sam2/sam2_image_predictor.py:431: UserWarning: cannot import name '_C' from 'sam2' (/tmp/sam2_repo/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  masks = self._transforms.postprocess_masks(
+  [   1/428]  1897.jpg                       GT=  12 PRED=   9 AE=   3  5.4s
+  [   2/428]  1901.jpg                       GT=  17 PRED=   9 AE=   8  4.9s
+  [   3/428]  1906.jpg                       GT=  70 PRED=  60 AE=  10  6.6s
+  [   4/428]  1907.jpg                       GT=  28 PRED=  16 AE=  12  5.3s
+  [   5/428]  1912.jpg                       GT=  46 PRED=  24 AE=  22  6.4s
+  [   7/428]  1915.jpg                       GT= 684 PRED= 155 AE= 529  8.1s
+  [  15/428] ERROR 1936.jpg: CUDA out of memory. Tried to allocate 7.60 GiB. GPU 0 has a total capacity of 23.99 GiB of which 2.71 GiB is free. 20.39 GiB allowed; Of the allocated memory 19.59 GiB is allocated by PyTorch, and 72.84 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [  21/428] ERROR 1956.jpg: CUDA out of memory. Tried to allocate 8.57 GiB. GPU 0 has a total capacity of 23.99 GiB of which 8.94 GiB is free. 20.39 GiB allowed; Of the allocated memory 13.38 GiB is allocated by PyTorch, and 49.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [  22/428]  1960.jpg                       GT= 163 PRED=  71 AE=  92  7.0s
+  [  31/428]  1983.jpg                       GT= 172 PRED=  76 AE=  96  6.2s
+  [  33/428]  1990.jpg                       GT= 476 PRED= 351 AE= 125  9.7s
+  [  50/428]  running MAE=28.08  total_time=279s  last: 2406.jpg GT=17 PRED=6

@@ -1,0 +1,57 @@
+Building SAM2 Predictor (paper seed-grid path) …
+Model ready. Backend=predictor, Mode=single, crop=224, finch_thresholds=(12.0, 9.0, 7.75), multiscale=True, dup_iou=0.1, seed_spacing=15
+Mask area filter: min=0.0005, max=0.1
+Mask policy: p0  (score_thresh=0.85, topk=100, iqr_k=1.5)
+Cluster method: finch (eps=10, delta=None for sng)  PRED strategy: max
+[gpu-guard] enabled  limit=78C  cooldown=30s  hysteresis=5C  check_every=5  gpu=0  start_temp=40C  bin=/usr/lib/wsl/lib/nvidia-smi
+
+============================================================
+  Split: test  (178 images)
+============================================================
+  [   1/178]  1461.jpg                       GT=  99 PRED=  90 AE=   9  5.0s
+  [   2/178]  1467.jpg                       GT=  70 PRED=  24 AE=  46  4.4s
+  [   3/178]  1497.jpg                       GT= 207 PRED= 103 AE= 104  4.2s
+  [   4/178]  1887.jpg                       GT=  10 PRED=  32 AE=  22  4.8s
+  [   5/178]  2008.jpg                       GT=  42 PRED=  51 AE=   9  5.7s
+  [  14/178]  2159.jpg                       GT= 621 PRED= 165 AE= 456  3.4s
+  [  50/178]  running MAE=25.62  total_time=224s  last: 3697.jpg GT=11 PRED=49
+  [  61/178]  4291.jpg                       GT= 323 PRED= 215 AE= 108  5.5s
+  [  73/178]  4905.jpg                       GT= 250 PRED= 159 AE=  91  4.3s
+  [ 100/178]  running MAE=18.56  total_time=441s  last: 5810.jpg GT=90 PRED=60
+  [ 122/178]  6271.jpg                       GT= 240 PRED=  97 AE= 143  4.1s
+  [ 150/178]  running MAE=17.58  total_time=667s  last: 706.jpg GT=90 PRED=67
+  [ 151/178]  710.jpg                        GT=  16 PRED= 116 AE= 100  4.2s
+  [ 152/178]  7114.jpg                       GT= 289 PRED= 149 AE= 140  5.5s
+  [ 169/178]  7525.jpg                       GT=  26 PRED= 174 AE= 148  5.2s
+  [ 175/178]  7639.jpg                       GT=  20 PRED= 106 AE=  86  7.2s
+  [ 178/178]  running MAE=19.95  total_time=818s  last: 985.jpg GT=53 PRED=137
+
+  Per-image detail saved → /home/czp/ws_yiyang/GOC-Freely-Object-Counting/results/2026-05-29-2057-spacing-sweep-occamS/spacing_15/per_image_test.json
+
+  [test] MAE=19.9494  MSE=2235.7921  RMSE=47.2842  NAE=0.3958
+
+======================================================================
+  OCCAM Origin-Simulation — FSC-147 Full Evaluation Summary
+======================================================================
+  Mode        : OCCAM-SINGLE (fraction=0.150, seed=42)
+  SAM2 config : configs/sam2.1/sam2.1_hiera_l.yaml
+  SAM2 ckpt   : /home/czp/ws_yiyang/GOC-Freely-Object-Counting/codes/checkpoints/sam2.1_hiera_large.pt
+  Started     : 2026-05-29 21:34:10
+  Finished    : 2026-05-29 21:47:54
+  Total time  : 13.7 min
+
+  ── test split (n=178)
+     MAE   = 19.9494
+     MSE   = 2235.7921
+     RMSE  = 47.2842
+     NAE   = 0.3958
+     avg_time = 4.59 s/img
+     by GT count range:
+       [   1-10]  n=  10  MAE=   7.70  RMSE=  11.55
+       [  11-50]  n=  96  MAE=   9.83  RMSE=  23.48
+       [ 51-200]  n=  60  MAE=  22.38  RMSE=  31.50
+       [   201+]  n=  12  MAE=  98.92  RMSE= 153.89
+
+======================================================================
+
+Summary saved → /home/czp/ws_yiyang/GOC-Freely-Object-Counting/results/2026-05-29-2057-spacing-sweep-occamS/spacing_15/summary.txt

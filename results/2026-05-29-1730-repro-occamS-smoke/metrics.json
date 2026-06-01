@@ -1,0 +1,38 @@
+{
+  "test": {
+    "n": 8,
+    "mae": 451.125,
+    "mse": 1558691.125,
+    "rmse": 1248.4755,
+    "nae": 0.2721,
+    "avg_time_sec": 10.57,
+    "by_gt_range": {
+      "11-50": {
+        "n": 2,
+        "mae": 16.0,
+        "rmse": 20.0
+      },
+      "51-200": {
+        "n": 3,
+        "mae": 11.333333333333334,
+        "rmse": 15.033296378372908
+      },
+      "201+": {
+        "n": 3,
+        "mae": 1181.0,
+        "rmse": 2038.6311584001653
+      }
+    }
+  },
+  "thermal": {
+    "enabled": true,
+    "temp_limit_c": 78,
+    "cooldown_sec": 30,
+    "hysteresis_c": 5,
+    "check_every": 5,
+    "peak_temp_c": 46,
+    "cooldown_events": 0,
+    "cooldown_seconds": 0.0,
+    "polls": 1
+  }
+}

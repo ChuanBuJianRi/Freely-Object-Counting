@@ -1,0 +1,23 @@
+======================================================================
+  OCCAM Origin-Simulation — FSC-147 Full Evaluation Summary
+======================================================================
+  Mode        : OCCAM-SINGLE (fraction=0.333, seed=42)
+  SAM2 config : configs/sam2.1/sam2.1_hiera_l.yaml
+  SAM2 ckpt   : /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM/checkpoints/sam2.1_hiera_large.pt
+  Started     : 2026-05-20 11:26:55
+  Finished    : 2026-05-20 12:03:15
+  Total time  : 36.3 min
+
+  ── val split (n=428)
+     MAE   = 39.6776
+     MSE   = 10984.3458
+     RMSE  = 104.8062
+     NAE   = 0.9173
+     avg_time = 4.99 s/img
+     by GT count range:
+       [   1-10]  n=  46  MAE=  18.57  RMSE=  36.62
+       [  11-50]  n= 251  MAE=  19.49  RMSE=  26.20
+       [ 51-200]  n= 105  MAE=  32.26  RMSE=  39.65
+       [   201+]  n=  26  MAE= 301.85  RMSE= 406.78
+
+======================================================================

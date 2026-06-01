@@ -1,0 +1,7 @@
+image       : 4574.jpg
+label       : flamingo_flock
+gt_count    : 402
+pred_count  : 17
+abs_error   : 385
+num_clusters: 4
+cluster_counts: [1, 12, 3, 1]

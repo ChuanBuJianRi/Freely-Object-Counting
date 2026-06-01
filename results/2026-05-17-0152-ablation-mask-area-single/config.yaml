@@ -1,0 +1,21 @@
+run_id: 2026-05-17-0152-ablation-mask-area-single
+task: ablation
+dataset:
+  name: FSC-147
+  splits: [val]
+  fraction: 0.333
+  seed: 42
+model:
+  name: OCCAM-S
+  mode: single
+swept:
+  min_mask_area_ratio: [0.0001, 0.0005, 0.001, 0.005, 0.01]
+  max_mask_area_ratio: [0.10, 0.25, 0.5]
+fixed:
+  mask_policy: p0
+  cluster_method: finch
+  pred_strategy: total
+best_sub_run: A6_max010
+best_metric:
+  MAE: 42.94
+launcher: run_ablation.sh

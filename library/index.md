@@ -12,9 +12,10 @@ UPDATE_RULES:
 ## tree
 ```
 library/
-├── category.md   # this index
+├── index.md      # this index
+├── notes/        # project-internal method notes / synced docs from FreeCounting
 ├── paper/        # academic papers / reference PDFs
-│   └── research-guides/   # classic CS-research methodology PDFs (Hamming, Chapman, Bundy, ...)
+│   └── research-guides/   # classic CS-research methodology PDFs
 └── scripts/      # project scripts (data, experiments, utilities)
 ```
 
@@ -37,6 +38,16 @@ purpose: store project scripts (data processing, experiment runners, utilities).
 files:
 - (empty)
 
+## notes/
+purpose: project-internal method notes and synced documents from upstream (FreeCounting). Source of truth for non-paper write-ups; cross-referenced from results/ READMEs.
+files:
+- SNG-method.md :: full write-up of the (ε, δ) Shared-Neighbor Graph clustering method (definition, complexity, FSC-147 ablation table, η-based theoretical analysis, 5 architecture-improvement directions §7.1–§7.5, reproduction commands). Synced from `Model_innovation.md`.
+- MCV-method.md :: write-up of the Mode-Cluster-Vote prediction head proposed to fix OCCAM-MP7's 201+ bucket failure (MAE 312.96). Defines `predict_count(strategy=mode_cluster_vote)`: anchored at the largest cluster, sum every cluster within `k * MAD` of its `log10(bbox_area_ratio)`; `k=1.5` reused from existing `mask_iqr_k` ⇒ zero new hyperparameters. Documents 4 failure modes + relation to SNG + reproduction command.
+- freecounting-original-readme.md :: original FreeCounting repo README (FSC-147 Val MAE 43.65 / Test MAE 45.47 for OCCAM-S baseline; structure overview).
+- occam-impl-original-readme.md :: original OCCAM reimplementation README (pipeline description, single/multi mode parameters, run instructions).
+
 ## changelog
 - 2026-05-26 :: init; registered paper/ (OCCAM.pdf), scripts/ (empty).
 - 2026-05-26 14:31 :: registered paper/research-guides/ subfolder with 5 classic CS-research methodology PDFs (Hamming, Keshav, Patterson, Chapman, Bundy).
+- 2026-05-27 10:45 :: registered notes/ subfolder with SNG-method.md (synced from FreeCounting Model_innovation.md) and 2 upstream READMEs.
+- 2026-05-27 14:06 :: added notes/MCV-method.md (Mode-Cluster-Vote prediction head proposed to fix MP7's 201+ bucket; companion to SNG-method.md; cross-referenced from history/2026-05-27-1406-add-mcv-pred-head.md).

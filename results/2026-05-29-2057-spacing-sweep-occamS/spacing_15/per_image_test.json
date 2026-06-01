@@ -1,0 +1,5113 @@
+[
+  {
+    "name": "1461.jpg",
+    "gt": 99,
+    "pred": 90,
+    "ae": 9,
+    "se": 81.0,
+    "nae": 0.09090909090909091,
+    "elapsed_sec": 4.96,
+    "trace": {
+      "pred": 90,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        2,
+        90,
+        5,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "1467.jpg",
+    "gt": 70,
+    "pred": 24,
+    "ae": 46,
+    "se": 2116.0,
+    "nae": 0.6571428571428571,
+    "elapsed_sec": 4.41,
+    "trace": {
+      "pred": 24,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        24,
+        1,
+        1,
+        1,
+        2,
+        2,
+        5,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "1497.jpg",
+    "gt": 207,
+    "pred": 103,
+    "ae": 104,
+    "se": 10816.0,
+    "nae": 0.5024154589371981,
+    "elapsed_sec": 4.17,
+    "trace": {
+      "pred": 103,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        1,
+        103,
+        73,
+        21
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "1887.jpg",
+    "gt": 10,
+    "pred": 32,
+    "ae": 22,
+    "se": 484.0,
+    "nae": 2.2,
+    "elapsed_sec": 4.77,
+    "trace": {
+      "pred": 32,
+      "strategy": "max",
+      "cluster_sizes": [
+        7,
+        1,
+        9,
+        1,
+        2,
+        1,
+        32,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 6,
+      "mode_member_indices": [
+        6
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2008.jpg",
+    "gt": 42,
+    "pred": 51,
+    "ae": 9,
+    "se": 81.0,
+    "nae": 0.21428571428571427,
+    "elapsed_sec": 5.75,
+    "trace": {
+      "pred": 51,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        2,
+        36,
+        2,
+        51,
+        5,
+        1,
+        2,
+        4,
+        4,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2016.jpg",
+    "gt": 24,
+    "pred": 25,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.041666666666666664,
+    "elapsed_sec": 7.7,
+    "trace": {
+      "pred": 25,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        2,
+        4,
+        1,
+        2,
+        25,
+        2,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        3,
+        2,
+        5,
+        15
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 5,
+      "mode_member_indices": [
+        5
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2018.jpg",
+    "gt": 68,
+    "pred": 137,
+    "ae": 69,
+    "se": 4761.0,
+    "nae": 1.0147058823529411,
+    "elapsed_sec": 3.83,
+    "trace": {
+      "pred": 137,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        2,
+        137,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2029.jpg",
+    "gt": 79,
+    "pred": 90,
+    "ae": 11,
+    "se": 121.0,
+    "nae": 0.13924050632911392,
+    "elapsed_sec": 4.79,
+    "trace": {
+      "pred": 90,
+      "strategy": "max",
+      "cluster_sizes": [
+        90,
+        1,
+        1,
+        34,
+        2,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2038.jpg",
+    "gt": 198,
+    "pred": 278,
+    "ae": 80,
+    "se": 6400.0,
+    "nae": 0.40404040404040403,
+    "elapsed_sec": 5.43,
+    "trace": {
+      "pred": 278,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        1,
+        278,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2040.jpg",
+    "gt": 32,
+    "pred": 86,
+    "ae": 54,
+    "se": 2916.0,
+    "nae": 1.6875,
+    "elapsed_sec": 6.0,
+    "trace": {
+      "pred": 86,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        86,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2054.jpg",
+    "gt": 63,
+    "pred": 111,
+    "ae": 48,
+    "se": 2304.0,
+    "nae": 0.7619047619047619,
+    "elapsed_sec": 4.42,
+    "trace": {
+      "pred": 111,
+      "strategy": "max",
+      "cluster_sizes": [
+        111,
+        1,
+        5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2140.jpg",
+    "gt": 21,
+    "pred": 12,
+    "ae": 9,
+    "se": 81.0,
+    "nae": 0.42857142857142855,
+    "elapsed_sec": 3.6,
+    "trace": {
+      "pred": 12,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        9,
+        12,
+        3,
+        4,
+        1,
+        1,
+        1,
+        6,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2147.jpg",
+    "gt": 37,
+    "pred": 27,
+    "ae": 10,
+    "se": 100.0,
+    "nae": 0.2702702702702703,
+    "elapsed_sec": 4.06,
+    "trace": {
+      "pred": 27,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        22,
+        1,
+        27,
+        3,
+        4,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2159.jpg",
+    "gt": 621,
+    "pred": 165,
+    "ae": 456,
+    "se": 207936.0,
+    "nae": 0.7342995169082126,
+    "elapsed_sec": 3.41,
+    "trace": {
+      "pred": 165,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        2,
+        3,
+        5,
+        165
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2163.jpg",
+    "gt": 13,
+    "pred": 20,
+    "ae": 7,
+    "se": 49.0,
+    "nae": 0.5384615384615384,
+    "elapsed_sec": 4.26,
+    "trace": {
+      "pred": 20,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        20,
+        6,
+        6,
+        1,
+        1,
+        5,
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2180.jpg",
+    "gt": 223,
+    "pred": 229,
+    "ae": 6,
+    "se": 36.0,
+    "nae": 0.026905829596412557,
+    "elapsed_sec": 5.54,
+    "trace": {
+      "pred": 229,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        229,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2203.jpg",
+    "gt": 22,
+    "pred": 22,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 5.35,
+    "trace": {
+      "pred": 22,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        22,
+        1,
+        1,
+        3,
+        2,
+        16
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2216.jpg",
+    "gt": 36,
+    "pred": 31,
+    "ae": 5,
+    "se": 25.0,
+    "nae": 0.1388888888888889,
+    "elapsed_sec": 13.45,
+    "trace": {
+      "pred": 31,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        1,
+        31,
+        20,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2240.jpg",
+    "gt": 54,
+    "pred": 83,
+    "ae": 29,
+    "se": 841.0,
+    "nae": 0.5370370370370371,
+    "elapsed_sec": 3.51,
+    "trace": {
+      "pred": 83,
+      "strategy": "max",
+      "cluster_sizes": [
+        9,
+        2,
+        83,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2247.jpg",
+    "gt": 16,
+    "pred": 15,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.0625,
+    "elapsed_sec": 4.31,
+    "trace": {
+      "pred": 15,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        15,
+        1,
+        1,
+        1,
+        2,
+        5,
+        12,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2258.jpg",
+    "gt": 75,
+    "pred": 67,
+    "ae": 8,
+    "se": 64.0,
+    "nae": 0.10666666666666667,
+    "elapsed_sec": 4.42,
+    "trace": {
+      "pred": 67,
+      "strategy": "max",
+      "cluster_sizes": [
+        67,
+        32,
+        4,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2273.jpg",
+    "gt": 165,
+    "pred": 135,
+    "ae": 30,
+    "se": 900.0,
+    "nae": 0.18181818181818182,
+    "elapsed_sec": 3.17,
+    "trace": {
+      "pred": 135,
+      "strategy": "max",
+      "cluster_sizes": [
+        4,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        135,
+        1,
+        1,
+        3
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 7,
+      "mode_member_indices": [
+        7
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2619.jpg",
+    "gt": 47,
+    "pred": 93,
+    "ae": 46,
+    "se": 2116.0,
+    "nae": 0.9787234042553191,
+    "elapsed_sec": 3.87,
+    "trace": {
+      "pred": 93,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        6,
+        1,
+        93,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        7,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "288.jpg",
+    "gt": 26,
+    "pred": 17,
+    "ae": 9,
+    "se": 81.0,
+    "nae": 0.34615384615384615,
+    "elapsed_sec": 4.47,
+    "trace": {
+      "pred": 17,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        17,
+        1,
+        14,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2916.jpg",
+    "gt": 202,
+    "pred": 178,
+    "ae": 24,
+    "se": 576.0,
+    "nae": 0.1188118811881188,
+    "elapsed_sec": 4.14,
+    "trace": {
+      "pred": 178,
+      "strategy": "max",
+      "cluster_sizes": [
+        4,
+        2,
+        7,
+        178
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2925.jpg",
+    "gt": 65,
+    "pred": 57,
+    "ae": 8,
+    "se": 64.0,
+    "nae": 0.12307692307692308,
+    "elapsed_sec": 4.95,
+    "trace": {
+      "pred": 57,
+      "strategy": "max",
+      "cluster_sizes": [
+        4,
+        1,
+        1,
+        1,
+        57,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2941.jpg",
+    "gt": 17,
+    "pred": 15,
+    "ae": 2,
+    "se": 4.0,
+    "nae": 0.11764705882352941,
+    "elapsed_sec": 3.89,
+    "trace": {
+      "pred": 15,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        12,
+        1,
+        15,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2942.jpg",
+    "gt": 25,
+    "pred": 25,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.67,
+    "trace": {
+      "pred": 25,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        25,
+        19
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2947.jpg",
+    "gt": 36,
+    "pred": 35,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.027777777777777776,
+    "elapsed_sec": 3.37,
+    "trace": {
+      "pred": 35,
+      "strategy": "max",
+      "cluster_sizes": [
+        5,
+        35,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "2951.jpg",
+    "gt": 14,
+    "pred": 14,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 4.53,
+    "trace": {
+      "pred": 14,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        3,
+        1,
+        1,
+        14
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "307.jpg",
+    "gt": 21,
+    "pred": 37,
+    "ae": 16,
+    "se": 256.0,
+    "nae": 0.7619047619047619,
+    "elapsed_sec": 3.84,
+    "trace": {
+      "pred": 37,
+      "strategy": "max",
+      "cluster_sizes": [
+        16,
+        3,
+        2,
+        37,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3114.jpg",
+    "gt": 17,
+    "pred": 18,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.058823529411764705,
+    "elapsed_sec": 5.15,
+    "trace": {
+      "pred": 18,
+      "strategy": "max",
+      "cluster_sizes": [
+        5,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        17,
+        1,
+        2,
+        18,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 13,
+      "mode_member_indices": [
+        13
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "317.jpg",
+    "gt": 14,
+    "pred": 14,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 5.73,
+    "trace": {
+      "pred": 14,
+      "strategy": "max",
+      "cluster_sizes": [
+        14,
+        8
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "323.jpg",
+    "gt": 25,
+    "pred": 24,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.04,
+    "elapsed_sec": 5.01,
+    "trace": {
+      "pred": 24,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        2,
+        24,
+        17,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "325.jpg",
+    "gt": 33,
+    "pred": 36,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.09090909090909091,
+    "elapsed_sec": 3.92,
+    "trace": {
+      "pred": 36,
+      "strategy": "max",
+      "cluster_sizes": [
+        27,
+        36
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3276.jpg",
+    "gt": 18,
+    "pred": 18,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.92,
+    "trace": {
+      "pred": 18,
+      "strategy": "max",
+      "cluster_sizes": [
+        6,
+        18,
+        3,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3282.jpg",
+    "gt": 31,
+    "pred": 43,
+    "ae": 12,
+    "se": 144.0,
+    "nae": 0.3870967741935484,
+    "elapsed_sec": 3.95,
+    "trace": {
+      "pred": 43,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        43,
+        1,
+        1,
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "329.jpg",
+    "gt": 19,
+    "pred": 51,
+    "ae": 32,
+    "se": 1024.0,
+    "nae": 1.6842105263157894,
+    "elapsed_sec": 4.09,
+    "trace": {
+      "pred": 51,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        1,
+        1,
+        5,
+        1,
+        19,
+        1,
+        51,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 7,
+      "mode_member_indices": [
+        7
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3309.jpg",
+    "gt": 16,
+    "pred": 14,
+    "ae": 2,
+    "se": 4.0,
+    "nae": 0.125,
+    "elapsed_sec": 4.62,
+    "trace": {
+      "pred": 14,
+      "strategy": "max",
+      "cluster_sizes": [
+        14
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3313.jpg",
+    "gt": 63,
+    "pred": 18,
+    "ae": 45,
+    "se": 2025.0,
+    "nae": 0.7142857142857143,
+    "elapsed_sec": 3.06,
+    "trace": {
+      "pred": 18,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        6,
+        1,
+        2,
+        18
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 10,
+      "mode_member_indices": [
+        10
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3321.jpg",
+    "gt": 49,
+    "pred": 45,
+    "ae": 4,
+    "se": 16.0,
+    "nae": 0.08163265306122448,
+    "elapsed_sec": 4.63,
+    "trace": {
+      "pred": 45,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        45,
+        44
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3327.jpg",
+    "gt": 33,
+    "pred": 32,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.030303030303030304,
+    "elapsed_sec": 3.2,
+    "trace": {
+      "pred": 32,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        32
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3328.jpg",
+    "gt": 99,
+    "pred": 87,
+    "ae": 12,
+    "se": 144.0,
+    "nae": 0.12121212121212122,
+    "elapsed_sec": 4.63,
+    "trace": {
+      "pred": 87,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        5,
+        87,
+        61
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3496.jpg",
+    "gt": 103,
+    "pred": 104,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.009708737864077669,
+    "elapsed_sec": 3.12,
+    "trace": {
+      "pred": 104,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        104
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "350.jpg",
+    "gt": 17,
+    "pred": 18,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.058823529411764705,
+    "elapsed_sec": 3.86,
+    "trace": {
+      "pred": 18,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        18,
+        1,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "351.jpg",
+    "gt": 41,
+    "pred": 39,
+    "ae": 2,
+    "se": 4.0,
+    "nae": 0.04878048780487805,
+    "elapsed_sec": 3.07,
+    "trace": {
+      "pred": 39,
+      "strategy": "max",
+      "cluster_sizes": [
+        39,
+        10,
+        21,
+        10
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3646.jpg",
+    "gt": 15,
+    "pred": 12,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.2,
+    "elapsed_sec": 3.05,
+    "trace": {
+      "pred": 12,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        1,
+        12,
+        1,
+        2,
+        2,
+        3
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3659.jpg",
+    "gt": 41,
+    "pred": 39,
+    "ae": 2,
+    "se": 4.0,
+    "nae": 0.04878048780487805,
+    "elapsed_sec": 2.91,
+    "trace": {
+      "pred": 39,
+      "strategy": "max",
+      "cluster_sizes": [
+        39,
+        20
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3694.jpg",
+    "gt": 34,
+    "pred": 33,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.029411764705882353,
+    "elapsed_sec": 4.55,
+    "trace": {
+      "pred": 33,
+      "strategy": "max",
+      "cluster_sizes": [
+        33,
+        5,
+        1,
+        24,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "3697.jpg",
+    "gt": 11,
+    "pred": 49,
+    "ae": 38,
+    "se": 1444.0,
+    "nae": 3.4545454545454546,
+    "elapsed_sec": 3.02,
+    "trace": {
+      "pred": 49,
+      "strategy": "max",
+      "cluster_sizes": [
+        10,
+        1,
+        1,
+        1,
+        2,
+        49,
+        2,
+        9
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 5,
+      "mode_member_indices": [
+        5
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4078.jpg",
+    "gt": 58,
+    "pred": 61,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.05172413793103448,
+    "elapsed_sec": 4.69,
+    "trace": {
+      "pred": 61,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        61,
+        3
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 6,
+      "mode_member_indices": [
+        6
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4080.jpg",
+    "gt": 54,
+    "pred": 53,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.018518518518518517,
+    "elapsed_sec": 3.17,
+    "trace": {
+      "pred": 53,
+      "strategy": "max",
+      "cluster_sizes": [
+        53,
+        5,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4086.jpg",
+    "gt": 12,
+    "pred": 13,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.08333333333333333,
+    "elapsed_sec": 3.01,
+    "trace": {
+      "pred": 13,
+      "strategy": "max",
+      "cluster_sizes": [
+        13,
+        1,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4088.jpg",
+    "gt": 28,
+    "pred": 27,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.03571428571428571,
+    "elapsed_sec": 3.9,
+    "trace": {
+      "pred": 27,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        27,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4089.jpg",
+    "gt": 59,
+    "pred": 59,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 6.06,
+    "trace": {
+      "pred": 59,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        1,
+        1,
+        4,
+        59,
+        1,
+        3,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4114.jpg",
+    "gt": 12,
+    "pred": 12,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 4.4,
+    "trace": {
+      "pred": 12,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        1,
+        12,
+        2,
+        2,
+        1,
+        8,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4115.jpg",
+    "gt": 8,
+    "pred": 12,
+    "ae": 4,
+    "se": 16.0,
+    "nae": 0.5,
+    "elapsed_sec": 4.99,
+    "trace": {
+      "pred": 12,
+      "strategy": "max",
+      "cluster_sizes": [
+        12,
+        1,
+        1,
+        1,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4118.jpg",
+    "gt": 13,
+    "pred": 18,
+    "ae": 5,
+    "se": 25.0,
+    "nae": 0.38461538461538464,
+    "elapsed_sec": 5.22,
+    "trace": {
+      "pred": 18,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        18,
+        2,
+        11
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4284.jpg",
+    "gt": 91,
+    "pred": 104,
+    "ae": 13,
+    "se": 169.0,
+    "nae": 0.14285714285714285,
+    "elapsed_sec": 3.39,
+    "trace": {
+      "pred": 104,
+      "strategy": "max",
+      "cluster_sizes": [
+        104
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4290.jpg",
+    "gt": 25,
+    "pred": 25,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.52,
+    "trace": {
+      "pred": 25,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        2,
+        25,
+        1,
+        4,
+        9
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4291.jpg",
+    "gt": 323,
+    "pred": 215,
+    "ae": 108,
+    "se": 11664.0,
+    "nae": 0.33436532507739936,
+    "elapsed_sec": 5.45,
+    "trace": {
+      "pred": 215,
+      "strategy": "max",
+      "cluster_sizes": [
+        9,
+        1,
+        215,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4296.jpg",
+    "gt": 32,
+    "pred": 34,
+    "ae": 2,
+    "se": 4.0,
+    "nae": 0.0625,
+    "elapsed_sec": 4.51,
+    "trace": {
+      "pred": 34,
+      "strategy": "max",
+      "cluster_sizes": [
+        4,
+        11,
+        34,
+        12,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4297.jpg",
+    "gt": 108,
+    "pred": 62,
+    "ae": 46,
+    "se": 2116.0,
+    "nae": 0.42592592592592593,
+    "elapsed_sec": 4.66,
+    "trace": {
+      "pred": 62,
+      "strategy": "max",
+      "cluster_sizes": [
+        7,
+        58,
+        62
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4301.jpg",
+    "gt": 44,
+    "pred": 34,
+    "ae": 10,
+    "se": 100.0,
+    "nae": 0.22727272727272727,
+    "elapsed_sec": 3.05,
+    "trace": {
+      "pred": 34,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        4,
+        23,
+        1,
+        1,
+        2,
+        1,
+        34,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 8,
+      "mode_member_indices": [
+        8
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4303.jpg",
+    "gt": 191,
+    "pred": 135,
+    "ae": 56,
+    "se": 3136.0,
+    "nae": 0.2931937172774869,
+    "elapsed_sec": 4.18,
+    "trace": {
+      "pred": 135,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        2,
+        12,
+        1,
+        1,
+        135,
+        1,
+        2,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 5,
+      "mode_member_indices": [
+        5
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4412.jpg",
+    "gt": 10,
+    "pred": 32,
+    "ae": 22,
+    "se": 484.0,
+    "nae": 2.2,
+    "elapsed_sec": 4.5,
+    "trace": {
+      "pred": 32,
+      "strategy": "max",
+      "cluster_sizes": [
+        32,
+        10,
+        23,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4413.jpg",
+    "gt": 11,
+    "pred": 26,
+    "ae": 15,
+    "se": 225.0,
+    "nae": 1.3636363636363635,
+    "elapsed_sec": 6.33,
+    "trace": {
+      "pred": 26,
+      "strategy": "max",
+      "cluster_sizes": [
+        6,
+        12,
+        11,
+        1,
+        26,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4493.jpg",
+    "gt": 18,
+    "pred": 13,
+    "ae": 5,
+    "se": 25.0,
+    "nae": 0.2777777777777778,
+    "elapsed_sec": 4.56,
+    "trace": {
+      "pred": 13,
+      "strategy": "max",
+      "cluster_sizes": [
+        13,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4496.jpg",
+    "gt": 13,
+    "pred": 12,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.07692307692307693,
+    "elapsed_sec": 4.09,
+    "trace": {
+      "pred": 12,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        6,
+        1,
+        11,
+        2,
+        1,
+        1,
+        12,
+        1,
+        4,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 8,
+      "mode_member_indices": [
+        8
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4500.jpg",
+    "gt": 8,
+    "pred": 22,
+    "ae": 14,
+    "se": 196.0,
+    "nae": 1.75,
+    "elapsed_sec": 3.14,
+    "trace": {
+      "pred": 22,
+      "strategy": "max",
+      "cluster_sizes": [
+        6,
+        22,
+        7,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4874.jpg",
+    "gt": 68,
+    "pred": 60,
+    "ae": 8,
+    "se": 64.0,
+    "nae": 0.11764705882352941,
+    "elapsed_sec": 5.17,
+    "trace": {
+      "pred": 60,
+      "strategy": "max",
+      "cluster_sizes": [
+        60,
+        42
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4884.jpg",
+    "gt": 101,
+    "pred": 129,
+    "ae": 28,
+    "se": 784.0,
+    "nae": 0.27722772277227725,
+    "elapsed_sec": 3.0,
+    "trace": {
+      "pred": 129,
+      "strategy": "max",
+      "cluster_sizes": [
+        129
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4905.jpg",
+    "gt": 250,
+    "pred": 159,
+    "ae": 91,
+    "se": 8281.0,
+    "nae": 0.364,
+    "elapsed_sec": 4.29,
+    "trace": {
+      "pred": 159,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        17,
+        1,
+        159,
+        2,
+        19,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4908.jpg",
+    "gt": 24,
+    "pred": 23,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.041666666666666664,
+    "elapsed_sec": 5.55,
+    "trace": {
+      "pred": 23,
+      "strategy": "max",
+      "cluster_sizes": [
+        23,
+        3,
+        4
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4920.jpg",
+    "gt": 20,
+    "pred": 27,
+    "ae": 7,
+    "se": 49.0,
+    "nae": 0.35,
+    "elapsed_sec": 3.04,
+    "trace": {
+      "pred": 27,
+      "strategy": "max",
+      "cluster_sizes": [
+        5,
+        27,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        12,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4924.jpg",
+    "gt": 67,
+    "pred": 64,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.04477611940298507,
+    "elapsed_sec": 4.9,
+    "trace": {
+      "pred": 64,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        64,
+        10,
+        17,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4931.jpg",
+    "gt": 58,
+    "pred": 47,
+    "ae": 11,
+    "se": 121.0,
+    "nae": 0.1896551724137931,
+    "elapsed_sec": 4.48,
+    "trace": {
+      "pred": 47,
+      "strategy": "max",
+      "cluster_sizes": [
+        47,
+        44,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4956.jpg",
+    "gt": 102,
+    "pred": 114,
+    "ae": 12,
+    "se": 144.0,
+    "nae": 0.11764705882352941,
+    "elapsed_sec": 4.48,
+    "trace": {
+      "pred": 114,
+      "strategy": "max",
+      "cluster_sizes": [
+        114,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "4966.jpg",
+    "gt": 46,
+    "pred": 44,
+    "ae": 2,
+    "se": 4.0,
+    "nae": 0.043478260869565216,
+    "elapsed_sec": 3.87,
+    "trace": {
+      "pred": 44,
+      "strategy": "max",
+      "cluster_sizes": [
+        44,
+        1,
+        22,
+        1,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5145.jpg",
+    "gt": 15,
+    "pred": 12,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.2,
+    "elapsed_sec": 3.05,
+    "trace": {
+      "pred": 12,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        1,
+        12,
+        1,
+        2,
+        2,
+        3
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5359.jpg",
+    "gt": 33,
+    "pred": 33,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 4.07,
+    "trace": {
+      "pred": 33,
+      "strategy": "max",
+      "cluster_sizes": [
+        6,
+        33,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5360.jpg",
+    "gt": 65,
+    "pred": 64,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.015384615384615385,
+    "elapsed_sec": 4.04,
+    "trace": {
+      "pred": 64,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        64
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5362.jpg",
+    "gt": 18,
+    "pred": 26,
+    "ae": 8,
+    "se": 64.0,
+    "nae": 0.4444444444444444,
+    "elapsed_sec": 3.03,
+    "trace": {
+      "pred": 26,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        26,
+        1,
+        1,
+        2,
+        11
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 5,
+      "mode_member_indices": [
+        5
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5365.jpg",
+    "gt": 9,
+    "pred": 21,
+    "ae": 12,
+    "se": 144.0,
+    "nae": 1.3333333333333333,
+    "elapsed_sec": 4.03,
+    "trace": {
+      "pred": 21,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        8,
+        1,
+        21
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5371.jpg",
+    "gt": 44,
+    "pred": 44,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.11,
+    "trace": {
+      "pred": 44,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        2,
+        44,
+        2,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5375.jpg",
+    "gt": 18,
+    "pred": 19,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.05555555555555555,
+    "elapsed_sec": 5.72,
+    "trace": {
+      "pred": 19,
+      "strategy": "max",
+      "cluster_sizes": [
+        18,
+        2,
+        1,
+        19,
+        1,
+        2,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5385.jpg",
+    "gt": 9,
+    "pred": 9,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.56,
+    "trace": {
+      "pred": 9,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        9,
+        6,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5390.jpg",
+    "gt": 14,
+    "pred": 15,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.07142857142857142,
+    "elapsed_sec": 3.66,
+    "trace": {
+      "pred": 15,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        15,
+        9
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5564.jpg",
+    "gt": 16,
+    "pred": 21,
+    "ae": 5,
+    "se": 25.0,
+    "nae": 0.3125,
+    "elapsed_sec": 5.37,
+    "trace": {
+      "pred": 21,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        16,
+        1,
+        1,
+        21,
+        1,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5566.jpg",
+    "gt": 33,
+    "pred": 30,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.09090909090909091,
+    "elapsed_sec": 5.05,
+    "trace": {
+      "pred": 30,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        30,
+        1,
+        2,
+        3,
+        1,
+        2,
+        5,
+        1,
+        1,
+        1,
+        2,
+        5,
+        1,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5583.jpg",
+    "gt": 12,
+    "pred": 11,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.08333333333333333,
+    "elapsed_sec": 4.99,
+    "trace": {
+      "pred": 11,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        11,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5588.jpg",
+    "gt": 49,
+    "pred": 49,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.91,
+    "trace": {
+      "pred": 49,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        49,
+        18,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5597.jpg",
+    "gt": 128,
+    "pred": 110,
+    "ae": 18,
+    "se": 324.0,
+    "nae": 0.140625,
+    "elapsed_sec": 4.57,
+    "trace": {
+      "pred": 110,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        110,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5602.jpg",
+    "gt": 21,
+    "pred": 20,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.047619047619047616,
+    "elapsed_sec": 4.25,
+    "trace": {
+      "pred": 20,
+      "strategy": "max",
+      "cluster_sizes": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5797.jpg",
+    "gt": 58,
+    "pred": 60,
+    "ae": 2,
+    "se": 4.0,
+    "nae": 0.034482758620689655,
+    "elapsed_sec": 3.82,
+    "trace": {
+      "pred": 60,
+      "strategy": "max",
+      "cluster_sizes": [
+        60
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5798.jpg",
+    "gt": 45,
+    "pred": 40,
+    "ae": 5,
+    "se": 25.0,
+    "nae": 0.1111111111111111,
+    "elapsed_sec": 5.2,
+    "trace": {
+      "pred": 40,
+      "strategy": "max",
+      "cluster_sizes": [
+        40,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5802.jpg",
+    "gt": 14,
+    "pred": 11,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.21428571428571427,
+    "elapsed_sec": 6.07,
+    "trace": {
+      "pred": 11,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        11,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5805.jpg",
+    "gt": 31,
+    "pred": 42,
+    "ae": 11,
+    "se": 121.0,
+    "nae": 0.3548387096774194,
+    "elapsed_sec": 4.34,
+    "trace": {
+      "pred": 42,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        42,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5808.jpg",
+    "gt": 53,
+    "pred": 53,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.45,
+    "trace": {
+      "pred": 53,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        53,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5810.jpg",
+    "gt": 90,
+    "pred": 60,
+    "ae": 30,
+    "se": 900.0,
+    "nae": 0.3333333333333333,
+    "elapsed_sec": 6.97,
+    "trace": {
+      "pred": 60,
+      "strategy": "max",
+      "cluster_sizes": [
+        5,
+        27,
+        60,
+        26
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5812.jpg",
+    "gt": 51,
+    "pred": 70,
+    "ae": 19,
+    "se": 361.0,
+    "nae": 0.37254901960784315,
+    "elapsed_sec": 4.5,
+    "trace": {
+      "pred": 70,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        70,
+        2,
+        2,
+        1,
+        1,
+        5,
+        2,
+        2,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5820.jpg",
+    "gt": 23,
+    "pred": 18,
+    "ae": 5,
+    "se": 25.0,
+    "nae": 0.21739130434782608,
+    "elapsed_sec": 6.75,
+    "trace": {
+      "pred": 18,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        18,
+        1,
+        2,
+        1,
+        3,
+        14,
+        3,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5823.jpg",
+    "gt": 69,
+    "pred": 84,
+    "ae": 15,
+    "se": 225.0,
+    "nae": 0.21739130434782608,
+    "elapsed_sec": 6.62,
+    "trace": {
+      "pred": 84,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        84,
+        8,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5834.jpg",
+    "gt": 27,
+    "pred": 41,
+    "ae": 14,
+    "se": 196.0,
+    "nae": 0.5185185185185185,
+    "elapsed_sec": 3.02,
+    "trace": {
+      "pred": 41,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        8,
+        41,
+        1,
+        1,
+        2,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 6,
+      "mode_member_indices": [
+        6
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5839.jpg",
+    "gt": 45,
+    "pred": 44,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.022222222222222223,
+    "elapsed_sec": 4.47,
+    "trace": {
+      "pred": 44,
+      "strategy": "max",
+      "cluster_sizes": [
+        44,
+        2,
+        1,
+        34,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5845.jpg",
+    "gt": 57,
+    "pred": 48,
+    "ae": 9,
+    "se": 81.0,
+    "nae": 0.15789473684210525,
+    "elapsed_sec": 5.08,
+    "trace": {
+      "pred": 48,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        3,
+        19,
+        48,
+        3
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5846.jpg",
+    "gt": 34,
+    "pred": 27,
+    "ae": 7,
+    "se": 49.0,
+    "nae": 0.20588235294117646,
+    "elapsed_sec": 2.89,
+    "trace": {
+      "pred": 27,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        27,
+        14,
+        14
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5850.jpg",
+    "gt": 9,
+    "pred": 9,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 4.43,
+    "trace": {
+      "pred": 9,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        2,
+        9,
+        2,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5915.jpg",
+    "gt": 12,
+    "pred": 14,
+    "ae": 2,
+    "se": 4.0,
+    "nae": 0.16666666666666666,
+    "elapsed_sec": 3.93,
+    "trace": {
+      "pred": 14,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        12,
+        14,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5920.jpg",
+    "gt": 18,
+    "pred": 19,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.05555555555555555,
+    "elapsed_sec": 4.64,
+    "trace": {
+      "pred": 19,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        16,
+        1,
+        18,
+        1,
+        1,
+        1,
+        19,
+        2,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 8,
+      "mode_member_indices": [
+        8
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5923.jpg",
+    "gt": 13,
+    "pred": 32,
+    "ae": 19,
+    "se": 361.0,
+    "nae": 1.4615384615384615,
+    "elapsed_sec": 3.5,
+    "trace": {
+      "pred": 32,
+      "strategy": "max",
+      "cluster_sizes": [
+        6,
+        1,
+        13,
+        6,
+        4,
+        32,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 5,
+      "mode_member_indices": [
+        5
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5931.jpg",
+    "gt": 9,
+    "pred": 12,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.3333333333333333,
+    "elapsed_sec": 5.31,
+    "trace": {
+      "pred": 12,
+      "strategy": "max",
+      "cluster_sizes": [
+        12,
+        9,
+        2,
+        1,
+        1,
+        1,
+        4,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5932.jpg",
+    "gt": 20,
+    "pred": 20,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.47,
+    "trace": {
+      "pred": 20,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        20,
+        6,
+        2,
+        3
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "5934.jpg",
+    "gt": 17,
+    "pred": 47,
+    "ae": 30,
+    "se": 900.0,
+    "nae": 1.7647058823529411,
+    "elapsed_sec": 4.49,
+    "trace": {
+      "pred": 47,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        15,
+        47
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 7,
+      "mode_member_indices": [
+        7
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6047.jpg",
+    "gt": 185,
+    "pred": 107,
+    "ae": 78,
+    "se": 6084.0,
+    "nae": 0.42162162162162165,
+    "elapsed_sec": 6.53,
+    "trace": {
+      "pred": 107,
+      "strategy": "max",
+      "cluster_sizes": [
+        5,
+        2,
+        1,
+        1,
+        1,
+        1,
+        107,
+        2,
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 6,
+      "mode_member_indices": [
+        6
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6048.jpg",
+    "gt": 103,
+    "pred": 88,
+    "ae": 15,
+    "se": 225.0,
+    "nae": 0.14563106796116504,
+    "elapsed_sec": 3.51,
+    "trace": {
+      "pred": 88,
+      "strategy": "max",
+      "cluster_sizes": [
+        88,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6251.jpg",
+    "gt": 25,
+    "pred": 28,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.12,
+    "elapsed_sec": 4.97,
+    "trace": {
+      "pred": 28,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        20,
+        1,
+        3,
+        1,
+        1,
+        28,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 6,
+      "mode_member_indices": [
+        6
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6258.jpg",
+    "gt": 13,
+    "pred": 13,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 4.05,
+    "trace": {
+      "pred": 13,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        13,
+        2,
+        1,
+        1,
+        3,
+        2,
+        1,
+        1,
+        7
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6261.jpg",
+    "gt": 324,
+    "pred": 264,
+    "ae": 60,
+    "se": 3600.0,
+    "nae": 0.18518518518518517,
+    "elapsed_sec": 4.39,
+    "trace": {
+      "pred": 264,
+      "strategy": "max",
+      "cluster_sizes": [
+        5,
+        3,
+        264,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6262.jpg",
+    "gt": 74,
+    "pred": 60,
+    "ae": 14,
+    "se": 196.0,
+    "nae": 0.1891891891891892,
+    "elapsed_sec": 4.6,
+    "trace": {
+      "pred": 60,
+      "strategy": "max",
+      "cluster_sizes": [
+        60,
+        6,
+        38
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6267.jpg",
+    "gt": 95,
+    "pred": 136,
+    "ae": 41,
+    "se": 1681.0,
+    "nae": 0.43157894736842106,
+    "elapsed_sec": 4.93,
+    "trace": {
+      "pred": 136,
+      "strategy": "max",
+      "cluster_sizes": [
+        136,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6271.jpg",
+    "gt": 240,
+    "pred": 97,
+    "ae": 143,
+    "se": 20449.0,
+    "nae": 0.5958333333333333,
+    "elapsed_sec": 4.08,
+    "trace": {
+      "pred": 97,
+      "strategy": "max",
+      "cluster_sizes": [
+        5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        97,
+        3,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 10,
+      "mode_member_indices": [
+        10
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6275.jpg",
+    "gt": 32,
+    "pred": 35,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.09375,
+    "elapsed_sec": 3.97,
+    "trace": {
+      "pred": 35,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        35,
+        2,
+        15,
+        1,
+        1,
+        12,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6278.jpg",
+    "gt": 45,
+    "pred": 38,
+    "ae": 7,
+    "se": 49.0,
+    "nae": 0.15555555555555556,
+    "elapsed_sec": 4.2,
+    "trace": {
+      "pred": 38,
+      "strategy": "max",
+      "cluster_sizes": [
+        38,
+        27,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6279.jpg",
+    "gt": 10,
+    "pred": 10,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 4.68,
+    "trace": {
+      "pred": 10,
+      "strategy": "max",
+      "cluster_sizes": [
+        10,
+        2,
+        1,
+        4
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6280.jpg",
+    "gt": 41,
+    "pred": 22,
+    "ae": 19,
+    "se": 361.0,
+    "nae": 0.4634146341463415,
+    "elapsed_sec": 5.29,
+    "trace": {
+      "pred": 22,
+      "strategy": "max",
+      "cluster_sizes": [
+        22,
+        8,
+        8,
+        3,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6283.jpg",
+    "gt": 21,
+    "pred": 19,
+    "ae": 2,
+    "se": 4.0,
+    "nae": 0.09523809523809523,
+    "elapsed_sec": 4.45,
+    "trace": {
+      "pred": 19,
+      "strategy": "max",
+      "cluster_sizes": [
+        19,
+        6,
+        1,
+        11,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6285.jpg",
+    "gt": 101,
+    "pred": 69,
+    "ae": 32,
+    "se": 1024.0,
+    "nae": 0.31683168316831684,
+    "elapsed_sec": 4.93,
+    "trace": {
+      "pred": 69,
+      "strategy": "max",
+      "cluster_sizes": [
+        52,
+        69
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6647.jpg",
+    "gt": 199,
+    "pred": 167,
+    "ae": 32,
+    "se": 1024.0,
+    "nae": 0.16080402010050251,
+    "elapsed_sec": 3.31,
+    "trace": {
+      "pred": 167,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        4,
+        3,
+        2,
+        1,
+        1,
+        1,
+        10,
+        1,
+        167
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 10,
+      "mode_member_indices": [
+        10
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6649.jpg",
+    "gt": 108,
+    "pred": 65,
+    "ae": 43,
+    "se": 1849.0,
+    "nae": 0.39814814814814814,
+    "elapsed_sec": 3.13,
+    "trace": {
+      "pred": 65,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        2,
+        3,
+        3,
+        28,
+        65
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 5,
+      "mode_member_indices": [
+        5
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6656.jpg",
+    "gt": 100,
+    "pred": 99,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.01,
+    "elapsed_sec": 3.89,
+    "trace": {
+      "pred": 99,
+      "strategy": "max",
+      "cluster_sizes": [
+        4,
+        2,
+        1,
+        99,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6659.jpg",
+    "gt": 9,
+    "pred": 9,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 2.93,
+    "trace": {
+      "pred": 9,
+      "strategy": "max",
+      "cluster_sizes": [
+        9,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6715.jpg",
+    "gt": 36,
+    "pred": 36,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.07,
+    "trace": {
+      "pred": 36,
+      "strategy": "max",
+      "cluster_sizes": [
+        8,
+        36,
+        13
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6739.jpg",
+    "gt": 108,
+    "pred": 91,
+    "ae": 17,
+    "se": 289.0,
+    "nae": 0.1574074074074074,
+    "elapsed_sec": 12.19,
+    "trace": {
+      "pred": 91,
+      "strategy": "max",
+      "cluster_sizes": [
+        7,
+        91,
+        2,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6742.jpg",
+    "gt": 24,
+    "pred": 21,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.125,
+    "elapsed_sec": 4.59,
+    "trace": {
+      "pred": 21,
+      "strategy": "max",
+      "cluster_sizes": [
+        11,
+        21,
+        3,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6756.jpg",
+    "gt": 35,
+    "pred": 36,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.02857142857142857,
+    "elapsed_sec": 4.13,
+    "trace": {
+      "pred": 36,
+      "strategy": "max",
+      "cluster_sizes": [
+        7,
+        36,
+        10,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6771.jpg",
+    "gt": 25,
+    "pred": 25,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 4.31,
+    "trace": {
+      "pred": 25,
+      "strategy": "max",
+      "cluster_sizes": [
+        25,
+        2,
+        1,
+        3,
+        3,
+        14,
+        3,
+        1,
+        9,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6788.jpg",
+    "gt": 211,
+    "pred": 198,
+    "ae": 13,
+    "se": 169.0,
+    "nae": 0.061611374407582936,
+    "elapsed_sec": 3.91,
+    "trace": {
+      "pred": 198,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        198,
+        3
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6828.jpg",
+    "gt": 25,
+    "pred": 25,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.15,
+    "trace": {
+      "pred": 25,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        25
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6829.jpg",
+    "gt": 107,
+    "pred": 111,
+    "ae": 4,
+    "se": 16.0,
+    "nae": 0.037383177570093455,
+    "elapsed_sec": 7.06,
+    "trace": {
+      "pred": 111,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        89,
+        10,
+        6,
+        111
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6838.jpg",
+    "gt": 25,
+    "pred": 21,
+    "ae": 4,
+    "se": 16.0,
+    "nae": 0.16,
+    "elapsed_sec": 3.73,
+    "trace": {
+      "pred": 21,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        21,
+        4,
+        1,
+        1,
+        2,
+        1,
+        1,
+        6,
+        2,
+        1,
+        1,
+        7,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6842.jpg",
+    "gt": 36,
+    "pred": 45,
+    "ae": 9,
+    "se": 81.0,
+    "nae": 0.25,
+    "elapsed_sec": 3.54,
+    "trace": {
+      "pred": 45,
+      "strategy": "max",
+      "cluster_sizes": [
+        27,
+        15,
+        45,
+        5
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "685.jpg",
+    "gt": 86,
+    "pred": 108,
+    "ae": 22,
+    "se": 484.0,
+    "nae": 0.2558139534883721,
+    "elapsed_sec": 4.69,
+    "trace": {
+      "pred": 108,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        1,
+        108,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6852.jpg",
+    "gt": 68,
+    "pred": 69,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.014705882352941176,
+    "elapsed_sec": 5.61,
+    "trace": {
+      "pred": 69,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        69,
+        7,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6928.jpg",
+    "gt": 30,
+    "pred": 25,
+    "ae": 5,
+    "se": 25.0,
+    "nae": 0.16666666666666666,
+    "elapsed_sec": 2.94,
+    "trace": {
+      "pred": 25,
+      "strategy": "max",
+      "cluster_sizes": [
+        6,
+        24,
+        25,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6936.jpg",
+    "gt": 111,
+    "pred": 111,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.14,
+    "trace": {
+      "pred": 111,
+      "strategy": "max",
+      "cluster_sizes": [
+        8,
+        1,
+        111
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "6996.jpg",
+    "gt": 89,
+    "pred": 137,
+    "ae": 48,
+    "se": 2304.0,
+    "nae": 0.5393258426966292,
+    "elapsed_sec": 5.5,
+    "trace": {
+      "pred": 137,
+      "strategy": "max",
+      "cluster_sizes": [
+        137,
+        1,
+        1,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "701.jpg",
+    "gt": 60,
+    "pred": 49,
+    "ae": 11,
+    "se": 121.0,
+    "nae": 0.18333333333333332,
+    "elapsed_sec": 6.12,
+    "trace": {
+      "pred": 49,
+      "strategy": "max",
+      "cluster_sizes": [
+        49,
+        44,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7050.jpg",
+    "gt": 33,
+    "pred": 31,
+    "ae": 2,
+    "se": 4.0,
+    "nae": 0.06060606060606061,
+    "elapsed_sec": 3.98,
+    "trace": {
+      "pred": 31,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        2,
+        1,
+        31,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "706.jpg",
+    "gt": 90,
+    "pred": 67,
+    "ae": 23,
+    "se": 529.0,
+    "nae": 0.25555555555555554,
+    "elapsed_sec": 2.97,
+    "trace": {
+      "pred": 67,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        16,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        67,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 17,
+      "mode_member_indices": [
+        17
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "710.jpg",
+    "gt": 16,
+    "pred": 116,
+    "ae": 100,
+    "se": 10000.0,
+    "nae": 6.25,
+    "elapsed_sec": 4.21,
+    "trace": {
+      "pred": 116,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        3,
+        1,
+        1,
+        116,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7114.jpg",
+    "gt": 289,
+    "pred": 149,
+    "ae": 140,
+    "se": 19600.0,
+    "nae": 0.4844290657439446,
+    "elapsed_sec": 5.51,
+    "trace": {
+      "pred": 149,
+      "strategy": "max",
+      "cluster_sizes": [
+        4,
+        3,
+        6,
+        1,
+        2,
+        104,
+        2,
+        2,
+        1,
+        1,
+        1,
+        5,
+        5,
+        149,
+        10,
+        1,
+        1,
+        3,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 13,
+      "mode_member_indices": [
+        13
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7126.jpg",
+    "gt": 45,
+    "pred": 49,
+    "ae": 4,
+    "se": 16.0,
+    "nae": 0.08888888888888889,
+    "elapsed_sec": 3.94,
+    "trace": {
+      "pred": 49,
+      "strategy": "max",
+      "cluster_sizes": [
+        9,
+        49,
+        2,
+        1,
+        1,
+        1,
+        4
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7131.jpg",
+    "gt": 123,
+    "pred": 127,
+    "ae": 4,
+    "se": 16.0,
+    "nae": 0.032520325203252036,
+    "elapsed_sec": 5.0,
+    "trace": {
+      "pred": 127,
+      "strategy": "max",
+      "cluster_sizes": [
+        5,
+        2,
+        127,
+        4,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7136.jpg",
+    "gt": 87,
+    "pred": 87,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 3.22,
+    "trace": {
+      "pred": 87,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        3,
+        1,
+        17,
+        87
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 10,
+      "mode_member_indices": [
+        10
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "716.jpg",
+    "gt": 182,
+    "pred": 120,
+    "ae": 62,
+    "se": 3844.0,
+    "nae": 0.34065934065934067,
+    "elapsed_sec": 3.1,
+    "trace": {
+      "pred": 120,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        16,
+        3,
+        1,
+        1,
+        4,
+        120,
+        1,
+        1,
+        3,
+        3
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 6,
+      "mode_member_indices": [
+        6
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7206.jpg",
+    "gt": 83,
+    "pred": 83,
+    "ae": 0,
+    "se": 0.0,
+    "nae": 0.0,
+    "elapsed_sec": 9.92,
+    "trace": {
+      "pred": 83,
+      "strategy": "max",
+      "cluster_sizes": [
+        83,
+        2,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7262.jpg",
+    "gt": 21,
+    "pred": 18,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.14285714285714285,
+    "elapsed_sec": 5.39,
+    "trace": {
+      "pred": 18,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        18,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7312.jpg",
+    "gt": 21,
+    "pred": 24,
+    "ae": 3,
+    "se": 9.0,
+    "nae": 0.14285714285714285,
+    "elapsed_sec": 3.92,
+    "trace": {
+      "pred": 24,
+      "strategy": "max",
+      "cluster_sizes": [
+        19,
+        1,
+        5,
+        1,
+        24
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7319.jpg",
+    "gt": 351,
+    "pred": 339,
+    "ae": 12,
+    "se": 144.0,
+    "nae": 0.03418803418803419,
+    "elapsed_sec": 5.3,
+    "trace": {
+      "pred": 339,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        2,
+        339,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7341.jpg",
+    "gt": 17,
+    "pred": 50,
+    "ae": 33,
+    "se": 1089.0,
+    "nae": 1.9411764705882353,
+    "elapsed_sec": 4.55,
+    "trace": {
+      "pred": 50,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        17,
+        2,
+        50,
+        2,
+        2,
+        2,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7359.jpg",
+    "gt": 42,
+    "pred": 38,
+    "ae": 4,
+    "se": 16.0,
+    "nae": 0.09523809523809523,
+    "elapsed_sec": 6.63,
+    "trace": {
+      "pred": 38,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        38,
+        1,
+        2,
+        1,
+        32,
+        8
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7384.jpg",
+    "gt": 16,
+    "pred": 18,
+    "ae": 2,
+    "se": 4.0,
+    "nae": 0.125,
+    "elapsed_sec": 3.68,
+    "trace": {
+      "pred": 18,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        16,
+        17,
+        4,
+        18,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7424.jpg",
+    "gt": 145,
+    "pred": 113,
+    "ae": 32,
+    "se": 1024.0,
+    "nae": 0.2206896551724138,
+    "elapsed_sec": 6.65,
+    "trace": {
+      "pred": 113,
+      "strategy": "max",
+      "cluster_sizes": [
+        4,
+        1,
+        7,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        113,
+        1,
+        2,
+        8,
+        7,
+        1,
+        1,
+        1,
+        4,
+        1,
+        2,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 10,
+      "mode_member_indices": [
+        10
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7426.jpg",
+    "gt": 253,
+    "pred": 223,
+    "ae": 30,
+    "se": 900.0,
+    "nae": 0.11857707509881422,
+    "elapsed_sec": 6.0,
+    "trace": {
+      "pred": 223,
+      "strategy": "max",
+      "cluster_sizes": [
+        4,
+        223,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7484.jpg",
+    "gt": 21,
+    "pred": 17,
+    "ae": 4,
+    "se": 16.0,
+    "nae": 0.19047619047619047,
+    "elapsed_sec": 6.52,
+    "trace": {
+      "pred": 17,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        1,
+        5,
+        4,
+        17,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7511.jpg",
+    "gt": 36,
+    "pred": 53,
+    "ae": 17,
+    "se": 289.0,
+    "nae": 0.4722222222222222,
+    "elapsed_sec": 3.96,
+    "trace": {
+      "pred": 53,
+      "strategy": "max",
+      "cluster_sizes": [
+        35,
+        1,
+        53,
+        2,
+        4
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7522.jpg",
+    "gt": 84,
+    "pred": 79,
+    "ae": 5,
+    "se": 25.0,
+    "nae": 0.05952380952380952,
+    "elapsed_sec": 9.32,
+    "trace": {
+      "pred": 79,
+      "strategy": "max",
+      "cluster_sizes": [
+        7,
+        5,
+        79,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7525.jpg",
+    "gt": 26,
+    "pred": 174,
+    "ae": 148,
+    "se": 21904.0,
+    "nae": 5.6923076923076925,
+    "elapsed_sec": 5.19,
+    "trace": {
+      "pred": 174,
+      "strategy": "max",
+      "cluster_sizes": [
+        4,
+        2,
+        174,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7529.jpg",
+    "gt": 124,
+    "pred": 101,
+    "ae": 23,
+    "se": 529.0,
+    "nae": 0.18548387096774194,
+    "elapsed_sec": 5.7,
+    "trace": {
+      "pred": 101,
+      "strategy": "max",
+      "cluster_sizes": [
+        101,
+        2,
+        2,
+        2,
+        1,
+        7,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7564.jpg",
+    "gt": 52,
+    "pred": 51,
+    "ae": 1,
+    "se": 1.0,
+    "nae": 0.019230769230769232,
+    "elapsed_sec": 3.51,
+    "trace": {
+      "pred": 51,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        51,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7586.jpg",
+    "gt": 36,
+    "pred": 67,
+    "ae": 31,
+    "se": 961.0,
+    "nae": 0.8611111111111112,
+    "elapsed_sec": 4.81,
+    "trace": {
+      "pred": 67,
+      "strategy": "max",
+      "cluster_sizes": [
+        5,
+        35,
+        67
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7609.jpg",
+    "gt": 110,
+    "pred": 98,
+    "ae": 12,
+    "se": 144.0,
+    "nae": 0.10909090909090909,
+    "elapsed_sec": 5.6,
+    "trace": {
+      "pred": 98,
+      "strategy": "max",
+      "cluster_sizes": [
+        2,
+        1,
+        10,
+        1,
+        98,
+        9
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 4,
+      "mode_member_indices": [
+        4
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7633.jpg",
+    "gt": 30,
+    "pred": 23,
+    "ae": 7,
+    "se": 49.0,
+    "nae": 0.23333333333333334,
+    "elapsed_sec": 5.17,
+    "trace": {
+      "pred": 23,
+      "strategy": "max",
+      "cluster_sizes": [
+        17,
+        1,
+        3,
+        23,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 3,
+      "mode_member_indices": [
+        3
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7639.jpg",
+    "gt": 20,
+    "pred": 106,
+    "ae": 86,
+    "se": 7396.0,
+    "nae": 4.3,
+    "elapsed_sec": 7.16,
+    "trace": {
+      "pred": 106,
+      "strategy": "max",
+      "cluster_sizes": [
+        10,
+        6,
+        106
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 2,
+      "mode_member_indices": [
+        2
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "7650.jpg",
+    "gt": 52,
+    "pred": 69,
+    "ae": 17,
+    "se": 289.0,
+    "nae": 0.3269230769230769,
+    "elapsed_sec": 6.18,
+    "trace": {
+      "pred": 69,
+      "strategy": "max",
+      "cluster_sizes": [
+        69
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 0,
+      "mode_member_indices": [
+        0
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "909.jpg",
+    "gt": 62,
+    "pred": 12,
+    "ae": 50,
+    "se": 2500.0,
+    "nae": 0.8064516129032258,
+    "elapsed_sec": 4.96,
+    "trace": {
+      "pred": 12,
+      "strategy": "max",
+      "cluster_sizes": [
+        1,
+        3,
+        2,
+        1,
+        9,
+        2,
+        1,
+        12,
+        1,
+        3,
+        1,
+        1,
+        1,
+        6,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 7,
+      "mode_member_indices": [
+        7
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  },
+  {
+    "name": "985.jpg",
+    "gt": 53,
+    "pred": 137,
+    "ae": 84,
+    "se": 7056.0,
+    "nae": 1.5849056603773586,
+    "elapsed_sec": 5.8,
+    "trace": {
+      "pred": 137,
+      "strategy": "max",
+      "cluster_sizes": [
+        3,
+        137,
+        1,
+        11,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cluster_log_area": [],
+      "anchor_index": 1,
+      "mode_member_indices": [
+        1
+      ],
+      "sigma_log": null,
+      "k": null
+    }
+  }
+]

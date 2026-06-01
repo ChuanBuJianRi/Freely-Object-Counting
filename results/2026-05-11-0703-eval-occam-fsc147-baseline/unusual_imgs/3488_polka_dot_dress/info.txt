@@ -1,0 +1,7 @@
+image       : 3488.jpg
+label       : polka_dot_dress
+gt_count    : 431
+pred_count  : 8
+abs_error   : 423
+num_clusters: 5
+cluster_counts: [3, 2, 1, 1, 1]

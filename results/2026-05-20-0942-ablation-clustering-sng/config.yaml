@@ -1,0 +1,32 @@
+run_id: 2026-05-20-0942-ablation-clustering-sng
+task: ablation
+dataset:
+  name: FSC-147
+  splits: [val]
+  fraction: 0.333
+  seed: 42
+model:
+  name: OCCAM-S
+  mode: single
+upstream_fixed:
+  mask_policy: p0
+  min_mask_area_ratio: 0.0005
+  max_mask_area_ratio: 0.10
+  pred_strategy: max
+swept:
+  cluster_method: [finch, sng]
+  sng_epsilon: [5, 8, 10, 12, 15, 20]
+  sng_delta:   [2, 3, 4, 5, 6]
+reference_metric:
+  A6_FINCH_max:
+    MAE: 32.10
+best_sng_metric:
+  A6_SNG_e10_d6_eta064:
+    MAE: 38.94
+launchers:
+  - run_ablation.sh
+  - run_sng_sweep.sh
+  - run_sng_eta_sweep.sh
+  - run_sng_multi_top5.sh
+  - chain_eta_then_multi.sh
+related_notes: library/notes/SNG-method.md

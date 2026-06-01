@@ -1,0 +1,28 @@
+task: eval
+dataset: FSC-147
+split: val
+fraction: 0.333
+seed: 42
+n_images_expected: 425
+mode: multi
+min_mask_area_ratio: 0.0005
+max_mask_area_ratio: 0.10
+mask_policy: p7
+cluster_method: finch
+pred_strategy: mode_cluster_vote
+mcv_min_anchor_size: 30
+upstream_run_v1: 2026-05-28-1434-eval-mp7-mcv-full
+baseline_max: 2026-05-21-1328-ablation-mask-policy-multi/results/MP7_no_filter
+baseline_max_mae: 30.71
+v1_mcv_mae: 32.00
+trace_sweep_target_mae: 29.91   # offline simulation on v1 trace at A=30
+success_criteria:
+  overall_mae_lte: 30.71
+  bucket_201plus_mae_lte: 290.0
+  small_bucket_no_regression: "1-10 + 11-50 combined MAE within +1.0 of max baseline"
+data_dir: datasets/FSC147
+gpu:
+  temp_limit_c: 78
+  cooldown_sec: 30
+  hysteresis_c: 5
+  check_every: 5

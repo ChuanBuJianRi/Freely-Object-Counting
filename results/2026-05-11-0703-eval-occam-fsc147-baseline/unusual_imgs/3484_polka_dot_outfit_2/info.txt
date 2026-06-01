@@ -1,0 +1,7 @@
+image       : 3484.jpg
+label       : polka_dot_outfit_2
+gt_count    : 356
+pred_count  : 9
+abs_error   : 347
+num_clusters: 5
+cluster_counts: [2, 3, 1, 1, 2]

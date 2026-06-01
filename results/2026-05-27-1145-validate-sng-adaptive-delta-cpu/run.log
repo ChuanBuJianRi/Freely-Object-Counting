@@ -1,0 +1,50 @@
+Running synthetic SNG validation:
+  ns        = [50, 100, 150, 250, 500]
+  epsilons  = [10]
+  fixed-deltas = [1, 2, 3, 5, 7]
+  alphas    = [0.3, 0.4, 0.5]
+  seeds     = [0, 1, 2, 3, 4]
+  k=3 d=64 intra_std=0.8 inter_dist=4.0
+  [   1/ 200] n= 50 eps=10 seed=0 fixed-1              delta= 1 eta=-0.14 ARI=+0.000 mae_max= 34
+  [   2/ 200] n= 50 eps=10 seed=0 fixed-2              delta= 2 eta=+0.00 ARI=+0.000 mae_max= 34
+  [   3/ 200] n= 50 eps=10 seed=0 fixed-3              delta= 3 eta=+0.14 ARI=+0.519 mae_max= 17
+  [   4/ 200] n= 50 eps=10 seed=0 fixed-5              delta= 5 eta=+0.43 ARI=+0.581 mae_max= 16
+  [   5/ 200] n= 50 eps=10 seed=0 fixed-7              delta= 7 eta=+0.71 ARI=+0.552 mae_max= 16
+  [  25/ 200] n= 50 eps=10 seed=3 fixed-1              delta= 1 eta=-0.14 ARI=+0.000 mae_max= 34
+  [  50/ 200] n=100 eps=10 seed=1 fixed-2              delta= 2 eta=+0.12 ARI=+0.000 mae_max= 68
+  [  75/ 200] n=100 eps=10 seed=4 fixed-3              delta= 3 eta=+0.25 ARI=+0.523 mae_max= 34
+  [ 100/ 200] n=150 eps=10 seed=2 fixed-5              delta= 5 eta=+0.52 ARI=+0.854 mae_max=  4
+  [ 125/ 200] n=250 eps=10 seed=0 fixed-7              delta= 7 eta=+0.77 ARI=+0.289 mae_max= 34
+  [ 150/ 200] n=250 eps=10 seed=3 adaptive-a0.30       delta= 2 eta=+0.19 ARI=+0.545 mae_max= 83
+  [ 175/ 200] n=500 eps=10 seed=1 adaptive-a0.40       delta= 3 eta=+0.32 ARI=+0.863 mae_max=  4
+  [ 200/ 200] n=500 eps=10 seed=4 adaptive-a0.50       delta= 4 eta=+0.43 ARI=+0.652 mae_max= 29
+======================================================================
+  GOC SNG adaptive-delta synthetic validation
+======================================================================
+  ns           = [50, 100, 150, 250, 500]
+  epsilons     = [10]
+  fixed_deltas = [1, 2, 3, 5, 7]
+  alphas       = [0.3, 0.4, 0.5]
+  seeds        = [0, 1, 2, 3, 4]
+  k=3 d=64 intra_std=0.8 inter_dist=4.0
+
+Per-scheme aggregate (across all n x seed):
+  eps scheme                       n   ARI_mean  ARI_worst MAEmax_mean MAEmax_worst
+  ---------------------------------------------------------------------------------
+   10 adaptive-a0.30              25     0.4645     0.0000      71.000          167
+   10 adaptive-a0.40              25     0.6117     0.0000      34.400          132
+   10 adaptive-a0.50              25     0.6914     0.0620      22.320           70
+   10 fixed-1                     25     0.0031     0.0000     142.000          338
+   10 fixed-2                     25     0.2514     0.0000      84.760          167
+   10 fixed-3                     25     0.5334     0.0000      41.360          132
+   10 fixed-5                     25     0.6236     0.0620      25.920           66
+   10 fixed-7                     25     0.4567     0.0775      32.720          117
+
+Best fixed-delta baseline per epsilon (lowest MAEmax_mean):
+  eps=10  best=fixed-5               MAEmax_mean=25.920  MAEmax_worst=66
+
+Adaptive-vs-best-fixed comparison:
+  eps=10  adaptive-a0.30        Delta(mean)=+45.080  Delta(worst)=+101  ratio=2.739x
+  eps=10  adaptive-a0.40        Delta(mean)=+8.480  Delta(worst)=+66  ratio=1.327x
+  eps=10  adaptive-a0.50        Delta(mean)=-3.600  Delta(worst)=+4  ratio=0.861x
+======================================================================

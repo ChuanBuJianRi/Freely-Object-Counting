@@ -1,0 +1,83 @@
+Building SAM2 AMG model …
+Model ready. Mode=multi, crop=500, thresholds=(5.0, 4.0, 3.0)
+Mask area filter: min=0.0005, max=0.1
+Mask policy: p7  (score_thresh=0.85, topk=100, iqr_k=1.5)
+Cluster method: finch (eps=10, delta=None for sng)  PRED strategy: mode_cluster_vote
+[gpu-guard] enabled  limit=78C  cooldown=30s  hysteresis=5C  check_every=5  gpu=0  start_temp=46C  bin=/usr/lib/wsl/lib/nvidia-smi
+
+============================================================
+  Split: test  (396 images)
+============================================================
+/home/czp/ws_yiyang/FreeCounting/venv/lib/python3.12/site-packages/sam2/sam2_image_predictor.py:431: UserWarning: cannot import name '_C' from 'sam2' (/home/czp/ws_yiyang/FreeCounting/venv/lib/python3.12/site-packages/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  masks = self._transforms.postprocess_masks(
+  [   1/396]  1053.jpg                       GT= 207 PRED= 184 AE=  23  7.0s
+  [   2/396]  1106.jpg                       GT=  49 PRED=  50 AE=   1  5.7s
+  [   3/396]  1123.jpg                       GT=3701 PRED= 140 AE=3561  6.1s
+  [   4/396]  1458.jpg                       GT= 162 PRED= 145 AE=  17  5.9s
+  [   5/396]  1463.jpg                       GT=  60 PRED=  88 AE=  28  6.1s
+  [  12/396]  2005.jpg                       GT= 140 PRED= 260 AE= 120  7.1s
+  [  13/396]  2009.jpg                       GT= 198 PRED= 301 AE= 103  9.6s
+  [  20/396]  2025.jpg                       GT=  60 PRED= 165 AE= 105  6.2s
+  [  40/396]  2219.jpg                       GT= 356 PRED= 267 AE=  89  7.9s
+  [  50/396]  running MAE=100.84  total_time=293s  last: 2255.jpg GT=20 PRED=27
+  [  53/396]  2261.jpg                       GT= 174 PRED=  67 AE= 107  5.9s
+  [ 100/396]  running MAE=59.85  total_time=576s  last: 320.jpg GT=16 PRED=59
+  [ 112/396] ERROR 3322.jpg: CUDA out of memory. Tried to allocate 6.65 GiB. GPU 0 has a total capacity of 23.99 GiB of which 5.06 GiB is free. 20.39 GiB allowed; Of the allocated memory 17.27 GiB is allocated by PyTorch, and 53.21 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [ 118/396]  3335.jpg                       GT= 350 PRED= 113 AE= 237  5.9s
+  [ 150/396]  running MAE=45.62  total_time=860s  last: 4174.jpg GT=36 PRED=33
+  [ 200/396]  running MAE=38.44  total_time=1148s  last: 5145.jpg GT=15 PRED=20
+  [ 210/396]  5376.jpg                       GT=  13 PRED= 127 AE= 114  6.6s
+  [ 250/396]  running MAE=33.89  total_time=1433s  last: 5847.jpg GT=13 PRED=19
+  [ 273/396] ERROR 6281.jpg: CUDA out of memory. Tried to allocate 8.57 GiB. GPU 0 has a total capacity of 23.99 GiB of which 8.94 GiB is free. 20.39 GiB allowed; Of the allocated memory 13.38 GiB is allocated by PyTorch, and 49.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [ 278/396] ERROR 6644.jpg: CUDA out of memory. Tried to allocate 7.23 GiB. GPU 0 has a total capacity of 23.99 GiB of which 3.65 GiB is free. 20.39 GiB allowed; Of the allocated memory 18.68 GiB is allocated by PyTorch, and 42.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [ 289/396]  682.jpg                        GT=  14 PRED= 107 AE=  93  5.7s
+  [ 300/396]  running MAE=31.95  total_time=1710s  last: 6920.jpg GT=44 PRED=81
+  [ 304/396]  6938.jpg                       GT=  45 PRED= 175 AE= 130  6.7s
+  [ 311/396] ERROR 6973.jpg: CUDA out of memory. Tried to allocate 6.14 GiB. GPU 0 has a total capacity of 23.99 GiB of which 6.31 GiB is free. 20.39 GiB allowed; Of the allocated memory 16.03 GiB is allocated by PyTorch, and 37.78 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [ 314/396]  7027.jpg                       GT=  93 PRED= 179 AE=  86  7.4s
+  [ 317/396]  7042.jpg                       GT= 198 PRED=  15 AE= 183  4.3s
+  [ 322/396]  7075.jpg                       GT= 195 PRED=  36 AE= 159  5.0s
+  [ 324/396]  7079.jpg                       GT=  59 PRED= 151 AE=  92  6.9s
+  [ 337/396]  7192.jpg                       GT=  19 PRED= 108 AE=  89  5.8s
+  [ 348/396]  7347.jpg                       GT= 103 PRED= 187 AE=  84  6.2s
+  [ 350/396]  running MAE=32.66  total_time=2003s  last: 7381.jpg GT=72 PRED=94
+  [ 351/396]  7384.jpg                       GT=  16 PRED= 133 AE= 117  6.6s
+  [ 357/396]  7440.jpg                       GT=  32 PRED= 196 AE= 164  6.3s
+  [ 360/396]  7449.jpg                       GT=  60 PRED= 150 AE=  90  7.0s
+  [ 361/396]  7455.jpg                       GT=  73 PRED= 169 AE=  96  6.5s
+  [ 363/396] ERROR 7473.jpg: CUDA out of memory. Tried to allocate 7.68 GiB. GPU 0 has a total capacity of 23.99 GiB of which 2.56 GiB is free. 20.39 GiB allowed; Of the allocated memory 19.77 GiB is allocated by PyTorch, and 46.87 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [ 364/396]  7475.jpg                       GT= 122 PRED=  26 AE=  96  4.8s
+  [ 379/396]  7611.jpg                       GT=2560 PRED= 226 AE=2334  7.0s
+  [ 396/396]  running MAE=38.77  total_time=2267s  last: 995.jpg GT=20 PRED=42
+
+  Per-image detail saved → /home/czp/ws_yiyang/GOC-Freely-Object-Counting/results/2026-05-29-1250-eval-mp7-mcv-test/per_image_test.json
+
+  [test] MAE=38.7724  MSE=47756.491  RMSE=218.5326  NAE=0.7146
+
+======================================================================
+  OCCAM Origin-Simulation — FSC-147 Full Evaluation Summary
+======================================================================
+  Mode        : OCCAM-MULTI (fraction=0.333, seed=42)
+  SAM2 config : configs/sam2.1/sam2.1_hiera_l.yaml
+  SAM2 ckpt   : /home/czp/ws_yiyang/GOC-Freely-Object-Counting/codes/checkpoints/sam2.1_hiera_large.pt
+  Started     : 2026-05-29 16:14:52
+  Finished    : 2026-05-29 16:54:08
+  Total time  : 39.3 min
+
+  ── test split (n=391)
+     MAE   = 38.7724
+     MSE   = 47756.4910
+     RMSE  = 218.5326
+     NAE   = 0.7146
+     avg_time = 5.80 s/img
+     by GT count range:
+       [   1-10]  n=  11  MAE=  14.45  RMSE=  18.84
+       [  11-50]  n= 219  MAE=  21.09  RMSE=  32.09
+       [ 51-200]  n= 139  MAE=  27.29  RMSE=  41.51
+       [   201+]  n=  22  MAE= 299.55  RMSE= 909.64
+
+======================================================================
+
+Summary saved → /home/czp/ws_yiyang/GOC-Freely-Object-Counting/results/2026-05-29-1250-eval-mp7-mcv-test/summary.txt

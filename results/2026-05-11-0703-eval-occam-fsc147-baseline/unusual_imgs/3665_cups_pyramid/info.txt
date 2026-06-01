@@ -1,0 +1,7 @@
+image       : 3665.jpg
+label       : cups_pyramid
+gt_count    : 907
+pred_count  : 158
+abs_error   : 749
+num_clusters: 10
+cluster_counts: [31, 115, 1, 3, 2, 2, 1, 1, 1, 1]

@@ -1,0 +1,90 @@
+Building SAM2 AMG model …
+Model ready. Mode=single, crop=224, thresholds=(12.0, 9.0, 7.75)
+Mask area filter: min=0.0005, max=0.1
+Cluster method: sng (eps=10, delta=2 for sng)  PRED strategy: max
+
+============================================================
+  Split: val  (428 images)
+============================================================
+/tmp/sam2_repo/sam2/sam2_image_predictor.py:431: UserWarning: cannot import name '_C' from 'sam2' (/tmp/sam2_repo/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  masks = self._transforms.postprocess_masks(
+  [   1/428]  1897.jpg                       GT=  12 PRED=  28 AE=  16  5.5s
+  [   2/428]  1901.jpg                       GT=  17 PRED=  31 AE=  14  4.5s
+  [   3/428]  1906.jpg                       GT=  70 PRED= 100 AE=  30  5.9s
+  [   4/428]  1907.jpg                       GT=  28 PRED=  46 AE=  18  5.3s
+  [   5/428]  1912.jpg                       GT=  46 PRED=  87 AE=  41  5.6s
+  [   7/428]  1915.jpg                       GT= 684 PRED= 258 AE= 426  5.7s
+  [  21/428]  1956.jpg                       GT=1229 PRED= 575 AE= 654  6.1s
+  [  33/428]  1990.jpg                       GT= 476 PRED= 373 AE= 103  5.9s
+  [  50/428]  running MAE=44.44  total_time=260s  last: 2406.jpg GT=17 PRED=20
+  [  84/428]  3433.jpg                       GT= 538 PRED=   5 AE= 533  4.7s
+  [  87/428]  3482.jpg                       GT= 315 PRED=   1 AE= 314  5.0s
+  [  88/428]  3484.jpg                       GT= 356 PRED=   9 AE= 347  4.4s
+  [  90/428]  3487.jpg                       GT= 321 PRED=   1 AE= 320  4.7s
+  [  91/428]  3488.jpg                       GT= 431 PRED=   7 AE= 424  4.7s
+  [ 100/428]  running MAE=53.13  total_time=507s  last: 3547.jpg GT=21 PRED=62
+  [ 115/428]  3665.jpg                       GT= 907 PRED= 156 AE= 751  5.4s
+  [ 123/428]  3768.jpg                       GT=   9 PRED= 220 AE= 211  5.8s
+  [ 150/428]  running MAE=48.77  total_time=771s  last: 4569.jpg GT=21 PRED=21
+  [ 152/428]  4572.jpg                       GT= 141 PRED=  54 AE=  87  4.7s
+  [ 153/428]  4574.jpg                       GT= 402 PRED=  16 AE= 386  4.9s
+  [ 195/428]  4811.jpg                       GT= 213 PRED=  94 AE= 119  4.5s
+  [ 200/428]  running MAE=44.20  total_time=1026s  last: 4821.jpg GT=90 PRED=133
+  [ 215/428]  5044.jpg                       GT= 100 PRED=  13 AE=  87  5.0s
+  [ 250/428]  running MAE=40.83  total_time=1273s  last: 569.jpg GT=17 PRED=29
+  [ 251/428]  5743.jpg                       GT= 270 PRED=  76 AE= 194  5.0s
+  [ 252/428]  5747.jpg                       GT= 100 PRED=   5 AE=  95  4.9s
+  [ 258/428]  5860.jpg                       GT= 757 PRED= 177 AE= 580  4.9s
+  [ 268/428]  5902.jpg                       GT= 209 PRED=  72 AE= 137  4.9s
+  [ 300/428]  running MAE=39.81  total_time=1517s  last: 615.jpg GT=23 PRED=34
+  [ 312/428]  6728.jpg                       GT=  99 PRED= 182 AE=  83  5.9s
+  [ 313/428]  6729.jpg                       GT= 251 PRED= 107 AE= 144  5.0s
+  [ 318/428]  6784.jpg                       GT=  52 PRED= 134 AE=  82  5.2s
+  [ 327/428]  6927.jpg                       GT=  32 PRED= 143 AE= 111  5.3s
+  [ 329/428]  6969.jpg                       GT= 949 PRED=   1 AE= 948  4.3s
+  [ 335/428]  7069.jpg                       GT= 142 PRED= 246 AE= 104  5.6s
+  [ 340/428]  7155.jpg                       GT=  69 PRED= 155 AE=  86  5.5s
+  [ 345/428]  7228.jpg                       GT=  63 PRED= 170 AE= 107  5.1s
+  [ 350/428]  running MAE=42.32  total_time=1771s  last: 7301.jpg GT=36 PRED=1
+  [ 356/428]  7388.jpg                       GT= 134 PRED= 218 AE=  84  5.4s
+  [ 384/428]  7601.jpg                       GT= 142 PRED= 263 AE= 121  5.7s
+  [ 400/428]  running MAE=40.58  total_time=2018s  last: 813.jpg GT=185 PRED=210
+  [ 408/428]  840.jpg                        GT= 637 PRED= 177 AE= 460  4.9s
+  [ 410/428]  851.jpg                        GT= 320 PRED= 178 AE= 142  4.9s
+  [ 412/428]  859.jpg                        GT=  97 PRED= 185 AE=  88  5.2s
+  [ 413/428]  860.jpg                        GT= 240 PRED= 146 AE=  94  4.8s
+  [ 417/428]  916.jpg                        GT=   9 PRED=  91 AE=  82  5.6s
+  [ 418/428]  920.jpg                        GT=  12 PRED= 316 AE= 304  5.5s
+  [ 428/428]  running MAE=42.15  total_time=2160s  last: 979.jpg GT=108 PRED=41
+
+  Per-image detail saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_clustering/results/A6_SNG_e10_d2/per_image_val.json
+
+  [val] MAE=42.1542  MSE=9992.8458  RMSE=99.9642  NAE=1.0808
+
+======================================================================
+  OCCAM Origin-Simulation — FSC-147 Full Evaluation Summary
+======================================================================
+  Mode        : OCCAM-SINGLE (fraction=0.333, seed=42)
+  SAM2 config : configs/sam2.1/sam2.1_hiera_l.yaml
+  SAM2 ckpt   : /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM/checkpoints/sam2.1_hiera_large.pt
+  Started     : 2026-05-19 17:42:08
+  Finished    : 2026-05-19 18:18:55
+  Total time  : 36.8 min
+
+  ── val split (n=428)
+     MAE   = 42.1542
+     MSE   = 9992.8458
+     RMSE  = 99.9642
+     NAE   = 1.0808
+     avg_time = 5.05 s/img
+     by GT count range:
+       [   1-10]  n=  46  MAE=  20.93  RMSE=  38.89
+       [  11-50]  n= 251  MAE=  23.25  RMSE=  33.98
+       [ 51-200]  n= 105  MAE=  38.10  RMSE=  46.50
+       [   201+]  n=  26  MAE= 278.54  RMSE= 376.76
+
+======================================================================
+
+Summary saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_clustering/results/A6_SNG_e10_d2/summary.txt

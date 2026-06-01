@@ -47,6 +47,8 @@ memory/
 - 2026-05-26 14:08 :: memory/2026-05-26-1408.md :: authored 6 local project-specific skills (counting-eval, paper-reading, ablation-runner, pseudo-label-pipeline, experiment-logger, figure-maker).
 - 2026-05-26 14:20 :: memory/2026-05-26-1420-handoff.md :: HANDOFF snapshot — full state of contract, skills, decisions, open questions, and next concrete steps for incoming agent.
 - 2026-05-26 14:31 :: memory/2026-05-26-1431.md :: linked 3 external research-process skills + authored cs-research-workflow SOP skill + downloaded 5 classic CS-research guide PDFs into library/paper/research-guides/.
+- 2026-05-27 10:45 :: memory/2026-05-27-1045.md :: synced FreeCounting research state into GOC repo — OCCAM baseline package, SNG method write-up, 6 evaluation/ablation runs (FSC-147 baselines + 4 ablation campaigns), all index files updated, AGENTREAD.md §6 rewritten.
+- 2026-05-27 11:45 :: memory/2026-05-27-1145.md :: hardened GPU thermal-safety contract (shared `_gpu_safety.GpuGuard` + mandatory `metrics.json::thermal` block); finished byte-aligned FreeCounting sync (recovered `occam_multi/results/` nested layout); implemented §7.1 adaptive δ in `sng_cluster` (delta=None ⇒ formula; helpers `adaptive_delta` + `eta_health`); ran CPU-only synthetic validation `results/2026-05-27-1145-validate-sng-adaptive-delta-cpu` (adaptive α=0.50 beats best fixed-δ by 14 % mean MAE_max).
 
 ## changelog
 - 2026-05-26 :: init memory index; defined naming, template, and update rules.

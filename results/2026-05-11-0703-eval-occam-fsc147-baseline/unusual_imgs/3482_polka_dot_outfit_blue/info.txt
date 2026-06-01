@@ -1,0 +1,7 @@
+image       : 3482.jpg
+label       : polka_dot_outfit_blue
+gt_count    : 315
+pred_count  : 4
+abs_error   : 311
+num_clusters: 3
+cluster_counts: [2, 1, 1]

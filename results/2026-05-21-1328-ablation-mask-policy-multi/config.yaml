@@ -1,0 +1,24 @@
+run_id: 2026-05-21-1328-ablation-mask-policy-multi
+task: ablation
+dataset:
+  name: FSC-147
+  splits: [val]
+  fraction: 0.333
+  seed: 42
+model:
+  name: OCCAM-M
+  mode: multi
+upstream_fixed:
+  min_mask_area_ratio: 0.0005
+  max_mask_area_ratio: 0.10
+  cluster_method: finch
+  pred_strategy: max
+swept:
+  mask_policy: [p0, p1, p2, p3, p4, p5, p6, p7]
+  mask_score_thresh: 0.90  # for p1, p5
+  mask_topk: 100           # for p2
+  mask_iqr_k: 1.5          # for p3
+best_sub_run: MP7_no_filter
+best_metric:
+  MAE: 30.71
+launcher: run_sweep.sh

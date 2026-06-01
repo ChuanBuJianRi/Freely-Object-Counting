@@ -1,0 +1,23 @@
+task: eval
+dataset: FSC-147
+split: val
+fraction: 0.333
+seed: 42
+n_images_expected: 425
+mode: multi
+min_mask_area_ratio: 0.0005
+max_mask_area_ratio: 0.10
+mask_policy: p7
+cluster_method: finch
+pred_strategy: mode_cluster_vote
+baseline_run: 2026-05-21-1328-ablation-mask-policy-multi/results/MP7_no_filter
+baseline_mae: 30.71
+success_criteria:
+  overall_mae_lte: 30.71
+  bucket_201plus_mae_lte: 250.0
+data_dir: datasets/FSC147
+gpu:
+  temp_limit_c: 78
+  cooldown_sec: 30
+  hysteresis_c: 5
+  check_every: 5

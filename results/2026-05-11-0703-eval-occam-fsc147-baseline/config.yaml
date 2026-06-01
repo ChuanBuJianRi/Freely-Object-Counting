@@ -1,0 +1,29 @@
+run_id: 2026-05-11-0703-eval-occam-fsc147-baseline
+task: eval
+dataset:
+  name: FSC-147
+  splits: [val, test]
+  fraction: 0.333
+  seed: 42
+model:
+  name: OCCAM-S
+  mode: single
+  sam2_config: configs/sam2.1/sam2.1_hiera_l.yaml
+  sam2_checkpoint: sam2.1_hiera_large.pt
+  features: imagenet-resnet50
+  crop_size: 224
+mask:
+  policy: p0
+  min_mask_area_ratio: 0.0005
+  max_mask_area_ratio: 0.5
+  duplicate_iou_threshold: 0.5
+clustering:
+  method: finch
+  thresholds: [12.0, 9.0, 7.75]
+prediction:
+  strategy: total
+runtime:
+  device: cuda
+  started_at: 2026-05-11 07:03:41
+  finished_at: 2026-05-11 09:46:25
+  total_minutes: 162.7

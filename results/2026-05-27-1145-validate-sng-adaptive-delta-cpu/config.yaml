@@ -1,0 +1,44 @@
+run_id: 2026-05-27-1145-validate-sng-adaptive-delta-cpu
+task: ablation
+dataset:
+  kind: synthetic_gaussians
+  k: 3
+  d: 64
+  intra_std: 0.8
+  inter_dist: 4.0
+  noise_frac: 0.05
+sweep:
+  ns: [50, 100, 150, 250, 500]
+  epsilons: [10]
+  seeds: [0, 1, 2, 3, 4]
+  fixed_deltas: [1, 2, 3, 5, 7]
+  alphas: [0.3, 0.4, 0.5]
+clustering:
+  method: sng
+  epsilon: 10
+runtime:
+  device: cpu
+  total_runs: 200
+  wall_clock_sec: ~3
+launcher:
+  command: |
+    python codes/scripts/synth_validate_sng.py \
+      --output-dir results/2026-05-27-1145-validate-sng-adaptive-delta-cpu \
+      --ns 50 100 150 250 500 \
+      --seeds 0 1 2 3 4 \
+      --epsilons 10 \
+      --fixed-deltas 1 2 3 5 7 \
+      --alphas 0.3 0.4 0.5 \
+      --k 3 \
+      --intra-std 0.8 \
+      --inter-dist 4.0
+thermal:
+  enabled: false
+  reason: CPU-only synthetic validation; no GPU access required.
+related_notes:
+  - library/notes/SNG-method.md  # §7.1 definition + theoretical motivation
+  - history/2026-05-27-1145-add-adaptive-sng-delta.md  # implementation log
+best:
+  scheme: adaptive-a0.50
+  metric: count_mae_max_mean
+  value: 22.32

@@ -1,0 +1,45 @@
+Building SAM2 Predictor (paper seed-grid path) …
+Model ready. Backend=predictor, Mode=single, crop=224, finch_thresholds=(12.0, 9.0, 7.75), multiscale=True, dup_iou=0.1, seed_spacing=10
+Mask area filter: min=0.0005, max=0.5
+Mask policy: p0  (score_thresh=0.85, topk=100, iqr_k=1.5)
+Cluster method: finch (eps=10, delta=None for sng)  PRED strategy: total
+[gpu-guard] enabled  limit=78C  cooldown=30s  hysteresis=5C  check_every=5  gpu=0  start_temp=46C  bin=/usr/lib/wsl/lib/nvidia-smi
+
+============================================================
+  Split: test  (8 images)
+============================================================
+  [   1/8]  1053.jpg                       GT= 207 PRED= 198 AE=   9  9.5s
+  [   2/8]  1106.jpg                       GT=  49 PRED=  77 AE=  28  6.2s
+  [   3/8]  1123.jpg                       GT=3701 PRED= 170 AE=3531  9.7s
+  [   4/8]  1458.jpg                       GT= 162 PRED= 169 AE=   7  7.3s
+  [   5/8]  1463.jpg                       GT=  60 PRED=  62 AE=   2  16.1s
+  [   8/8]  running MAE=451.12  total_time=85s  last: 1572.jpg GT=25 PRED=29
+
+  Per-image detail saved → /home/czp/ws_yiyang/GOC-Freely-Object-Counting/results/2026-05-29-1730-repro-occamS-smoke/per_image_test.json
+
+  [test] MAE=451.125  MSE=1558691.125  RMSE=1248.4755  NAE=0.2721
+
+======================================================================
+  OCCAM Origin-Simulation — FSC-147 Full Evaluation Summary
+======================================================================
+  Mode        : OCCAM-SINGLE (fraction=0.333, seed=42)
+  SAM2 config : configs/sam2.1/sam2.1_hiera_l.yaml
+  SAM2 ckpt   : /home/czp/ws_yiyang/GOC-Freely-Object-Counting/codes/checkpoints/sam2.1_hiera_large.pt
+  Started     : 2026-05-29 17:42:08
+  Finished    : 2026-05-29 17:43:33
+  Total time  : 1.4 min
+
+  ── test split (n=8)
+     MAE   = 451.1250
+     MSE   = 1558691.1250
+     RMSE  = 1248.4755
+     NAE   = 0.2721
+     avg_time = 10.57 s/img
+     by GT count range:
+       [  11-50]  n=   2  MAE=  16.00  RMSE=  20.00
+       [ 51-200]  n=   3  MAE=  11.33  RMSE=  15.03
+       [   201+]  n=   3  MAE=1181.00  RMSE=2038.63
+
+======================================================================
+
+Summary saved → /home/czp/ws_yiyang/GOC-Freely-Object-Counting/results/2026-05-29-1730-repro-occamS-smoke/summary.txt

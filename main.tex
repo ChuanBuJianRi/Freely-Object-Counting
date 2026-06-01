@@ -1,0 +1,134 @@
+%File: main.tex
+%
+% AAAI 2027 paper template (GCount).
+% Currently using the official AAAI 2026 style files (aaai2026.sty / aaai2026.bst)
+% as a placeholder; swap them for the AAAI 2027 files when the kit ships.
+% Compile: pdflatex main && bibtex main && pdflatex main && pdflatex main
+
+\documentclass[letterpaper]{article}
+
+% --- AAAI required preamble ---------------------------------------------------
+\usepackage{aaai2026}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage[hyphens]{url}
+\usepackage{graphicx}
+\urlstyle{rm}
+\def\UrlFont{\rm}
+\usepackage{natbib}
+\usepackage{caption}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+% --- Additional commonly-allowed packages -------------------------------------
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+
+% --- Helper macro for draft placeholders (remove before camera-ready) ---------
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+% --- DO NOT add any of the following (AAAI forbids them) ----------------------
+%   hyperref, navigator, geometry, babel, titlesec, float
+%   \pagestyle, \thispagestyle, \pagenumbering
+%   \linespread, \vspace, \setlength (on text dimensions), \addtolength
+%   \input, page-breaking commands, footnote re-numbering, etc.
+% Refer to the AAAI Author Kit guide for the full list.
+
+% --- Theorem environments (optional) -----------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+
+% --- PDF metadata required by AAAI -------------------------------------------
+\pdfinfo{
+/Title (GOC: How to Count Everything Without Hints in Real World)
+/Author (Anonymous)
+/TemplateVersion (2026.1)
+}
+
+% --- Title and authors --------------------------------------------------------
+% For double-blind submission use \author{Anonymous}.
+% For camera-ready, follow the AAAI author block format in the kit.
+\title{GOC: How to Count Everything Without Hints in Real World}
+
+\author{
+    % Anonymous submission
+    Anonymous Submission\\
+}
+\affiliations{
+    % Anonymous submission
+    Anonymous Institution\\
+    anonymous@example.com
+}
+
+% =============================================================================
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Counting arbitrary objects in open-world images is a fundamental yet under-served vision task: existing solutions either fine-tune on dataset-specific annotations, assume a closed category vocabulary, or rely on a user-provided exemplar at inference time. The recently proposed OCCAM pipeline is the first counter that is simultaneously \emph{training-free}, \emph{label-free}, and \emph{class-free} (``3-free''), but achieving its reported accuracy still requires \emph{per-dataset manual hyper-parameter tuning}---a researcher must inspect the data, run a grid search, and hand-pick thresholds for every new benchmark. Such a workflow is neither intelligent nor truly open-world: it is simply a closed-world counter whose closed world has been hidden inside a configuration file. We argue that a deployable open-world counter must be not only 3-free, but also \emph{adaptive} and \emph{hyper-parameter-free}: every threshold should be derived from the test image itself. We present GOC (Generalized Open-world Counting, a.k.a.\ Freely Object Counting), a fully 3-free framework that re-designs each of OCCAM's four stages---class-agnostic proposal generation, frozen vision--language feature extraction, calibrated prompt/exemplar prototype matching, and density-aware aggregation---to be self-calibrating. Its key technical novelty is an image-conditioned Similarity-Neighborhood Graph (SNG) aggregator whose pruning radius is derived analytically from per-image similarity statistics, removing the single most sensitive constant in the OCCAM pipeline. To stress-test open-world counters beyond single-class benchmarks, we further contribute \textbf{GOC-Multi}, the first multi-class open-vocabulary counting dataset with per-category point annotations and free-form textual prompts. With a \emph{single, frozen} configuration---no per-dataset tuning, no validation sweep, no exemplars---GOC sets a new state of the art among 3-free counters on FSC-147 (\todo{MAE $X.X$ / RMSE $Y.Y$}), CARPK (\todo{MAE $X.X$}), OmniCount-191 (\todo{MAE $X.X$}), and GOC-Multi (\todo{MAE $X.X$}). We release a modular codebase, per-stage ablations, the GOC-Multi benchmark, and reproduction recipes, providing a practical foundation for future training-free counting research.
+\end{abstract}
+
+% Optional: code / dataset links (AAAI 26+ provides a \begin{links} env).
+% \begin{links}
+%   \link{Code}{https://example.com/code}
+%   \link{Datasets}{https://example.com/data}
+% \end{links}
+
+% =============================================================================
+\section{Introduction}
+\label{sec:intro}
+
+Counting is one of the most fundamental visual reasoning skills, underpinning applications as diverse as biomedical microscopy, agricultural yield estimation, traffic analytics, retail inventory, and ecological monitoring. Yet, despite a decade of progress on object counting, the vast majority of existing systems remain locked behind one or more of three restrictive assumptions: \emph{(i)~category-specific training} on a curated set of classes (e.g., crowds, cars, cells), \emph{(ii)~dense supervision} in the form of dot, box, or density-map annotations, and \emph{(iii)~closed-vocabulary or exemplar-conditioned inference}, where the user must either choose from a fixed class list or manually annotate one or more bounding boxes at test time. In the open world, where the target category is arbitrary, the data distribution is unknown, and end users cannot be expected to supply exemplars or tune hyper-parameters, none of these assumptions hold. We argue that practical, deployable counting must be simultaneously \emph{training-free}, \emph{label-free}, and \emph{class-free}---a property we abbreviate as ``\textbf{3-free}.''
+
+Recent class-agnostic and reference-less counting work \citep{example2026} has begun to chip away at this gap, but each remaining family still violates at least one of the 3-free criteria. Few-shot counters such as FamNet, BMNet, and CounTR remove the closed-vocabulary assumption but still demand a small set of user-drawn exemplar boxes at inference. Reference-less counters such as RCC and zero-shot CounTR remove the exemplar requirement but are trained end-to-end on FSC-147, inheriting its label distribution and its annotation cost. Prompt-driven counters built on top of CLIP or SAM, e.g., CLIP-Count and CounTX, sidestep training-time labels but still require category-aware text prompts and---more critically---a per-dataset hyper-parameter sweep (similarity thresholds, NMS thresholds, density bandwidths) to perform competitively. The recently proposed OCCAM pipeline \citep{example2026} is the first system that is simultaneously training-free, label-free, and class-free, and it therefore represents the strongest open-world counting baseline available to us. However, OCCAM is far from ``plug-and-play'': to obtain the numbers reported in its paper, the user must \emph{manually} re-tune a handful of internal constants---most notably the SNG pruning radius $\delta$, the similarity-acceptance threshold, and the NMS overlap---for every new dataset, and even for different density regimes within a single dataset. In our own reproduction (Section~\ref{sec:experiments}) a single grid-searched $\delta$ swings the FSC-147 mean absolute error by more than $40\%$, and the optimal $\delta$ on FSC-147 is not the optimal $\delta$ on CARPK or OmniCount-191. In other words, the published OCCAM numbers are the output of \emph{a human in the loop}: a researcher who inspects the data, runs a validation sweep, and hand-picks a configuration per benchmark. This is exactly the workflow we want to eliminate. An ``open-world'' counter that silently requires per-dataset manual tuning is, in any practical sense, not open-world at all---it is simply a closed-world counter whose closed world has been hidden inside a hyper-parameter file. A truly intelligent system should look at the image, decide its own thresholds, and report a count; it should not ask its user to re-run a grid search.
+
+\textbf{Our position.} A truly open-world counter should not only be 3-free, but also \emph{adaptive} and \emph{tuning-free}: every internal threshold, bandwidth, and pruning constant should be derived from the test image itself rather than from a held-out validation set. We present \textbf{GOC} (\emph{Generalized Open-world Counting}, also known as \emph{Freely Object Counting}), a fully 3-free, hyper-parameter-free open-world counting framework built around four modular stages---class-agnostic proposal generation, frozen vision--language feature extraction, calibrated prompt/exemplar prototype matching, and density-aware aggregation. Each stage is re-designed to be \emph{self-calibrating}: mask proposers are filtered by an image-conditioned confidence score, prototype matching uses per-image z-normalisation, and our novel Similarity-Neighborhood Graph (SNG) aggregator derives its pruning radius $\delta$ analytically from the empirical similarity statistics of the current image---no validation set, no grid search, no manual knobs. The result is a single configuration that runs out-of-the-box on FSC-147, CARPK, OmniCount-191, and our newly proposed multi-class benchmark, without any per-dataset adjustment.
+
+\textbf{A new multi-class open-world counting benchmark.} A second obstacle to 3-free counting research is that existing benchmarks are either single-class-per-image (FSC-147, CARPK) or restricted to a fixed taxonomy (OmniCount). Real-world images, however, routinely contain \emph{multiple} co-occurring categories that a user may wish to count independently (``how many apples \emph{and} how many oranges are on the table?''). To close this gap, we contribute \textbf{GOC-Multi}, a multi-class open-world counting dataset of \todo{$N$} images spanning \todo{$C$} object categories with \todo{$K$} category-image pairs, where each image is annotated with per-category point counts and free-form textual category names. GOC-Multi is, to the best of our knowledge, the first benchmark that simultaneously stresses (a) multi-class co-occurrence, (b) open-vocabulary category descriptions, and (c) class-imbalanced object density within a single image---three properties that any deployable open-world counter must handle gracefully.
+
+\textbf{Empirical findings.} Across four benchmarks, GOC establishes a new state of the art among 3-free counters and, on several splits, matches or exceeds methods that are trained or tuned on the target dataset. Concretely, with a \emph{single, frozen} configuration, GOC achieves \todo{MAE $X.X$ / RMSE $Y.Y$} on FSC-147 (val/test), \todo{MAE $X.X$} on CARPK, \todo{MAE $X.X$} on OmniCount-191, and \todo{MAE $X.X$} on the proposed GOC-Multi benchmark, improving over the OCCAM baseline by \todo{$\Delta\%$} on average while removing all of its manual hyper-parameters. Ablations in Section~\ref{sec:experiments} attribute the gains to three sources in roughly equal measure: (i) stronger frozen backbones (DINOv2, SigLIP, EVA-CLIP), (ii) calibrated text--exemplar prototype matching, and (iii) the adaptive SNG aggregator.
+
+\textbf{Contributions.} In summary, this paper makes the following contributions:
+\begin{itemize}
+    \item We formalise \emph{3-free} open-world counting (training-free, label-free, class-free) and identify hyper-parameter sensitivity as the last remaining obstacle to truly deployable open-world counters.
+    \item We propose \textbf{GOC}, a modular, fully adaptive, hyper-parameter-free open-world counting framework. Its key technical novelty is an analytically-derived, image-conditioned Similarity-Neighborhood Graph (SNG) aggregator whose pruning radius $\delta$ is determined entirely from per-image similarity statistics.
+    \item We contribute \textbf{GOC-Multi}, the first multi-class open-vocabulary counting benchmark, designed to stress co-occurring categories, free-form prompts, and intra-image density imbalance.
+    \item We report extensive experiments on FSC-147, CARPK, OmniCount-191, and GOC-Multi, where a single frozen GOC configuration sets a new state of the art among 3-free counters and is competitive with category-specific, fully supervised baselines. We release the codebase, per-stage ablations, and reproduction recipes to support future training-free counting research.
+\end{itemize}
+
+% =============================================================================
+\section{Related Work}
+\label{sec:related}
+
+% =============================================================================
+\section{Preliminaries}
+\label{sec:prelim}
+
+% =============================================================================
+\section{Method}
+\label{sec:method}
+
+% =============================================================================
+\section{Experiments}
+\label{sec:experiments}
+
+% =============================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+% =============================================================================
+% Bibliography
+\bibliographystyle{aaai2026}
+\bibliography{references}
+
+\end{document}

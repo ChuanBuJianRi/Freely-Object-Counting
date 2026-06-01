@@ -1,0 +1,93 @@
+/tmp/sam2_repo/sam2/sam2_image_predictor.py:431: UserWarning: cannot import name '_C' from 'sam2' (/tmp/sam2_repo/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  masks = self._transforms.postprocess_masks(
+Building SAM2 AMG model …
+Model ready. Mode=single, crop=224, thresholds=(12.0, 9.0, 7.75)
+Mask area filter: min=0.0001, max=0.5
+
+============================================================
+  Split: val  (428 images)
+============================================================
+  [   1/428]  1897.jpg                       GT=  12 PRED=  31 AE=  19  5.2s
+  [   2/428]  1901.jpg                       GT=  17 PRED=  32 AE=  15  4.6s
+  [   3/428]  1906.jpg                       GT=  70 PRED= 101 AE=  31  5.9s
+  [   4/428]  1907.jpg                       GT=  28 PRED=  48 AE=  20  5.2s
+  [   5/428]  1912.jpg                       GT=  46 PRED=  88 AE=  42  5.7s
+  [   7/428]  1915.jpg                       GT= 684 PRED= 289 AE= 395  5.4s
+  [  21/428]  1956.jpg                       GT=1229 PRED= 634 AE= 595  6.3s
+  [  33/428]  1990.jpg                       GT= 476 PRED= 387 AE=  89  5.8s
+  [  50/428]  running MAE=46.12  total_time=260s  last: 2406.jpg GT=17 PRED=31
+  [  84/428]  3433.jpg                       GT= 538 PRED=   7 AE= 531  4.8s
+  [  87/428]  3482.jpg                       GT= 315 PRED=   4 AE= 311  4.9s
+  [  88/428]  3484.jpg                       GT= 356 PRED=   9 AE= 347  4.3s
+  [  90/428]  3487.jpg                       GT= 321 PRED=   4 AE= 317  4.7s
+  [  91/428]  3488.jpg                       GT= 431 PRED=   8 AE= 423  4.6s
+  [ 100/428]  running MAE=56.58  total_time=506s  last: 3547.jpg GT=21 PRED=74
+  [ 115/428]  3665.jpg                       GT= 907 PRED= 187 AE= 720  4.9s
+  [ 123/428]  3768.jpg                       GT=   9 PRED= 245 AE= 236  5.5s
+  [ 126/428]  3775.jpg                       GT=  12 PRED= 144 AE= 132  5.1s
+  [ 150/428]  running MAE=53.38  total_time=754s  last: 4569.jpg GT=21 PRED=23
+  [ 153/428]  4574.jpg                       GT= 402 PRED= 197 AE= 205  4.8s
+  [ 195/428]  4811.jpg                       GT= 213 PRED= 103 AE= 110  4.5s
+  [ 200/428]  running MAE=46.98  total_time=1006s  last: 4821.jpg GT=90 PRED=141
+  [ 215/428]  5044.jpg                       GT= 100 PRED=  15 AE=  85  5.1s
+  [ 250/428]  running MAE=44.29  total_time=1258s  last: 569.jpg GT=17 PRED=33
+  [ 251/428]  5743.jpg                       GT= 270 PRED=  81 AE= 189  5.0s
+  [ 252/428]  5747.jpg                       GT= 100 PRED=   7 AE=  93  4.9s
+  [ 258/428]  5860.jpg                       GT= 757 PRED= 182 AE= 575  4.9s
+  [ 268/428]  5902.jpg                       GT= 209 PRED= 112 AE=  97  4.9s
+  [ 300/428]  running MAE=43.29  total_time=1504s  last: 615.jpg GT=23 PRED=36
+  [ 312/428]  6728.jpg                       GT=  99 PRED= 183 AE=  84  5.6s
+  [ 313/428]  6729.jpg                       GT= 251 PRED= 110 AE= 141  5.2s
+  [ 318/428]  6784.jpg                       GT=  52 PRED= 143 AE=  91  5.6s
+  [ 322/428]  6836.jpg                       GT=  15 PRED=  98 AE=  83  4.9s
+  [ 327/428]  6927.jpg                       GT=  32 PRED= 145 AE= 113  5.3s
+  [ 329/428]  6969.jpg                       GT= 949 PRED=  80 AE= 869  4.3s
+  [ 335/428]  7069.jpg                       GT= 142 PRED= 260 AE= 118  5.8s
+  [ 340/428]  7155.jpg                       GT=  69 PRED= 161 AE=  92  5.0s
+  [ 345/428]  7228.jpg                       GT=  63 PRED= 177 AE= 114  5.4s
+  [ 350/428]  running MAE=45.70  total_time=1761s  last: 7301.jpg GT=36 PRED=34
+  [ 356/428]  7388.jpg                       GT= 134 PRED= 231 AE=  97  5.6s
+  [ 376/428]  7545.jpg                       GT= 106 PRED= 289 AE= 183  5.8s
+  [ 384/428]  7601.jpg                       GT= 142 PRED= 273 AE= 131  6.1s
+  [ 400/428]  running MAE=44.15  total_time=2010s  last: 813.jpg GT=185 PRED=214
+  [ 401/428]  820.jpg                        GT= 437 PRED= 534 AE=  97  7.0s
+  [ 408/428]  840.jpg                        GT= 637 PRED= 224 AE= 413  5.0s
+  [ 410/428]  851.jpg                        GT= 320 PRED= 182 AE= 138  5.1s
+  [ 412/428]  859.jpg                        GT=  97 PRED= 203 AE= 106  5.4s
+  [ 413/428]  860.jpg                        GT= 240 PRED= 154 AE=  86  5.0s
+  [ 417/428]  916.jpg                        GT=   9 PRED= 101 AE=  92  5.4s
+  [ 418/428]  920.jpg                        GT=  12 PRED= 327 AE= 315  5.4s
+  [ 423/428]  955.jpg                        GT=  86 PRED= 181 AE=  95  5.3s
+  [ 428/428]  running MAE=45.69  total_time=2154s  last: 979.jpg GT=108 PRED=80
+
+  Per-image detail saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_mask_area/results/A1_min0001/per_image_val.json
+
+  [val] MAE=45.6916  MSE=9359.1963  RMSE=96.7429  NAE=1.3483
+
+======================================================================
+  OCCAM Origin-Simulation — FSC-147 Full Evaluation Summary
+======================================================================
+  Mode        : OCCAM-SINGLE (fraction=0.333, seed=42)
+  SAM2 config : configs/sam2.1/sam2.1_hiera_l.yaml
+  SAM2 ckpt   : /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM/checkpoints/sam2.1_hiera_large.pt
+  Started     : 2026-05-17 02:28:20
+  Finished    : 2026-05-17 03:04:14
+  Total time  : 35.9 min
+
+  ── val split (n=428)
+     MAE   = 45.6916
+     MSE   = 9359.1963
+     RMSE  = 96.7429
+     NAE   = 1.3483
+     avg_time = 5.03 s/img
+     by GT count range:
+       [   1-10]  n=  46  MAE=  27.65  RMSE=  46.59
+       [  11-50]  n= 251  MAE=  28.25  RMSE=  39.16
+       [ 51-200]  n= 105  MAE=  41.73  RMSE=  52.51
+       [   201+]  n=  26  MAE= 261.96  RMSE= 352.54
+
+======================================================================
+
+Summary saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_mask_area/results/A1_min0001/summary.txt

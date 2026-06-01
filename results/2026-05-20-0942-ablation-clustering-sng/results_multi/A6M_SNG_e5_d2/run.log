@@ -1,0 +1,100 @@
+Building SAM2 AMG model …
+Model ready. Mode=multi, crop=500, thresholds=(5.0, 4.0, 3.0)
+Mask area filter: min=0.0005, max=0.1
+Cluster method: sng (eps=5, delta=2 for sng)  PRED strategy: max
+
+============================================================
+  Split: val  (428 images)
+============================================================
+/tmp/sam2_repo/sam2/sam2_image_predictor.py:431: UserWarning: cannot import name '_C' from 'sam2' (/tmp/sam2_repo/sam2/__init__.py)
+
+Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
+  masks = self._transforms.postprocess_masks(
+  [   1/428]  1897.jpg                       GT=  12 PRED=  12 AE=   0  5.1s
+  [   2/428]  1901.jpg                       GT=  17 PRED=  11 AE=   6  4.6s
+  [   3/428]  1906.jpg                       GT=  70 PRED=  45 AE=  25  6.5s
+  [   4/428]  1907.jpg                       GT=  28 PRED=  24 AE=   4  5.3s
+  [   5/428]  1912.jpg                       GT=  46 PRED=  26 AE=  20  6.1s
+  [   7/428]  1915.jpg                       GT= 684 PRED=  87 AE= 597  7.6s
+  [  14/428]  1934.jpg                       GT= 171 PRED=  81 AE=  90  7.1s
+  [  15/428] ERROR 1936.jpg: CUDA out of memory. Tried to allocate 7.60 GiB. GPU 0 has a total capacity of 23.99 GiB of which 2.71 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. 20.39 GiB allowed; Of the allocated memory 19.59 GiB is allocated by PyTorch, and 72.84 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [  21/428] ERROR 1956.jpg: CUDA out of memory. Tried to allocate 8.57 GiB. GPU 0 has a total capacity of 23.99 GiB of which 8.94 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. 20.39 GiB allowed; Of the allocated memory 13.38 GiB is allocated by PyTorch, and 49.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [  22/428]  1960.jpg                       GT= 163 PRED=  74 AE=  89  7.0s
+  [  28/428]  1977.jpg                       GT= 132 PRED=  38 AE=  94  7.3s
+  [  33/428]  1990.jpg                       GT= 476 PRED= 116 AE= 360  9.3s
+  [  50/428]  running MAE=36.21  total_time=268s  last: 2406.jpg GT=17 PRED=20
+  [  61/428]  2818.jpg                       GT= 252 PRED=  91 AE= 161  7.5s
+  [  77/428]  2879.jpg                       GT= 150 PRED=  68 AE=  82  6.4s
+  [  84/428]  3433.jpg                       GT= 538 PRED=   5 AE= 533  4.8s
+  [  87/428]  3482.jpg                       GT= 315 PRED=   1 AE= 314  5.0s
+  [  88/428]  3484.jpg                       GT= 356 PRED=   9 AE= 347  4.4s
+  [  89/428]  3485.jpg                       GT= 174 PRED=  29 AE= 145  5.9s
+  [  90/428]  3487.jpg                       GT= 321 PRED=   1 AE= 320  4.8s
+  [  91/428]  3488.jpg                       GT= 431 PRED=   7 AE= 424  4.7s
+  [ 100/428]  running MAE=49.05  total_time=531s  last: 3547.jpg GT=21 PRED=25
+  [ 115/428]  3665.jpg                       GT= 907 PRED= 103 AE= 804  6.1s
+  [ 142/428]  4556.jpg                       GT= 133 PRED=  44 AE=  89  5.7s
+  [ 150/428]  running MAE=41.43  total_time=790s  last: 4569.jpg GT=21 PRED=21
+  [ 152/428]  4572.jpg                       GT= 141 PRED=  50 AE=  91  4.7s
+  [ 153/428]  4574.jpg                       GT= 402 PRED=  16 AE= 386  4.5s
+  [ 156/428]  4580.jpg                       GT= 165 PRED=  64 AE= 101  5.7s
+  [ 194/428]  4809.jpg                       GT= 306 PRED= 156 AE= 150  7.3s
+  [ 195/428]  4811.jpg                       GT= 213 PRED=  46 AE= 167  5.2s
+  [ 200/428]  running MAE=37.89  total_time=1056s  last: 4821.jpg GT=90 PRED=33
+  [ 212/428]  4849.jpg                       GT= 121 PRED=  37 AE=  84  6.2s
+  [ 215/428]  5044.jpg                       GT= 100 PRED=  13 AE=  87  5.2s
+  [ 250/428]  running MAE=33.49  total_time=1318s  last: 569.jpg GT=17 PRED=17
+  [ 251/428]  5743.jpg                       GT= 270 PRED=  65 AE= 205  5.5s
+  [ 252/428]  5747.jpg                       GT= 100 PRED=   5 AE=  95  5.0s
+  [ 258/428]  5860.jpg                       GT= 757 PRED= 112 AE= 645  5.8s
+  [ 260/428]  5876.jpg                       GT= 216 PRED=  65 AE= 151  7.8s
+  [ 268/428]  5902.jpg                       GT= 209 PRED=  46 AE= 163  5.7s
+  [ 269/428]  5905.jpg                       GT= 147 PRED=  45 AE= 102  6.4s
+  [ 300/428]  running MAE=34.16  total_time=1578s  last: 615.jpg GT=23 PRED=28
+  [ 313/428]  6729.jpg                       GT= 251 PRED=  54 AE= 197  5.8s
+  [ 316/428]  6775.jpg                       GT= 191 PRED=  33 AE= 158  7.4s
+  [ 321/428]  6835.jpg                       GT= 138 PRED=  22 AE= 116  6.4s
+  [ 329/428]  6969.jpg                       GT= 949 PRED=   1 AE= 948  4.3s
+  [ 333/428]  7013.jpg                       GT= 139 PRED=  41 AE=  98  6.5s
+  [ 350/428]  running MAE=36.10  total_time=1861s  last: 7301.jpg GT=36 PRED=1
+  [ 356/428]  7388.jpg                       GT= 134 PRED=  33 AE= 101  6.9s
+  [ 362/428]  7436.jpg                       GT= 283 PRED=  38 AE= 245  9.4s
+  [ 382/428]  7593.jpg                       GT= 274 PRED=  25 AE= 249  8.1s
+  [ 390/428]  7659.jpg                       GT= 198 PRED=  60 AE= 138  8.4s
+  [ 400/428]  running MAE=35.75  total_time=2133s  last: 813.jpg GT=185 PRED=25
+  [ 401/428] ERROR 820.jpg: CUDA out of memory. Tried to allocate 7.15 GiB. GPU 0 has a total capacity of 23.99 GiB of which 3.82 GiB is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. 20.39 GiB allowed; Of the allocated memory 18.50 GiB is allocated by PyTorch, and 48.64 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+  [ 408/428]  840.jpg                        GT= 637 PRED= 119 AE= 518  6.1s
+  [ 409/428]  850.jpg                        GT= 183 PRED=  88 AE=  95  5.9s
+  [ 410/428]  851.jpg                        GT= 320 PRED= 107 AE= 213  6.4s
+  [ 413/428]  860.jpg                        GT= 240 PRED=  88 AE= 152  6.1s
+  [ 428/428]  running MAE=37.21  total_time=2285s  last: 979.jpg GT=108 PRED=35
+
+  Per-image detail saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_clustering/results_multi/A6M_SNG_e5_d2/per_image_val.json
+
+  [val] MAE=37.2094  MSE=10517.7129  RMSE=102.5559  NAE=0.5155
+
+======================================================================
+  OCCAM Origin-Simulation — FSC-147 Full Evaluation Summary
+======================================================================
+  Mode        : OCCAM-MULTI (fraction=0.333, seed=42)
+  SAM2 config : configs/sam2.1/sam2.1_hiera_l.yaml
+  SAM2 ckpt   : /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM/checkpoints/sam2.1_hiera_large.pt
+  Started     : 2026-05-20 17:12:38
+  Finished    : 2026-05-20 17:51:56
+  Total time  : 39.3 min
+
+  ── val split (n=425)
+     MAE   = 37.2094
+     MSE   = 10517.7129
+     RMSE  = 102.5559
+     NAE   = 0.5155
+     avg_time = 5.38 s/img
+     by GT count range:
+       [   1-10]  n=  46  MAE=  10.00  RMSE=  13.84
+       [  11-50]  n= 251  MAE=   7.98  RMSE=  11.58
+       [ 51-200]  n= 105  MAE=  48.59  RMSE=  60.22
+       [   201+]  n=  23  MAE= 358.65  RMSE= 419.46
+
+======================================================================
+
+Summary saved → /home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM_experiments_series/ablation_clustering/results_multi/A6M_SNG_e5_d2/summary.txt
