@@ -1,0 +1,18 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Caches / downloaded weights
+.cache/
+.torch/
+
+# OS
+.DS_Store
+Thumbs.db

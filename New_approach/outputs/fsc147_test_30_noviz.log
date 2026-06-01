@@ -1,0 +1,17 @@
+[1/30] 2.jpg gt=8 top1=4 oracle=8 cand=1405 groups=213 (30.8s)
+[5/30] 6.jpg gt=9 top1=4 oracle=10 cand=647 groups=118 (93.7s)
+[10/30] 289.jpg gt=26 top1=4 oracle=22 cand=2429 groups=369 (378.7s)
+[15/30] 294.jpg gt=124 top1=4 oracle=79 cand=1516 groups=303 (633.6s)
+[20/30] 299.jpg gt=16 top1=4 oracle=11 cand=1062 groups=218 (787.9s)
+[25/30] 305.jpg gt=11 top1=4 oracle=10 cand=1863 groups=332 (997.9s)
+[30/30] 310.jpg gt=65 top1=4 oracle=86 cand=1768 groups=336 (1197.3s)
+
+=== FSC147 test results ===
+{
+  "num_images": 30,
+  "top1_mae": 30.666666666666668,
+  "top1_rmse": 43.574457349843534,
+  "oracle_mae": 9.766666666666667,
+  "oracle_rmse": 19.39673512046121,
+  "elapsed_sec": 1197.2813267707825
+}
