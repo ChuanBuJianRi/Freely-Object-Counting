@@ -1,0 +1,13 @@
+Using cache found in /home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main
+/home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+[gpu-guard] enabled  limit=78C  cooldown=30s  hysteresis=5C  check_every=5  gpu=0  start_temp=39C  bin=/usr/bin/nvidia-smi
+[1/297] 5.jpg gt=113 top1=2 oracle=77 cand=1673 groups=167 top1_MAE=111.00 (43.8s, 43.8s/img)
+[5/297] 299.jpg gt=16 top1=4 oracle=14 cand=1062 groups=114 top1_MAE=42.80 (117.7s, 9.3s/img)
+[10/297] 322.jpg gt=27 top1=2 oracle=28 cand=1964 groups=180 top1_MAE=37.60 (319.1s, 124.9s/img)
+[15/297] 343.jpg gt=16 top1=2 oracle=15 cand=1181 groups=162 top1_MAE=31.87 (414.1s, 10.1s/img)
+[20/297] 695.jpg gt=11 top1=2 oracle=10 cand=881 groups=105 top1_MAE=37.65 (503.2s, 11.8s/img)

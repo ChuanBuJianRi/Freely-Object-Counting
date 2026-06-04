@@ -1,0 +1,11 @@
+Using cache found in /home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main
+/home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+[gpu-guard] enabled  limit=78C  cooldown=30s  hysteresis=5C  check_every=5  gpu=0  start_temp=38C  bin=/usr/bin/nvidia-smi
+[1/297] 5.jpg gt=113 top1=2 oracle=65 cand=2167 groups=179 top1_MAE=111.00 (178.7s, 178.7s/img)
+[5/297] 299.jpg gt=16 top1=4 oracle=14 cand=1474 groups=199 top1_MAE=43.00 (489.4s, 15.8s/img)
+[10/297] 322.jpg gt=27 top1=2 oracle=28 cand=2956 groups=325 top1_MAE=37.70 (689.1s, 28.8s/img)

@@ -1,6 +1,6 @@
 """Rank-normalized distance fusion (no manual feature weights)."""
 
-from typing import List
+from typing import List, Optional
 
 import numpy as np
 from scipy.spatial.distance import pdist, squareform
@@ -8,6 +8,30 @@ from scipy.spatial.distance import pdist, squareform
 from pf_cud.data import Candidate
 
 _DEFAULT_KEYS = ["visual", "shape", "color", "spatial"]
+
+# Cached compute device for the Euclidean distance kernel. ``torch.cdist`` on
+# the GPU is dramatically faster than ``scipy.pdist`` for the large (N up to a
+# few thousand) candidate sets PF-CUD produces, while staying numerically
+# equivalent (both compute the L2 distance). Engineering acceleration only; no
+# algorithm parameter is introduced.
+_TORCH = None
+_TORCH_DEVICE: Optional[str] = None
+
+
+def _torch_device():
+    """Lazily import torch and pick cuda if available; cache the result."""
+    global _TORCH, _TORCH_DEVICE
+    if _TORCH_DEVICE is not None:
+        return _TORCH, _TORCH_DEVICE
+    try:
+        import torch  # local import keeps non-torch callers light
+
+        _TORCH = torch
+        _TORCH_DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+    except Exception:
+        _TORCH = None
+        _TORCH_DEVICE = "none"
+    return _TORCH, _TORCH_DEVICE
 
 
 def pairwise_feature_distance(
@@ -17,6 +41,15 @@ def pairwise_feature_distance(
     n = len(feats)
     if n <= 1:
         return np.zeros((n, n), dtype=np.float64)
+
+    torch, device = _torch_device()
+    if torch is not None and metric == "euclidean":
+        # GPU (or CPU) L2 distance via torch.cdist. Equivalent to pdist/squareform.
+        t = torch.as_tensor(feats, dtype=torch.float32, device=device)
+        d = torch.cdist(t, t, p=2)
+        # cdist leaves tiny negative/positive noise on the diagonal; zero it.
+        d.fill_diagonal_(0.0)
+        return d.detach().to("cpu").numpy().astype(np.float64)
 
     d = squareform(pdist(feats, metric=metric))
     return d.astype(np.float64)

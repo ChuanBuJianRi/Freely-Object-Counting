@@ -21,7 +21,16 @@ def shape_feature(mask: np.ndarray, bbox: Tuple[int, int, int, int]) -> np.ndarr
     aspect = box_w / box_h
     extent = area / (box_w * box_h)
 
-    per = float(perimeter(mask))
+    # perimeter() is the dominant cost because skimage scans the whole H x W
+    # frame per candidate. It is translation-invariant, so computing it on the
+    # bbox-local mask is numerically identical but far cheaper. moments_hu()
+    # needs >=3rd-order moments and errors on tiny crops, and it is already
+    # cheap (~0.5s for thousands of masks), so it stays on the full mask.
+    cx1, cy1 = max(0, x1), max(0, y1)
+    cx2, cy2 = max(cx1 + 1, x2), max(cy1 + 1, y2)
+    local = mask[cy1:cy2, cx1:cx2]
+
+    per = float(perimeter(local))
     compactness = (4.0 * np.pi * area) / (per ** 2 + 1e-8)
 
     hu = moments_hu(mask.astype(float))

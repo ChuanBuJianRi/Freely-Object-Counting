@@ -1,0 +1,43 @@
+run_id: 2026-06-02-0144-eval-pfcud-fsc147-test
+task: eval
+dataset: FSC-147 test split (full, n=1190)
+method: PF-CUD (Parameter-Free Counting Unit Discovery)
+code: bench/New_approach/pf_cud
+entrypoint: python -m pf_cud.eval.eval_fsc147
+
+# PF-CUD pipeline configuration (engineering only; no algorithm tuning params)
+pipeline:
+  candidates: blob (use_edge=false, sam_model=none)
+  visual_feature: DINOv2 (dinov2_vits14, torch hub) on GPU
+  dedup: MST + Otsu (no IoU threshold)
+  fusion: rank-normalized (visual + shape + color + spatial), no manual weights
+  graph: MST
+  cut: Otsu on MST edge weights (no delta)
+  refine: MDL merge (use_mdl_split=false)
+  ranking: rank-aggregation hypothesis ranking
+
+predictors:
+  top1: count of the highest-ranked group (the method's actual prediction)
+  oracle: count of the group closest to GT (grouping upper bound)
+
+env:
+  python: 3.11 (venv /home/gaoyiyang/venvs/fsc)
+  torch: 2.6.0+cu124
+  device: cuda, 4-GPU sharded over physical GPUs 4/5/6/7
+          (each shard sets CUDA_VISIBLE_DEVICES to one card -> logical cuda:0)
+  dataset_root: /home/gaoyiyang/ws_yiyang/datasets/FSC147
+
+sharding:
+  scheme: images[offset::4], offset=0..3, one process per GPU
+  gpus: [4, 5, 6, 7]
+
+gpu_thermal_guard:
+  gpu_temp_limit: 78
+  gpu_cooldown_sec: 30
+  gpu_hysteresis: 5
+  gpu_check_every: 5
+  gpu_index: 0   # logical index 0 == the single visible physical GPU per shard
+
+launch: bash run_4gpu.sh        # starts 4 sharded processes
+merge:  python merge_shards.py  # merges shards -> metrics.json + summary.txt
+

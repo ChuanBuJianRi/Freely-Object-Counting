@@ -1,0 +1,9 @@
+shard 0 -> GPU 4 (pid 204489)
+shard 1 -> GPU 5 (pid 204490)
+shard 2 -> GPU 6 (pid 204491)
+shard 3 -> GPU 7 (pid 204492)
+run_4gpu.sh: line 30: 204489 Terminated              CUDA_VISIBLE_DEVICES="$gpu" python -m pf_cud.eval.eval_fsc147 --split test --dataset_root "$DATASET" --stride 4 --offset "$k" --out_json "$RUN_DIR/per_image_test_shard${k}.json" --gpu-index 0 > "$RUN_DIR/run_shard${k}.log" 2>&1
+run_4gpu.sh: line 30: 204490 Terminated              CUDA_VISIBLE_DEVICES="$gpu" python -m pf_cud.eval.eval_fsc147 --split test --dataset_root "$DATASET" --stride 4 --offset "$k" --out_json "$RUN_DIR/per_image_test_shard${k}.json" --gpu-index 0 > "$RUN_DIR/run_shard${k}.log" 2>&1
+run_4gpu.sh: line 30: 204491 Terminated              CUDA_VISIBLE_DEVICES="$gpu" python -m pf_cud.eval.eval_fsc147 --split test --dataset_root "$DATASET" --stride 4 --offset "$k" --out_json "$RUN_DIR/per_image_test_shard${k}.json" --gpu-index 0 > "$RUN_DIR/run_shard${k}.log" 2>&1
+run_4gpu.sh: line 30: 204492 Terminated              CUDA_VISIBLE_DEVICES="$gpu" python -m pf_cud.eval.eval_fsc147 --split test --dataset_root "$DATASET" --stride 4 --offset "$k" --out_json "$RUN_DIR/per_image_test_shard${k}.json" --gpu-index 0 > "$RUN_DIR/run_shard${k}.log" 2>&1
+all shards finished

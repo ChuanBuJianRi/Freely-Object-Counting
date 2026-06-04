@@ -1,0 +1,9 @@
+[1/149] 2.jpg gt=8 blobs=1851 (2s)
+[20/149] 2013.jpg gt=49 blobs=2015 (44s)
+[40/149] 2907.jpg gt=28 blobs=2051 (76s)
+[60/149] 4089.jpg gt=59 blobs=1423 (102s)
+[80/149] 5144.jpg gt=87 blobs=655 (135s)
+[100/149] 5916.jpg gt=38 blobs=1345 (159s)
+[120/149] 7370.jpg gt=11 blobs=1882 (180s)
+[140/149] 7573.jpg gt=18 blobs=1296 (225s)
+wrote 149 -> outputs/sigma_hist/shard_0.json

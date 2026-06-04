@@ -1,0 +1,126 @@
+Using cache found in /home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main
+/home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/home/gaoyiyang/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+/home/gaoyiyang/ws_yiyang/ws_mmmu/bench/New_approach/pf_cud/features/visual.py:75: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)
+  t = torch.from_numpy(arr).to(device).permute(2, 0, 1).float().div_(255.0)
+[gpu-guard] enabled  limit=78C  cooldown=30s  hysteresis=5C  check_every=5  gpu=0  start_temp=38C  bin=/usr/bin/nvidia-smi
+[1/297] 4.jpg gt=10 top1=3 oracle=9 cand=637 groups=72 top1_MAE=7.00 (5.8s, 5.8s/img)
+[5/297] 298.jpg gt=33 top1=2 oracle=33 cand=2600 groups=326 top1_MAE=35.80 (93.1s, 16.5s/img)
+[10/297] 321.jpg gt=39 top1=2 oracle=27 cand=2317 groups=329 top1_MAE=32.70 (164.4s, 14.3s/img)
+[15/297] 342.jpg gt=63 top1=2 oracle=43 cand=3222 groups=394 top1_MAE=31.67 (258.6s, 24.8s/img)
+[20/297] 694.jpg gt=80 top1=2 oracle=53 cand=5392 groups=481 top1_MAE=32.35 (348.8s, 45.4s/img)
+[25/297] 719.jpg gt=17 top1=2 oracle=17 cand=1462 groups=157 top1_MAE=34.84 (386.7s, 5.9s/img)
+[30/297] 1061.jpg gt=22 top1=2 oracle=22 cand=2032 groups=291 top1_MAE=36.07 (547.5s, 11.0s/img)
+[35/297] 1881.jpg gt=11 top1=4 oracle=11 cand=1315 groups=163 top1_MAE=47.00 (603.3s, 4.7s/img)
+[40/297] 2019.jpg gt=14 top1=3 oracle=14 cand=1822 groups=167 top1_MAE=46.77 (697.1s, 7.4s/img)
+[45/297] 2043.jpg gt=90 top1=2 oracle=88 cand=3248 groups=278 top1_MAE=46.73 (760.2s, 18.7s/img)
+[50/297] 2150.jpg gt=9 top1=2 oracle=9 cand=2107 groups=254 top1_MAE=44.10 (786.2s, 10.9s/img)
+[55/297] 2176.jpg gt=73 top1=2 oracle=52 cand=2842 groups=361 top1_MAE=45.73 (898.4s, 19.2s/img)
+[60/297] 2204.jpg gt=9 top1=2 oracle=8 cand=2315 groups=327 top1_MAE=46.73 (927.2s, 12.6s/img)
+[65/297] 2233.jpg gt=64 top1=2 oracle=50 cand=1678 groups=183 top1_MAE=51.15 (957.7s, 7.9s/img)
+[70/297] 2259.jpg gt=174 top1=2 oracle=31 cand=1060 groups=96 top1_MAE=51.30 (1013.7s, 4.1s/img)
+[75/297] 2282.jpg gt=47 top1=2 oracle=30 cand=2174 groups=204 top1_MAE=51.51 (1043.8s, 10.2s/img)
+[80/297] 2915.jpg gt=61 top1=2 oracle=48 cand=4492 groups=317 top1_MAE=52.33 (1206.2s, 23.7s/img)
+[85/297] 2936.jpg gt=23 top1=2 oracle=30 cand=2232 groups=229 top1_MAE=51.01 (1276.5s, 10.3s/img)
+[90/297] 3112.jpg gt=10 top1=2 oracle=10 cand=1383 groups=183 top1_MAE=49.19 (1344.1s, 6.3s/img)
+[95/297] 3282.jpg gt=31 top1=2 oracle=49 cand=1338 groups=124 top1_MAE=48.29 (1370.6s, 4.9s/img)
+[100/297] 3326.jpg gt=122 top1=2 oracle=21 cand=1138 groups=122 top1_MAE=50.77 (1399.1s, 4.5s/img)
+[105/297] 3496.jpg gt=103 top1=2 oracle=15 cand=826 groups=89 top1_MAE=53.74 (1449.1s, 2.7s/img)
+[110/297] 3657.jpg gt=24 top1=2 oracle=21 cand=823 groups=96 top1_MAE=52.42 (1463.8s, 2.6s/img)
+[115/297] 4072.jpg gt=11 top1=2 oracle=10 cand=970 groups=156 top1_MAE=52.53 (1526.6s, 3.7s/img)
+[120/297] 4115.jpg gt=8 top1=2 oracle=8 cand=1949 groups=200 top1_MAE=52.77 (1560.4s, 8.8s/img)
+[125/297] 4291.jpg gt=323 top1=2 oracle=474 cand=1682 groups=172 top1_MAE=54.53 (1603.2s, 7.1s/img)
+[130/297] 4414.jpg gt=11 top1=2 oracle=11 cand=4759 groups=325 top1_MAE=53.70 (1659.2s, 28.7s/img)
+[135/297] 4874.jpg gt=68 top1=2 oracle=78 cand=6060 groups=490 top1_MAE=52.60 (1732.2s, 52.6s/img)
+[140/297] 4894.jpg gt=11 top1=3 oracle=11 cand=2277 groups=264 top1_MAE=52.54 (1838.3s, 11.8s/img)
+[145/297] 4918.jpg gt=95 top1=2 oracle=105 cand=3713 groups=343 top1_MAE=51.92 (1906.4s, 24.3s/img)
+[150/297] 4939.jpg gt=20 top1=2 oracle=18 cand=2700 groups=266 top1_MAE=51.20 (2016.5s, 14.5s/img)
+[155/297] 4959.jpg gt=31 top1=2 oracle=31 cand=3146 groups=323 top1_MAE=53.43 (2112.7s, 19.4s/img)
+[160/297] 5357.jpg gt=12 top1=2 oracle=11 cand=587 groups=73 top1_MAE=54.75 (2196.4s, 2.0s/img)
+[165/297] 5378.jpg gt=11 top1=2 oracle=11 cand=1400 groups=236 top1_MAE=53.56 (2222.4s, 6.6s/img)
+[170/297] 5505.jpg gt=89 top1=2 oracle=43 cand=2853 groups=288 top1_MAE=52.76 (2277.9s, 15.7s/img)
+[175/297] 5574.jpg gt=90 top1=2 oracle=117 cand=607 groups=70 top1_MAE=53.37 (2298.9s, 1.8s/img)
+[180/297] 5596.jpg gt=40 top1=2 oracle=54 cand=2463 groups=190 top1_MAE=53.08 (2353.5s, 10.8s/img)
+[185/297] 5804.jpg gt=43 top1=2 oracle=41 cand=1472 groups=165 top1_MAE=53.17 (2393.4s, 5.5s/img)
+[190/297] 5824.jpg gt=24 top1=3 oracle=24 cand=1345 groups=164 top1_MAE=53.03 (2457.0s, 4.6s/img)
+[195/297] 5844.jpg gt=75 top1=2 oracle=52 cand=4420 groups=478 top1_MAE=53.35 (2534.3s, 34.9s/img)
+[200/297] 5922.jpg gt=35 top1=2 oracle=34 cand=1370 groups=120 top1_MAE=52.91 (2589.3s, 5.3s/img)
+[205/297] 5942.jpg gt=10 top1=2 oracle=11 cand=753 groups=111 top1_MAE=51.95 (2613.7s, 3.4s/img)
+[210/297] 6244.jpg gt=39 top1=2 oracle=33 cand=1516 groups=185 top1_MAE=52.77 (2657.6s, 6.7s/img)
+[215/297] 6264.jpg gt=16 top1=2 oracle=12 cand=1038 groups=107 top1_MAE=52.91 (2678.0s, 3.2s/img)
+[220/297] 6284.jpg gt=89 top1=2 oracle=59 cand=1613 groups=145 top1_MAE=53.06 (2711.2s, 6.6s/img)
+[225/297] 6657.jpg gt=123 top1=2 oracle=66 cand=1644 groups=168 top1_MAE=54.47 (2742.1s, 6.5s/img)
+[230/297] 7114.jpg gt=289 top1=2 oracle=326 cand=2032 groups=239 top1_MAE=56.49 (2770.3s, 10.1s/img)
+[235/297] 7398.jpg gt=26 top1=2 oracle=26 cand=3469 groups=382 top1_MAE=56.02 (2844.2s, 23.3s/img)
+[240/297] 6852.jpg gt=68 top1=3 oracle=10 cand=574 groups=62 top1_MAE=55.67 (2900.1s, 2.3s/img)
+[245/297] 7216.jpg gt=25 top1=2 oracle=24 cand=3459 groups=311 top1_MAE=55.29 (2947.1s, 18.4s/img)
+[250/297] 7694.jpg gt=60 top1=2 oracle=55 cand=2483 groups=179 top1_MAE=56.09 (3056.6s, 11.0s/img)
+[255/297] 7536.jpg gt=24 top1=2 oracle=25 cand=1613 groups=127 top1_MAE=56.17 (3170.3s, 5.3s/img)
+[260/297] 7015.jpg gt=141 top1=2 oracle=117 cand=4532 groups=405 top1_MAE=56.56 (3230.4s, 35.5s/img)
+[265/297] 7598.jpg gt=31 top1=2 oracle=37 cand=2262 groups=215 top1_MAE=56.46 (3270.1s, 10.9s/img)
+[270/297] 7056.jpg gt=77 top1=2 oracle=51 cand=1413 groups=119 top1_MAE=56.84 (3385.6s, 5.3s/img)
+[275/297] 7463.jpg gt=21 top1=2 oracle=21 cand=5838 groups=543 top1_MAE=56.18 (3697.1s, 45.6s/img)
+[280/297] 7671.jpg gt=87 top1=3 oracle=95 cand=2317 groups=107 top1_MAE=57.52 (3720.6s, 10.7s/img)
+[285/297] 7609.jpg gt=110 top1=7 oracle=25 cand=2094 groups=190 top1_MAE=58.60 (3765.3s, 9.2s/img)
+[290/297] 7096.jpg gt=19 top1=2 oracle=20 cand=529 groups=65 top1_MAE=67.50 (4116.8s, 1.8s/img)
+[295/297] 7347.jpg gt=103 top1=2 oracle=79 cand=1392 groups=100 top1_MAE=67.16 (4159.6s, 4.8s/img)
+
+=== FSC147 test results ===
+{
+  "num_images": 297,
+  "top1_mae": 67.4040404040404,
+  "top1_rmse": 173.9316499525571,
+  "top1_nae": 0.9151870811454482,
+  "top1_sre": 65.27340409144524,
+  "oracle_mae": 23.19191919191919,
+  "oracle_rmse": 47.87743892742341,
+  "top1_by_gt_range": {
+    "1-10": {
+      "n": 19,
+      "mae": 6.947368421052632,
+      "rmse": 7.041231949625083
+    },
+    "11-50": {
+      "n": 163,
+      "mae": 23.834355828220858,
+      "rmse": 26.283844673060027
+    },
+    "51-200": {
+      "n": 101,
+      "mae": 93.82178217821782,
+      "rmse": 100.68950410854035
+    },
+    "201+": {
+      "n": 14,
+      "mae": 466.14285714285717,
+      "rmse": 748.6837974548591
+    }
+  },
+  "oracle_by_gt_range": {
+    "1-10": {
+      "n": 19,
+      "mae": 0.7368421052631579,
+      "rmse": 1.2977713690461004
+    },
+    "11-50": {
+      "n": 163,
+      "mae": 4.674846625766871,
+      "rmse": 7.657547702092097
+    },
+    "51-200": {
+      "n": 101,
+      "mae": 41.83168316831683,
+      "rmse": 55.05397891214954
+    },
+    "201+": {
+      "n": 14,
+      "mae": 134.78571428571428,
+      "rmse": 161.48485112498057
+    }
+  },
+  "elapsed_sec": 4180.550185680389
+}

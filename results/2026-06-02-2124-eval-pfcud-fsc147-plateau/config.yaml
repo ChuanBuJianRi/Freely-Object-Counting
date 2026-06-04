@@ -1,0 +1,28 @@
+run_id: 2026-06-02-2124-eval-pfcud-fsc147-plateau
+task: eval
+dataset: FSC147 test (1190 images)
+method: PF-CUD parameter-free counting
+predictors:
+  - top1: rank-1 group size (pipeline default)
+  - select: group_filter unit-strength selection
+  - scale: scale-layer count via coarsest_plateau rule (NEW)
+  - oracle: group closest to GT (cheating upper bound)
+change: >
+  scale_count.py scale-layer selection rule changed from `most_stable`
+  (globally flattest interior level) to `coarsest_plateau` (coarsest level
+  whose adjacent relative count change is <= the curve's median relative
+  change). Data-driven, parameter-free; adapts the chosen scale per image.
+env:
+  venv: /home/gaoyiyang/venvs/fsc
+  torch: 2.6.0+cu124
+  gpus: [4, 5, 6, 7]
+  sharding: images[offset::4], offset 0..3
+  pipeline: blob + DINOv2 visual + edge candidates, use_edge=True
+gpu_thermal:
+  temp_limit_c: 78
+  cooldown_sec: 30
+  hysteresis_c: 5
+  check_every: 5
+  gpu_index: 0
+launch: bench/New_approach/run_fsc147_4gpu.sh
+outputs: bench/New_approach/outputs/fsc147_full_plateau/shard_offset{0..3}.json

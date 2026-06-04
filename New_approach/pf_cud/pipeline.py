@@ -75,6 +75,15 @@ class PFCUDPipeline:
         if self.edge_generator is not None:
             candidates.extend(self.edge_generator.generate(image_rgb))
 
+        # Snapshot the pre-dedup blob scale histogram: dedup merges same-scale
+        # blobs and would destroy the per-scale count curve that scale-layer
+        # counting reads. Stored as (sigma, count) pairs in the result meta.
+        self._raw_blob_sigmas = [
+            float(c.meta["sigma"])
+            for c in candidates
+            if c.source == "blob" and "sigma" in c.meta
+        ]
+
         candidates = deduplicate_candidates(candidates)
         return candidates
 
@@ -93,7 +102,10 @@ class PFCUDPipeline:
                 groups=[],
                 candidates=[],
                 image_shape=image_rgb.shape[:2],
-                meta={"status": "no_candidates"},
+                meta={
+                    "status": "no_candidates",
+                    "raw_blob_sigmas": getattr(self, "_raw_blob_sigmas", []),
+                },
             )
 
         self.attach_features(image_rgb, candidates)
@@ -116,5 +128,6 @@ class PFCUDPipeline:
             meta={
                 "num_candidates": len(candidates),
                 "num_groups": len(groups),
+                "raw_blob_sigmas": getattr(self, "_raw_blob_sigmas", []),
             },
         )

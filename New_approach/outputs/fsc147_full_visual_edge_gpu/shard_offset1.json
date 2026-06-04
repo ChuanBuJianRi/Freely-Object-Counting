@@ -1,0 +1,2751 @@
+{
+  "metrics": {
+    "num_images": 298,
+    "top1_mae": 60.12751677852349,
+    "top1_rmse": 95.5543346608788,
+    "top1_nae": 0.9163042182713338,
+    "top1_sre": 57.98183682246835,
+    "oracle_mae": 27.130872483221477,
+    "oracle_rmse": 56.24529808834672,
+    "top1_by_gt_range": {
+      "1-10": {
+        "n": 12,
+        "mae": 7.25,
+        "rmse": 7.285830998131464
+      },
+      "11-50": {
+        "n": 168,
+        "mae": 23.851190476190474,
+        "rmse": 26.442997992987536
+      },
+      "51-200": {
+        "n": 104,
+        "mae": 90.97115384615384,
+        "rmse": 97.69482507356183
+      },
+      "201+": {
+        "n": 14,
+        "mae": 311.64285714285717,
+        "rmse": 339.13914127221756
+      }
+    },
+    "oracle_by_gt_range": {
+      "1-10": {
+        "n": 12,
+        "mae": 0.9166666666666666,
+        "rmse": 1.3228756555322954
+      },
+      "11-50": {
+        "n": 168,
+        "mae": 4.660714285714286,
+        "rmse": 7.703199706244524
+      },
+      "51-200": {
+        "n": 104,
+        "mae": 44.20192307692308,
+        "rmse": 53.981032993792574
+      },
+      "201+": {
+        "n": 14,
+        "mae": 192.42857142857142,
+        "rmse": 212.08017351935564
+      }
+    },
+    "elapsed_sec": 4315.236387014389
+  },
+  "thermal": {
+    "enabled": true,
+    "temp_limit_c": 78,
+    "cooldown_sec": 30,
+    "hysteresis_c": 5,
+    "check_every": 5,
+    "peak_temp_c": 39,
+    "cooldown_events": 0,
+    "cooldown_seconds": 0.0,
+    "polls": 59
+  },
+  "per_image": [
+    {
+      "image": "3.jpg",
+      "gt": 11,
+      "top1": 3,
+      "oracle": 12,
+      "num_candidates": 1205,
+      "num_groups": 188,
+      "elapsed_sec": 8.64
+    },
+    {
+      "image": "285.jpg",
+      "gt": 28,
+      "top1": 2,
+      "oracle": 26,
+      "num_candidates": 5992,
+      "num_groups": 736,
+      "elapsed_sec": 74.15
+    },
+    {
+      "image": "289.jpg",
+      "gt": 26,
+      "top1": 4,
+      "oracle": 23,
+      "num_candidates": 3621,
+      "num_groups": 450,
+      "elapsed_sec": 25.35
+    },
+    {
+      "image": "293.jpg",
+      "gt": 41,
+      "top1": 2,
+      "oracle": 38,
+      "num_candidates": 4752,
+      "num_groups": 515,
+      "elapsed_sec": 40.82
+    },
+    {
+      "image": "297.jpg",
+      "gt": 12,
+      "top1": 2,
+      "oracle": 11,
+      "num_candidates": 1532,
+      "num_groups": 173,
+      "elapsed_sec": 6.16
+    },
+    {
+      "image": "301.jpg",
+      "gt": 28,
+      "top1": 2,
+      "oracle": 29,
+      "num_candidates": 2861,
+      "num_groups": 245,
+      "elapsed_sec": 12.99
+    },
+    {
+      "image": "306.jpg",
+      "gt": 30,
+      "top1": 2,
+      "oracle": 29,
+      "num_candidates": 3704,
+      "num_groups": 334,
+      "elapsed_sec": 23.22
+    },
+    {
+      "image": "310.jpg",
+      "gt": 65,
+      "top1": 2,
+      "oracle": 61,
+      "num_candidates": 3065,
+      "num_groups": 399,
+      "elapsed_sec": 20.98
+    },
+    {
+      "image": "315.jpg",
+      "gt": 53,
+      "top1": 2,
+      "oracle": 51,
+      "num_candidates": 5387,
+      "num_groups": 451,
+      "elapsed_sec": 44.31
+    },
+    {
+      "image": "320.jpg",
+      "gt": 16,
+      "top1": 2,
+      "oracle": 13,
+      "num_candidates": 2775,
+      "num_groups": 384,
+      "elapsed_sec": 18.24
+    },
+    {
+      "image": "324.jpg",
+      "gt": 11,
+      "top1": 2,
+      "oracle": 11,
+      "num_candidates": 906,
+      "num_groups": 113,
+      "elapsed_sec": 2.83
+    },
+    {
+      "image": "328.jpg",
+      "gt": 35,
+      "top1": 4,
+      "oracle": 31,
+      "num_candidates": 1459,
+      "num_groups": 185,
+      "elapsed_sec": 6.56
+    },
+    {
+      "image": "332.jpg",
+      "gt": 11,
+      "top1": 3,
+      "oracle": 10,
+      "num_candidates": 1152,
+      "num_groups": 175,
+      "elapsed_sec": 4.86
+    },
+    {
+      "image": "336.jpg",
+      "gt": 16,
+      "top1": 2,
+      "oracle": 15,
+      "num_candidates": 1448,
+      "num_groups": 184,
+      "elapsed_sec": 5.94
+    },
+    {
+      "image": "341.jpg",
+      "gt": 13,
+      "top1": 3,
+      "oracle": 14,
+      "num_candidates": 2260,
+      "num_groups": 234,
+      "elapsed_sec": 9.99
+    },
+    {
+      "image": "345.jpg",
+      "gt": 63,
+      "top1": 2,
+      "oracle": 76,
+      "num_candidates": 6411,
+      "num_groups": 611,
+      "elapsed_sec": 59.11
+    },
+    {
+      "image": "349.jpg",
+      "gt": 39,
+      "top1": 2,
+      "oracle": 41,
+      "num_candidates": 6192,
+      "num_groups": 511,
+      "elapsed_sec": 48.35
+    },
+    {
+      "image": "681.jpg",
+      "gt": 24,
+      "top1": 2,
+      "oracle": 25,
+      "num_candidates": 1149,
+      "num_groups": 110,
+      "elapsed_sec": 3.93
+    },
+    {
+      "image": "687.jpg",
+      "gt": 548,
+      "top1": 2,
+      "oracle": 566,
+      "num_candidates": 1413,
+      "num_groups": 161,
+      "elapsed_sec": 5.2
+    },
+    {
+      "image": "693.jpg",
+      "gt": 17,
+      "top1": 2,
+      "oracle": 14,
+      "num_candidates": 995,
+      "num_groups": 80,
+      "elapsed_sec": 3.15
+    },
+    {
+      "image": "698.jpg",
+      "gt": 154,
+      "top1": 2,
+      "oracle": 47,
+      "num_candidates": 3131,
+      "num_groups": 273,
+      "elapsed_sec": 17.64
+    },
+    {
+      "image": "704.jpg",
+      "gt": 59,
+      "top1": 2,
+      "oracle": 64,
+      "num_candidates": 1666,
+      "num_groups": 170,
+      "elapsed_sec": 7.02
+    },
+    {
+      "image": "709.jpg",
+      "gt": 132,
+      "top1": 2,
+      "oracle": 60,
+      "num_candidates": 6816,
+      "num_groups": 524,
+      "elapsed_sec": 67.59
+    },
+    {
+      "image": "713.jpg",
+      "gt": 24,
+      "top1": 3,
+      "oracle": 17,
+      "num_candidates": 450,
+      "num_groups": 74,
+      "elapsed_sec": 1.4
+    },
+    {
+      "image": "717.jpg",
+      "gt": 20,
+      "top1": 2,
+      "oracle": 19,
+      "num_candidates": 3909,
+      "num_groups": 504,
+      "elapsed_sec": 33.84
+    },
+    {
+      "image": "906.jpg",
+      "gt": 235,
+      "top1": 2,
+      "oracle": 50,
+      "num_candidates": 4577,
+      "num_groups": 344,
+      "elapsed_sec": 29.2
+    },
+    {
+      "image": "911.jpg",
+      "gt": 85,
+      "top1": 2,
+      "oracle": 72,
+      "num_candidates": 3452,
+      "num_groups": 312,
+      "elapsed_sec": 20.66
+    },
+    {
+      "image": "990.jpg",
+      "gt": 111,
+      "top1": 2,
+      "oracle": 62,
+      "num_candidates": 3197,
+      "num_groups": 315,
+      "elapsed_sec": 20.2
+    },
+    {
+      "image": "996.jpg",
+      "gt": 18,
+      "top1": 2,
+      "oracle": 18,
+      "num_candidates": 1981,
+      "num_groups": 127,
+      "elapsed_sec": 7.64
+    },
+    {
+      "image": "1053.jpg",
+      "gt": 207,
+      "top1": 2,
+      "oracle": 354,
+      "num_candidates": 2324,
+      "num_groups": 225,
+      "elapsed_sec": 12.53
+    },
+    {
+      "image": "1130.jpg",
+      "gt": 61,
+      "top1": 2,
+      "oracle": 20,
+      "num_candidates": 1689,
+      "num_groups": 154,
+      "elapsed_sec": 5.75
+    },
+    {
+      "image": "1461.jpg",
+      "gt": 99,
+      "top1": 4,
+      "oracle": 112,
+      "num_candidates": 2856,
+      "num_groups": 563,
+      "elapsed_sec": 29.03
+    },
+    {
+      "image": "1467.jpg",
+      "gt": 70,
+      "top1": 2,
+      "oracle": 12,
+      "num_candidates": 1128,
+      "num_groups": 80,
+      "elapsed_sec": 3.69
+    },
+    {
+      "image": "1537.jpg",
+      "gt": 110,
+      "top1": 2,
+      "oracle": 34,
+      "num_candidates": 867,
+      "num_groups": 78,
+      "elapsed_sec": 3.89
+    },
+    {
+      "image": "1875.jpg",
+      "gt": 54,
+      "top1": 2,
+      "oracle": 59,
+      "num_candidates": 7567,
+      "num_groups": 775,
+      "elapsed_sec": 92.95
+    },
+    {
+      "image": "1887.jpg",
+      "gt": 10,
+      "top1": 2,
+      "oracle": 10,
+      "num_candidates": 3979,
+      "num_groups": 406,
+      "elapsed_sec": 35.06
+    },
+    {
+      "image": "2005.jpg",
+      "gt": 140,
+      "top1": 2,
+      "oracle": 58,
+      "num_candidates": 3263,
+      "num_groups": 325,
+      "elapsed_sec": 26.55
+    },
+    {
+      "image": "2010.jpg",
+      "gt": 15,
+      "top1": 3,
+      "oracle": 15,
+      "num_candidates": 603,
+      "num_groups": 67,
+      "elapsed_sec": 2.77
+    },
+    {
+      "image": "2014.jpg",
+      "gt": 18,
+      "top1": 2,
+      "oracle": 17,
+      "num_candidates": 1810,
+      "num_groups": 196,
+      "elapsed_sec": 12.31
+    },
+    {
+      "image": "2018.jpg",
+      "gt": 68,
+      "top1": 2,
+      "oracle": 44,
+      "num_candidates": 2951,
+      "num_groups": 258,
+      "elapsed_sec": 21.96
+    },
+    {
+      "image": "2025.jpg",
+      "gt": 60,
+      "top1": 2,
+      "oracle": 81,
+      "num_candidates": 3010,
+      "num_groups": 287,
+      "elapsed_sec": 17.84
+    },
+    {
+      "image": "2029.jpg",
+      "gt": 79,
+      "top1": 2,
+      "oracle": 99,
+      "num_candidates": 2785,
+      "num_groups": 271,
+      "elapsed_sec": 16.34
+    },
+    {
+      "image": "2033.jpg",
+      "gt": 20,
+      "top1": 3,
+      "oracle": 7,
+      "num_candidates": 1779,
+      "num_groups": 105,
+      "elapsed_sec": 6.92
+    },
+    {
+      "image": "2038.jpg",
+      "gt": 198,
+      "top1": 2,
+      "oracle": 70,
+      "num_candidates": 4570,
+      "num_groups": 362,
+      "elapsed_sec": 33.98
+    },
+    {
+      "image": "2042.jpg",
+      "gt": 81,
+      "top1": 4,
+      "oracle": 34,
+      "num_candidates": 2076,
+      "num_groups": 198,
+      "elapsed_sec": 10.09
+    },
+    {
+      "image": "2046.jpg",
+      "gt": 20,
+      "top1": 2,
+      "oracle": 18,
+      "num_candidates": 2967,
+      "num_groups": 277,
+      "elapsed_sec": 18.52
+    },
+    {
+      "image": "2051.jpg",
+      "gt": 15,
+      "top1": 2,
+      "oracle": 16,
+      "num_candidates": 815,
+      "num_groups": 69,
+      "elapsed_sec": 2.79
+    },
+    {
+      "image": "2138.jpg",
+      "gt": 29,
+      "top1": 2,
+      "oracle": 30,
+      "num_candidates": 987,
+      "num_groups": 73,
+      "elapsed_sec": 3.38
+    },
+    {
+      "image": "2142.jpg",
+      "gt": 35,
+      "top1": 2,
+      "oracle": 31,
+      "num_candidates": 1452,
+      "num_groups": 179,
+      "elapsed_sec": 7.83
+    },
+    {
+      "image": "2147.jpg",
+      "gt": 37,
+      "top1": 2,
+      "oracle": 38,
+      "num_candidates": 1505,
+      "num_groups": 189,
+      "elapsed_sec": 7.16
+    },
+    {
+      "image": "2153.jpg",
+      "gt": 12,
+      "top1": 2,
+      "oracle": 9,
+      "num_candidates": 463,
+      "num_groups": 36,
+      "elapsed_sec": 1.29
+    },
+    {
+      "image": "2159.jpg",
+      "gt": 621,
+      "top1": 2,
+      "oracle": 399,
+      "num_candidates": 2290,
+      "num_groups": 238,
+      "elapsed_sec": 11.25
+    },
+    {
+      "image": "2165.jpg",
+      "gt": 24,
+      "top1": 3,
+      "oracle": 28,
+      "num_candidates": 1391,
+      "num_groups": 152,
+      "elapsed_sec": 5.26
+    },
+    {
+      "image": "2171.jpg",
+      "gt": 20,
+      "top1": 2,
+      "oracle": 13,
+      "num_candidates": 809,
+      "num_groups": 99,
+      "elapsed_sec": 2.64
+    },
+    {
+      "image": "2175.jpg",
+      "gt": 91,
+      "top1": 2,
+      "oracle": 63,
+      "num_candidates": 5855,
+      "num_groups": 504,
+      "elapsed_sec": 52.98
+    },
+    {
+      "image": "2179.jpg",
+      "gt": 16,
+      "top1": 2,
+      "oracle": 16,
+      "num_candidates": 843,
+      "num_groups": 116,
+      "elapsed_sec": 3.2
+    },
+    {
+      "image": "2184.jpg",
+      "gt": 33,
+      "top1": 3,
+      "oracle": 9,
+      "num_candidates": 1002,
+      "num_groups": 92,
+      "elapsed_sec": 3.38
+    },
+    {
+      "image": "2192.jpg",
+      "gt": 24,
+      "top1": 4,
+      "oracle": 22,
+      "num_candidates": 1561,
+      "num_groups": 179,
+      "elapsed_sec": 6.93
+    },
+    {
+      "image": "2197.jpg",
+      "gt": 90,
+      "top1": 5,
+      "oracle": 56,
+      "num_candidates": 1519,
+      "num_groups": 176,
+      "elapsed_sec": 7.58
+    },
+    {
+      "image": "2203.jpg",
+      "gt": 22,
+      "top1": 2,
+      "oracle": 17,
+      "num_candidates": 1159,
+      "num_groups": 148,
+      "elapsed_sec": 4.88
+    },
+    {
+      "image": "2208.jpg",
+      "gt": 13,
+      "top1": 2,
+      "oracle": 13,
+      "num_candidates": 1812,
+      "num_groups": 126,
+      "elapsed_sec": 6.35
+    },
+    {
+      "image": "2213.jpg",
+      "gt": 97,
+      "top1": 2,
+      "oracle": 60,
+      "num_candidates": 3263,
+      "num_groups": 376,
+      "elapsed_sec": 22.71
+    },
+    {
+      "image": "2218.jpg",
+      "gt": 15,
+      "top1": 3,
+      "oracle": 15,
+      "num_candidates": 1904,
+      "num_groups": 214,
+      "elapsed_sec": 9.53
+    },
+    {
+      "image": "2225.jpg",
+      "gt": 19,
+      "top1": 3,
+      "oracle": 17,
+      "num_candidates": 1408,
+      "num_groups": 163,
+      "elapsed_sec": 5.45
+    },
+    {
+      "image": "2232.jpg",
+      "gt": 96,
+      "top1": 3,
+      "oracle": 48,
+      "num_candidates": 867,
+      "num_groups": 94,
+      "elapsed_sec": 2.75
+    },
+    {
+      "image": "2236.jpg",
+      "gt": 98,
+      "top1": 2,
+      "oracle": 45,
+      "num_candidates": 1871,
+      "num_groups": 232,
+      "elapsed_sec": 10.1
+    },
+    {
+      "image": "2240.jpg",
+      "gt": 54,
+      "top1": 2,
+      "oracle": 31,
+      "num_candidates": 1406,
+      "num_groups": 166,
+      "elapsed_sec": 5.98
+    },
+    {
+      "image": "2245.jpg",
+      "gt": 82,
+      "top1": 2,
+      "oracle": 100,
+      "num_candidates": 5209,
+      "num_groups": 493,
+      "elapsed_sec": 46.96
+    },
+    {
+      "image": "2252.jpg",
+      "gt": 82,
+      "top1": 2,
+      "oracle": 40,
+      "num_candidates": 1504,
+      "num_groups": 115,
+      "elapsed_sec": 5.91
+    },
+    {
+      "image": "2258.jpg",
+      "gt": 75,
+      "top1": 2,
+      "oracle": 33,
+      "num_candidates": 1490,
+      "num_groups": 137,
+      "elapsed_sec": 6.24
+    },
+    {
+      "image": "2262.jpg",
+      "gt": 9,
+      "top1": 3,
+      "oracle": 11,
+      "num_candidates": 289,
+      "num_groups": 62,
+      "elapsed_sec": 0.95
+    },
+    {
+      "image": "2268.jpg",
+      "gt": 74,
+      "top1": 3,
+      "oracle": 41,
+      "num_candidates": 557,
+      "num_groups": 50,
+      "elapsed_sec": 1.58
+    },
+    {
+      "image": "2272.jpg",
+      "gt": 15,
+      "top1": 2,
+      "oracle": 17,
+      "num_candidates": 1156,
+      "num_groups": 134,
+      "elapsed_sec": 4.62
+    },
+    {
+      "image": "2276.jpg",
+      "gt": 30,
+      "top1": 2,
+      "oracle": 30,
+      "num_candidates": 1421,
+      "num_groups": 162,
+      "elapsed_sec": 6.34
+    },
+    {
+      "image": "2281.jpg",
+      "gt": 22,
+      "top1": 2,
+      "oracle": 21,
+      "num_candidates": 1466,
+      "num_groups": 164,
+      "elapsed_sec": 6.79
+    },
+    {
+      "image": "2286.jpg",
+      "gt": 14,
+      "top1": 2,
+      "oracle": 13,
+      "num_candidates": 1026,
+      "num_groups": 131,
+      "elapsed_sec": 3.87
+    },
+    {
+      "image": "2611.jpg",
+      "gt": 18,
+      "top1": 2,
+      "oracle": 17,
+      "num_candidates": 2846,
+      "num_groups": 312,
+      "elapsed_sec": 15.94
+    },
+    {
+      "image": "2615.jpg",
+      "gt": 9,
+      "top1": 2,
+      "oracle": 9,
+      "num_candidates": 6247,
+      "num_groups": 582,
+      "elapsed_sec": 60.24
+    },
+    {
+      "image": "2908.jpg",
+      "gt": 33,
+      "top1": 2,
+      "oracle": 43,
+      "num_candidates": 2273,
+      "num_groups": 231,
+      "elapsed_sec": 10.03
+    },
+    {
+      "image": "2914.jpg",
+      "gt": 28,
+      "top1": 2,
+      "oracle": 30,
+      "num_candidates": 3722,
+      "num_groups": 334,
+      "elapsed_sec": 23.98
+    },
+    {
+      "image": "2918.jpg",
+      "gt": 25,
+      "top1": 2,
+      "oracle": 24,
+      "num_candidates": 2878,
+      "num_groups": 236,
+      "elapsed_sec": 13.93
+    },
+    {
+      "image": "2923.jpg",
+      "gt": 86,
+      "top1": 2,
+      "oracle": 34,
+      "num_candidates": 3297,
+      "num_groups": 349,
+      "elapsed_sec": 20.28
+    },
+    {
+      "image": "2927.jpg",
+      "gt": 49,
+      "top1": 2,
+      "oracle": 47,
+      "num_candidates": 6211,
+      "num_groups": 321,
+      "elapsed_sec": 41.42
+    },
+    {
+      "image": "2931.jpg",
+      "gt": 43,
+      "top1": 2,
+      "oracle": 42,
+      "num_candidates": 3084,
+      "num_groups": 272,
+      "elapsed_sec": 15.52
+    },
+    {
+      "image": "2935.jpg",
+      "gt": 13,
+      "top1": 3,
+      "oracle": 12,
+      "num_candidates": 1806,
+      "num_groups": 104,
+      "elapsed_sec": 5.95
+    },
+    {
+      "image": "2939.jpg",
+      "gt": 52,
+      "top1": 2,
+      "oracle": 75,
+      "num_candidates": 2023,
+      "num_groups": 184,
+      "elapsed_sec": 8.41
+    },
+    {
+      "image": "2944.jpg",
+      "gt": 68,
+      "top1": 2,
+      "oracle": 61,
+      "num_candidates": 4452,
+      "num_groups": 377,
+      "elapsed_sec": 31.3
+    },
+    {
+      "image": "2948.jpg",
+      "gt": 11,
+      "top1": 2,
+      "oracle": 10,
+      "num_candidates": 1777,
+      "num_groups": 126,
+      "elapsed_sec": 5.68
+    },
+    {
+      "image": "2953.jpg",
+      "gt": 22,
+      "top1": 3,
+      "oracle": 16,
+      "num_candidates": 1513,
+      "num_groups": 134,
+      "elapsed_sec": 5.01
+    },
+    {
+      "image": "3111.jpg",
+      "gt": 20,
+      "top1": 2,
+      "oracle": 15,
+      "num_candidates": 1368,
+      "num_groups": 145,
+      "elapsed_sec": 4.57
+    },
+    {
+      "image": "3154.jpg",
+      "gt": 47,
+      "top1": 2,
+      "oracle": 25,
+      "num_candidates": 1206,
+      "num_groups": 170,
+      "elapsed_sec": 4.48
+    },
+    {
+      "image": "3158.jpg",
+      "gt": 43,
+      "top1": 2,
+      "oracle": 41,
+      "num_candidates": 1853,
+      "num_groups": 194,
+      "elapsed_sec": 8.17
+    },
+    {
+      "image": "3269.jpg",
+      "gt": 20,
+      "top1": 2,
+      "oracle": 19,
+      "num_candidates": 1101,
+      "num_groups": 127,
+      "elapsed_sec": 3.68
+    },
+    {
+      "image": "3275.jpg",
+      "gt": 12,
+      "top1": 3,
+      "oracle": 12,
+      "num_candidates": 2287,
+      "num_groups": 285,
+      "elapsed_sec": 13.66
+    },
+    {
+      "image": "3281.jpg",
+      "gt": 15,
+      "top1": 2,
+      "oracle": 12,
+      "num_candidates": 1246,
+      "num_groups": 157,
+      "elapsed_sec": 4.87
+    },
+    {
+      "image": "3285.jpg",
+      "gt": 34,
+      "top1": 2,
+      "oracle": 49,
+      "num_candidates": 1338,
+      "num_groups": 124,
+      "elapsed_sec": 4.68
+    },
+    {
+      "image": "3311.jpg",
+      "gt": 154,
+      "top1": 2,
+      "oracle": 8,
+      "num_candidates": 427,
+      "num_groups": 42,
+      "elapsed_sec": 1.49
+    },
+    {
+      "image": "3315.jpg",
+      "gt": 210,
+      "top1": 2,
+      "oracle": 24,
+      "num_candidates": 1183,
+      "num_groups": 155,
+      "elapsed_sec": 4.48
+    },
+    {
+      "image": "3320.jpg",
+      "gt": 159,
+      "top1": 2,
+      "oracle": 10,
+      "num_candidates": 698,
+      "num_groups": 84,
+      "elapsed_sec": 2.14
+    },
+    {
+      "image": "3324.jpg",
+      "gt": 56,
+      "top1": 4,
+      "oracle": 32,
+      "num_candidates": 339,
+      "num_groups": 30,
+      "elapsed_sec": 1.1
+    },
+    {
+      "image": "3329.jpg",
+      "gt": 178,
+      "top1": 2,
+      "oracle": 41,
+      "num_candidates": 1259,
+      "num_groups": 159,
+      "elapsed_sec": 4.69
+    },
+    {
+      "image": "3333.jpg",
+      "gt": 113,
+      "top1": 2,
+      "oracle": 13,
+      "num_candidates": 669,
+      "num_groups": 67,
+      "elapsed_sec": 2.18
+    },
+    {
+      "image": "3337.jpg",
+      "gt": 295,
+      "top1": 2,
+      "oracle": 478,
+      "num_candidates": 1281,
+      "num_groups": 46,
+      "elapsed_sec": 4.34
+    },
+    {
+      "image": "3342.jpg",
+      "gt": 12,
+      "top1": 2,
+      "oracle": 13,
+      "num_candidates": 2283,
+      "num_groups": 264,
+      "elapsed_sec": 12.52
+    },
+    {
+      "image": "3495.jpg",
+      "gt": 107,
+      "top1": 2,
+      "oracle": 95,
+      "num_candidates": 1677,
+      "num_groups": 191,
+      "elapsed_sec": 7.43
+    },
+    {
+      "image": "3499.jpg",
+      "gt": 91,
+      "top1": 2,
+      "oracle": 18,
+      "num_candidates": 688,
+      "num_groups": 67,
+      "elapsed_sec": 2.3
+    },
+    {
+      "image": "3643.jpg",
+      "gt": 59,
+      "top1": 2,
+      "oracle": 22,
+      "num_candidates": 1079,
+      "num_groups": 104,
+      "elapsed_sec": 4.01
+    },
+    {
+      "image": "3647.jpg",
+      "gt": 87,
+      "top1": 4,
+      "oracle": 28,
+      "num_candidates": 1432,
+      "num_groups": 110,
+      "elapsed_sec": 5.0
+    },
+    {
+      "image": "3651.jpg",
+      "gt": 11,
+      "top1": 2,
+      "oracle": 10,
+      "num_candidates": 989,
+      "num_groups": 149,
+      "elapsed_sec": 3.43
+    },
+    {
+      "image": "3656.jpg",
+      "gt": 45,
+      "top1": 2,
+      "oracle": 31,
+      "num_candidates": 748,
+      "num_groups": 93,
+      "elapsed_sec": 2.7
+    },
+    {
+      "image": "3693.jpg",
+      "gt": 36,
+      "top1": 10,
+      "oracle": 32,
+      "num_candidates": 1379,
+      "num_groups": 153,
+      "elapsed_sec": 5.92
+    },
+    {
+      "image": "3697.jpg",
+      "gt": 11,
+      "top1": 2,
+      "oracle": 8,
+      "num_candidates": 1645,
+      "num_groups": 166,
+      "elapsed_sec": 6.08
+    },
+    {
+      "image": "4063.jpg",
+      "gt": 11,
+      "top1": 4,
+      "oracle": 10,
+      "num_candidates": 364,
+      "num_groups": 36,
+      "elapsed_sec": 1.01
+    },
+    {
+      "image": "4067.jpg",
+      "gt": 42,
+      "top1": 2,
+      "oracle": 40,
+      "num_candidates": 953,
+      "num_groups": 60,
+      "elapsed_sec": 3.07
+    },
+    {
+      "image": "4071.jpg",
+      "gt": 48,
+      "top1": 2,
+      "oracle": 43,
+      "num_candidates": 879,
+      "num_groups": 89,
+      "elapsed_sec": 2.68
+    },
+    {
+      "image": "4077.jpg",
+      "gt": 221,
+      "top1": 2,
+      "oracle": 28,
+      "num_candidates": 2228,
+      "num_groups": 208,
+      "elapsed_sec": 11.2
+    },
+    {
+      "image": "4082.jpg",
+      "gt": 108,
+      "top1": 2,
+      "oracle": 58,
+      "num_candidates": 641,
+      "num_groups": 81,
+      "elapsed_sec": 1.98
+    },
+    {
+      "image": "4086.jpg",
+      "gt": 12,
+      "top1": 2,
+      "oracle": 15,
+      "num_candidates": 1085,
+      "num_groups": 70,
+      "elapsed_sec": 2.89
+    },
+    {
+      "image": "4110.jpg",
+      "gt": 12,
+      "top1": 2,
+      "oracle": 10,
+      "num_candidates": 1262,
+      "num_groups": 172,
+      "elapsed_sec": 4.62
+    },
+    {
+      "image": "4114.jpg",
+      "gt": 12,
+      "top1": 2,
+      "oracle": 11,
+      "num_candidates": 5322,
+      "num_groups": 491,
+      "elapsed_sec": 43.55
+    },
+    {
+      "image": "4119.jpg",
+      "gt": 12,
+      "top1": 2,
+      "oracle": 10,
+      "num_candidates": 1876,
+      "num_groups": 170,
+      "elapsed_sec": 8.58
+    },
+    {
+      "image": "4123.jpg",
+      "gt": 13,
+      "top1": 2,
+      "oracle": 10,
+      "num_candidates": 2148,
+      "num_groups": 262,
+      "elapsed_sec": 11.63
+    },
+    {
+      "image": "4175.jpg",
+      "gt": 21,
+      "top1": 2,
+      "oracle": 16,
+      "num_candidates": 3120,
+      "num_groups": 265,
+      "elapsed_sec": 19.23
+    },
+    {
+      "image": "4286.jpg",
+      "gt": 333,
+      "top1": 2,
+      "oracle": 60,
+      "num_candidates": 2750,
+      "num_groups": 205,
+      "elapsed_sec": 15.02
+    },
+    {
+      "image": "4290.jpg",
+      "gt": 25,
+      "top1": 2,
+      "oracle": 12,
+      "num_candidates": 1459,
+      "num_groups": 183,
+      "elapsed_sec": 6.47
+    },
+    {
+      "image": "4295.jpg",
+      "gt": 110,
+      "top1": 3,
+      "oracle": 68,
+      "num_candidates": 310,
+      "num_groups": 39,
+      "elapsed_sec": 0.95
+    },
+    {
+      "image": "4300.jpg",
+      "gt": 83,
+      "top1": 2,
+      "oracle": 40,
+      "num_candidates": 744,
+      "num_groups": 126,
+      "elapsed_sec": 2.82
+    },
+    {
+      "image": "4304.jpg",
+      "gt": 15,
+      "top1": 2,
+      "oracle": 15,
+      "num_candidates": 480,
+      "num_groups": 52,
+      "elapsed_sec": 1.6
+    },
+    {
+      "image": "4407.jpg",
+      "gt": 69,
+      "top1": 2,
+      "oracle": 33,
+      "num_candidates": 1620,
+      "num_groups": 114,
+      "elapsed_sec": 5.95
+    },
+    {
+      "image": "4413.jpg",
+      "gt": 11,
+      "top1": 3,
+      "oracle": 11,
+      "num_candidates": 3327,
+      "num_groups": 315,
+      "elapsed_sec": 21.81
+    },
+    {
+      "image": "4417.jpg",
+      "gt": 63,
+      "top1": 2,
+      "oracle": 26,
+      "num_candidates": 1895,
+      "num_groups": 190,
+      "elapsed_sec": 8.23
+    },
+    {
+      "image": "4422.jpg",
+      "gt": 10,
+      "top1": 3,
+      "oracle": 9,
+      "num_candidates": 533,
+      "num_groups": 49,
+      "elapsed_sec": 1.76
+    },
+    {
+      "image": "4494.jpg",
+      "gt": 26,
+      "top1": 2,
+      "oracle": 22,
+      "num_candidates": 2803,
+      "num_groups": 241,
+      "elapsed_sec": 14.85
+    },
+    {
+      "image": "4498.jpg",
+      "gt": 12,
+      "top1": 2,
+      "oracle": 12,
+      "num_candidates": 4223,
+      "num_groups": 443,
+      "elapsed_sec": 34.12
+    },
+    {
+      "image": "4502.jpg",
+      "gt": 21,
+      "top1": 2,
+      "oracle": 19,
+      "num_candidates": 2277,
+      "num_groups": 189,
+      "elapsed_sec": 10.13
+    },
+    {
+      "image": "4877.jpg",
+      "gt": 44,
+      "top1": 2,
+      "oracle": 44,
+      "num_candidates": 4277,
+      "num_groups": 417,
+      "elapsed_sec": 31.85
+    },
+    {
+      "image": "4881.jpg",
+      "gt": 35,
+      "top1": 2,
+      "oracle": 30,
+      "num_candidates": 3807,
+      "num_groups": 400,
+      "elapsed_sec": 25.23
+    },
+    {
+      "image": "4885.jpg",
+      "gt": 11,
+      "top1": 2,
+      "oracle": 11,
+      "num_candidates": 945,
+      "num_groups": 148,
+      "elapsed_sec": 3.33
+    },
+    {
+      "image": "4889.jpg",
+      "gt": 27,
+      "top1": 2,
+      "oracle": 20,
+      "num_candidates": 938,
+      "num_groups": 97,
+      "elapsed_sec": 3.52
+    },
+    {
+      "image": "4893.jpg",
+      "gt": 28,
+      "top1": 2,
+      "oracle": 26,
+      "num_candidates": 3956,
+      "num_groups": 452,
+      "elapsed_sec": 28.03
+    },
+    {
+      "image": "4897.jpg",
+      "gt": 35,
+      "top1": 2,
+      "oracle": 32,
+      "num_candidates": 2562,
+      "num_groups": 235,
+      "elapsed_sec": 10.72
+    },
+    {
+      "image": "4903.jpg",
+      "gt": 18,
+      "top1": 2,
+      "oracle": 12,
+      "num_candidates": 1132,
+      "num_groups": 125,
+      "elapsed_sec": 4.01
+    },
+    {
+      "image": "4908.jpg",
+      "gt": 24,
+      "top1": 2,
+      "oracle": 16,
+      "num_candidates": 993,
+      "num_groups": 81,
+      "elapsed_sec": 3.4
+    },
+    {
+      "image": "4912.jpg",
+      "gt": 39,
+      "top1": 2,
+      "oracle": 34,
+      "num_candidates": 6706,
+      "num_groups": 535,
+      "elapsed_sec": 56.86
+    },
+    {
+      "image": "4917.jpg",
+      "gt": 37,
+      "top1": 2,
+      "oracle": 40,
+      "num_candidates": 2166,
+      "num_groups": 277,
+      "elapsed_sec": 11.87
+    },
+    {
+      "image": "4921.jpg",
+      "gt": 13,
+      "top1": 3,
+      "oracle": 15,
+      "num_candidates": 1462,
+      "num_groups": 144,
+      "elapsed_sec": 4.79
+    },
+    {
+      "image": "4925.jpg",
+      "gt": 142,
+      "top1": 2,
+      "oracle": 99,
+      "num_candidates": 2410,
+      "num_groups": 208,
+      "elapsed_sec": 11.9
+    },
+    {
+      "image": "4929.jpg",
+      "gt": 36,
+      "top1": 2,
+      "oracle": 34,
+      "num_candidates": 3359,
+      "num_groups": 475,
+      "elapsed_sec": 25.49
+    },
+    {
+      "image": "4933.jpg",
+      "gt": 54,
+      "top1": 2,
+      "oracle": 28,
+      "num_candidates": 6652,
+      "num_groups": 364,
+      "elapsed_sec": 41.57
+    },
+    {
+      "image": "4938.jpg",
+      "gt": 58,
+      "top1": 2,
+      "oracle": 55,
+      "num_candidates": 3074,
+      "num_groups": 345,
+      "elapsed_sec": 19.82
+    },
+    {
+      "image": "4942.jpg",
+      "gt": 56,
+      "top1": 2,
+      "oracle": 18,
+      "num_candidates": 1998,
+      "num_groups": 133,
+      "elapsed_sec": 7.68
+    },
+    {
+      "image": "4946.jpg",
+      "gt": 71,
+      "top1": 2,
+      "oracle": 42,
+      "num_candidates": 2395,
+      "num_groups": 263,
+      "elapsed_sec": 13.58
+    },
+    {
+      "image": "4950.jpg",
+      "gt": 33,
+      "top1": 2,
+      "oracle": 34,
+      "num_candidates": 2786,
+      "num_groups": 284,
+      "elapsed_sec": 16.38
+    },
+    {
+      "image": "4954.jpg",
+      "gt": 29,
+      "top1": 2,
+      "oracle": 28,
+      "num_candidates": 4861,
+      "num_groups": 389,
+      "elapsed_sec": 36.77
+    },
+    {
+      "image": "4958.jpg",
+      "gt": 118,
+      "top1": 2,
+      "oracle": 38,
+      "num_candidates": 2887,
+      "num_groups": 268,
+      "elapsed_sec": 17.64
+    },
+    {
+      "image": "4962.jpg",
+      "gt": 30,
+      "top1": 2,
+      "oracle": 28,
+      "num_candidates": 3257,
+      "num_groups": 270,
+      "elapsed_sec": 18.5
+    },
+    {
+      "image": "4966.jpg",
+      "gt": 46,
+      "top1": 2,
+      "oracle": 46,
+      "num_candidates": 4820,
+      "num_groups": 461,
+      "elapsed_sec": 46.37
+    },
+    {
+      "image": "5141.jpg",
+      "gt": 30,
+      "top1": 2,
+      "oracle": 19,
+      "num_candidates": 756,
+      "num_groups": 63,
+      "elapsed_sec": 2.15
+    },
+    {
+      "image": "5145.jpg",
+      "gt": 15,
+      "top1": 5,
+      "oracle": 10,
+      "num_candidates": 1034,
+      "num_groups": 108,
+      "elapsed_sec": 3.42
+    },
+    {
+      "image": "5356.jpg",
+      "gt": 16,
+      "top1": 3,
+      "oracle": 17,
+      "num_candidates": 1056,
+      "num_groups": 94,
+      "elapsed_sec": 3.78
+    },
+    {
+      "image": "5360.jpg",
+      "gt": 65,
+      "top1": 2,
+      "oracle": 78,
+      "num_candidates": 2080,
+      "num_groups": 191,
+      "elapsed_sec": 9.11
+    },
+    {
+      "image": "5364.jpg",
+      "gt": 23,
+      "top1": 2,
+      "oracle": 22,
+      "num_candidates": 2096,
+      "num_groups": 150,
+      "elapsed_sec": 7.77
+    },
+    {
+      "image": "5368.jpg",
+      "gt": 153,
+      "top1": 2,
+      "oracle": 187,
+      "num_candidates": 1086,
+      "num_groups": 147,
+      "elapsed_sec": 4.14
+    },
+    {
+      "image": "5373.jpg",
+      "gt": 40,
+      "top1": 2,
+      "oracle": 40,
+      "num_candidates": 1580,
+      "num_groups": 145,
+      "elapsed_sec": 6.17
+    },
+    {
+      "image": "5377.jpg",
+      "gt": 9,
+      "top1": 2,
+      "oracle": 8,
+      "num_candidates": 1074,
+      "num_groups": 111,
+      "elapsed_sec": 3.6
+    },
+    {
+      "image": "5381.jpg",
+      "gt": 9,
+      "top1": 2,
+      "oracle": 6,
+      "num_candidates": 1328,
+      "num_groups": 87,
+      "elapsed_sec": 4.04
+    },
+    {
+      "image": "5386.jpg",
+      "gt": 14,
+      "top1": 2,
+      "oracle": 13,
+      "num_candidates": 1139,
+      "num_groups": 131,
+      "elapsed_sec": 4.24
+    },
+    {
+      "image": "5391.jpg",
+      "gt": 12,
+      "top1": 2,
+      "oracle": 11,
+      "num_candidates": 5322,
+      "num_groups": 491,
+      "elapsed_sec": 43.76
+    },
+    {
+      "image": "5461.jpg",
+      "gt": 18,
+      "top1": 2,
+      "oracle": 14,
+      "num_candidates": 519,
+      "num_groups": 70,
+      "elapsed_sec": 1.49
+    },
+    {
+      "image": "5504.jpg",
+      "gt": 122,
+      "top1": 3,
+      "oracle": 90,
+      "num_candidates": 285,
+      "num_groups": 48,
+      "elapsed_sec": 0.89
+    },
+    {
+      "image": "5508.jpg",
+      "gt": 84,
+      "top1": 6,
+      "oracle": 8,
+      "num_candidates": 520,
+      "num_groups": 52,
+      "elapsed_sec": 1.44
+    },
+    {
+      "image": "5512.jpg",
+      "gt": 72,
+      "top1": 3,
+      "oracle": 21,
+      "num_candidates": 541,
+      "num_groups": 57,
+      "elapsed_sec": 1.56
+    },
+    {
+      "image": "5563.jpg",
+      "gt": 189,
+      "top1": 2,
+      "oracle": 139,
+      "num_candidates": 2110,
+      "num_groups": 242,
+      "elapsed_sec": 10.14
+    },
+    {
+      "image": "5567.jpg",
+      "gt": 51,
+      "top1": 2,
+      "oracle": 33,
+      "num_candidates": 2326,
+      "num_groups": 187,
+      "elapsed_sec": 9.95
+    },
+    {
+      "image": "5573.jpg",
+      "gt": 26,
+      "top1": 2,
+      "oracle": 11,
+      "num_candidates": 881,
+      "num_groups": 69,
+      "elapsed_sec": 2.37
+    },
+    {
+      "image": "5577.jpg",
+      "gt": 51,
+      "top1": 2,
+      "oracle": 71,
+      "num_candidates": 1604,
+      "num_groups": 155,
+      "elapsed_sec": 6.73
+    },
+    {
+      "image": "5581.jpg",
+      "gt": 8,
+      "top1": 2,
+      "oracle": 9,
+      "num_candidates": 1337,
+      "num_groups": 119,
+      "elapsed_sec": 4.93
+    },
+    {
+      "image": "5585.jpg",
+      "gt": 32,
+      "top1": 2,
+      "oracle": 42,
+      "num_candidates": 2001,
+      "num_groups": 174,
+      "elapsed_sec": 7.93
+    },
+    {
+      "image": "5591.jpg",
+      "gt": 32,
+      "top1": 2,
+      "oracle": 32,
+      "num_candidates": 2917,
+      "num_groups": 257,
+      "elapsed_sec": 17.03
+    },
+    {
+      "image": "5595.jpg",
+      "gt": 15,
+      "top1": 5,
+      "oracle": 13,
+      "num_candidates": 914,
+      "num_groups": 116,
+      "elapsed_sec": 3.26
+    },
+    {
+      "image": "5599.jpg",
+      "gt": 33,
+      "top1": 6,
+      "oracle": 40,
+      "num_candidates": 609,
+      "num_groups": 56,
+      "elapsed_sec": 1.68
+    },
+    {
+      "image": "5791.jpg",
+      "gt": 35,
+      "top1": 2,
+      "oracle": 24,
+      "num_candidates": 769,
+      "num_groups": 48,
+      "elapsed_sec": 2.17
+    },
+    {
+      "image": "5795.jpg",
+      "gt": 84,
+      "top1": 2,
+      "oracle": 115,
+      "num_candidates": 1553,
+      "num_groups": 128,
+      "elapsed_sec": 6.05
+    },
+    {
+      "image": "5799.jpg",
+      "gt": 50,
+      "top1": 2,
+      "oracle": 50,
+      "num_candidates": 4669,
+      "num_groups": 455,
+      "elapsed_sec": 37.74
+    },
+    {
+      "image": "5803.jpg",
+      "gt": 35,
+      "top1": 2,
+      "oracle": 31,
+      "num_candidates": 2373,
+      "num_groups": 280,
+      "elapsed_sec": 13.22
+    },
+    {
+      "image": "5807.jpg",
+      "gt": 110,
+      "top1": 2,
+      "oracle": 80,
+      "num_candidates": 1740,
+      "num_groups": 195,
+      "elapsed_sec": 7.05
+    },
+    {
+      "image": "5811.jpg",
+      "gt": 37,
+      "top1": 2,
+      "oracle": 41,
+      "num_candidates": 4881,
+      "num_groups": 556,
+      "elapsed_sec": 44.39
+    },
+    {
+      "image": "5815.jpg",
+      "gt": 146,
+      "top1": 2,
+      "oracle": 112,
+      "num_candidates": 5541,
+      "num_groups": 489,
+      "elapsed_sec": 46.1
+    },
+    {
+      "image": "5819.jpg",
+      "gt": 9,
+      "top1": 2,
+      "oracle": 8,
+      "num_candidates": 1103,
+      "num_groups": 142,
+      "elapsed_sec": 3.87
+    },
+    {
+      "image": "5823.jpg",
+      "gt": 69,
+      "top1": 2,
+      "oracle": 48,
+      "num_candidates": 4908,
+      "num_groups": 671,
+      "elapsed_sec": 55.09
+    },
+    {
+      "image": "5827.jpg",
+      "gt": 56,
+      "top1": 2,
+      "oracle": 77,
+      "num_candidates": 5734,
+      "num_groups": 456,
+      "elapsed_sec": 41.05
+    },
+    {
+      "image": "5831.jpg",
+      "gt": 101,
+      "top1": 2,
+      "oracle": 65,
+      "num_candidates": 2691,
+      "num_groups": 371,
+      "elapsed_sec": 19.33
+    },
+    {
+      "image": "5835.jpg",
+      "gt": 79,
+      "top1": 2,
+      "oracle": 83,
+      "num_candidates": 3824,
+      "num_groups": 419,
+      "elapsed_sec": 27.88
+    },
+    {
+      "image": "5839.jpg",
+      "gt": 45,
+      "top1": 2,
+      "oracle": 32,
+      "num_candidates": 3897,
+      "num_groups": 469,
+      "elapsed_sec": 31.81
+    },
+    {
+      "image": "5843.jpg",
+      "gt": 74,
+      "top1": 2,
+      "oracle": 70,
+      "num_candidates": 6280,
+      "num_groups": 566,
+      "elapsed_sec": 56.82
+    },
+    {
+      "image": "5847.jpg",
+      "gt": 13,
+      "top1": 2,
+      "oracle": 13,
+      "num_candidates": 2059,
+      "num_groups": 165,
+      "elapsed_sec": 8.43
+    },
+    {
+      "image": "5851.jpg",
+      "gt": 43,
+      "top1": 2,
+      "oracle": 46,
+      "num_candidates": 3604,
+      "num_groups": 298,
+      "elapsed_sec": 21.34
+    },
+    {
+      "image": "5855.jpg",
+      "gt": 135,
+      "top1": 2,
+      "oracle": 60,
+      "num_candidates": 4134,
+      "num_groups": 543,
+      "elapsed_sec": 38.14
+    },
+    {
+      "image": "5917.jpg",
+      "gt": 12,
+      "top1": 4,
+      "oracle": 7,
+      "num_candidates": 696,
+      "num_groups": 37,
+      "elapsed_sec": 2.03
+    },
+    {
+      "image": "5921.jpg",
+      "gt": 30,
+      "top1": 2,
+      "oracle": 16,
+      "num_candidates": 1048,
+      "num_groups": 100,
+      "elapsed_sec": 3.58
+    },
+    {
+      "image": "5925.jpg",
+      "gt": 22,
+      "top1": 2,
+      "oracle": 11,
+      "num_candidates": 318,
+      "num_groups": 29,
+      "elapsed_sec": 0.93
+    },
+    {
+      "image": "5929.jpg",
+      "gt": 76,
+      "top1": 2,
+      "oracle": 12,
+      "num_candidates": 588,
+      "num_groups": 71,
+      "elapsed_sec": 2.42
+    },
+    {
+      "image": "5933.jpg",
+      "gt": 12,
+      "top1": 2,
+      "oracle": 13,
+      "num_candidates": 1121,
+      "num_groups": 89,
+      "elapsed_sec": 3.21
+    },
+    {
+      "image": "5937.jpg",
+      "gt": 10,
+      "top1": 2,
+      "oracle": 10,
+      "num_candidates": 348,
+      "num_groups": 40,
+      "elapsed_sec": 0.99
+    },
+    {
+      "image": "5941.jpg",
+      "gt": 10,
+      "top1": 2,
+      "oracle": 10,
+      "num_candidates": 1801,
+      "num_groups": 202,
+      "elapsed_sec": 7.86
+    },
+    {
+      "image": "6042.jpg",
+      "gt": 12,
+      "top1": 2,
+      "oracle": 12,
+      "num_candidates": 3304,
+      "num_groups": 277,
+      "elapsed_sec": 15.88
+    },
+    {
+      "image": "6046.jpg",
+      "gt": 60,
+      "top1": 2,
+      "oracle": 6,
+      "num_candidates": 3007,
+      "num_groups": 82,
+      "elapsed_sec": 16.27
+    },
+    {
+      "image": "6050.jpg",
+      "gt": 104,
+      "top1": 2,
+      "oracle": 16,
+      "num_candidates": 1630,
+      "num_groups": 135,
+      "elapsed_sec": 5.79
+    },
+    {
+      "image": "6054.jpg",
+      "gt": 112,
+      "top1": 2,
+      "oracle": 31,
+      "num_candidates": 845,
+      "num_groups": 85,
+      "elapsed_sec": 4.43
+    },
+    {
+      "image": "6243.jpg",
+      "gt": 24,
+      "top1": 2,
+      "oracle": 18,
+      "num_candidates": 808,
+      "num_groups": 89,
+      "elapsed_sec": 2.79
+    },
+    {
+      "image": "6247.jpg",
+      "gt": 15,
+      "top1": 2,
+      "oracle": 10,
+      "num_candidates": 1433,
+      "num_groups": 148,
+      "elapsed_sec": 4.48
+    },
+    {
+      "image": "6251.jpg",
+      "gt": 25,
+      "top1": 2,
+      "oracle": 27,
+      "num_candidates": 1329,
+      "num_groups": 130,
+      "elapsed_sec": 5.27
+    },
+    {
+      "image": "6255.jpg",
+      "gt": 49,
+      "top1": 2,
+      "oracle": 40,
+      "num_candidates": 1794,
+      "num_groups": 201,
+      "elapsed_sec": 8.2
+    },
+    {
+      "image": "6259.jpg",
+      "gt": 74,
+      "top1": 2,
+      "oracle": 104,
+      "num_candidates": 1167,
+      "num_groups": 132,
+      "elapsed_sec": 4.11
+    },
+    {
+      "image": "6263.jpg",
+      "gt": 23,
+      "top1": 2,
+      "oracle": 24,
+      "num_candidates": 1816,
+      "num_groups": 197,
+      "elapsed_sec": 7.15
+    },
+    {
+      "image": "6267.jpg",
+      "gt": 95,
+      "top1": 3,
+      "oracle": 45,
+      "num_candidates": 1635,
+      "num_groups": 160,
+      "elapsed_sec": 6.93
+    },
+    {
+      "image": "6271.jpg",
+      "gt": 240,
+      "top1": 2,
+      "oracle": 108,
+      "num_candidates": 3135,
+      "num_groups": 321,
+      "elapsed_sec": 17.43
+    },
+    {
+      "image": "6275.jpg",
+      "gt": 32,
+      "top1": 2,
+      "oracle": 23,
+      "num_candidates": 1433,
+      "num_groups": 122,
+      "elapsed_sec": 4.94
+    },
+    {
+      "image": "6279.jpg",
+      "gt": 10,
+      "top1": 2,
+      "oracle": 10,
+      "num_candidates": 865,
+      "num_groups": 142,
+      "elapsed_sec": 3.74
+    },
+    {
+      "image": "6283.jpg",
+      "gt": 21,
+      "top1": 2,
+      "oracle": 21,
+      "num_candidates": 1563,
+      "num_groups": 211,
+      "elapsed_sec": 7.56
+    },
+    {
+      "image": "6548.jpg",
+      "gt": 18,
+      "top1": 4,
+      "oracle": 17,
+      "num_candidates": 726,
+      "num_groups": 49,
+      "elapsed_sec": 2.33
+    },
+    {
+      "image": "6644.jpg",
+      "gt": 500,
+      "top1": 2,
+      "oracle": 54,
+      "num_candidates": 3072,
+      "num_groups": 300,
+      "elapsed_sec": 19.21
+    },
+    {
+      "image": "6648.jpg",
+      "gt": 48,
+      "top1": 7,
+      "oracle": 19,
+      "num_candidates": 658,
+      "num_groups": 65,
+      "elapsed_sec": 2.1
+    },
+    {
+      "image": "6652.jpg",
+      "gt": 33,
+      "top1": 2,
+      "oracle": 28,
+      "num_candidates": 1110,
+      "num_groups": 172,
+      "elapsed_sec": 5.95
+    },
+    {
+      "image": "6656.jpg",
+      "gt": 100,
+      "top1": 2,
+      "oracle": 48,
+      "num_candidates": 1707,
+      "num_groups": 179,
+      "elapsed_sec": 7.19
+    },
+    {
+      "image": "6660.jpg",
+      "gt": 10,
+      "top1": 2,
+      "oracle": 8,
+      "num_candidates": 1353,
+      "num_groups": 107,
+      "elapsed_sec": 3.87
+    },
+    {
+      "image": "6971.jpg",
+      "gt": 101,
+      "top1": 2,
+      "oracle": 60,
+      "num_candidates": 2025,
+      "num_groups": 201,
+      "elapsed_sec": 12.29
+    },
+    {
+      "image": "7665.jpg",
+      "gt": 33,
+      "top1": 2,
+      "oracle": 12,
+      "num_candidates": 455,
+      "num_groups": 49,
+      "elapsed_sec": 1.48
+    },
+    {
+      "image": "7596.jpg",
+      "gt": 298,
+      "top1": 2,
+      "oracle": 99,
+      "num_candidates": 2136,
+      "num_groups": 201,
+      "elapsed_sec": 10.01
+    },
+    {
+      "image": "6936.jpg",
+      "gt": 111,
+      "top1": 2,
+      "oracle": 27,
+      "num_candidates": 1066,
+      "num_groups": 96,
+      "elapsed_sec": 3.61
+    },
+    {
+      "image": "7283.jpg",
+      "gt": 22,
+      "top1": 2,
+      "oracle": 26,
+      "num_candidates": 630,
+      "num_groups": 56,
+      "elapsed_sec": 2.13
+    },
+    {
+      "image": "7483.jpg",
+      "gt": 191,
+      "top1": 2,
+      "oracle": 91,
+      "num_candidates": 2260,
+      "num_groups": 286,
+      "elapsed_sec": 12.28
+    },
+    {
+      "image": "6771.jpg",
+      "gt": 25,
+      "top1": 2,
+      "oracle": 25,
+      "num_candidates": 3046,
+      "num_groups": 294,
+      "elapsed_sec": 16.44
+    },
+    {
+      "image": "7076.jpg",
+      "gt": 31,
+      "top1": 2,
+      "oracle": 35,
+      "num_candidates": 2016,
+      "num_groups": 210,
+      "elapsed_sec": 8.78
+    },
+    {
+      "image": "7542.jpg",
+      "gt": 43,
+      "top1": 2,
+      "oracle": 36,
+      "num_candidates": 2255,
+      "num_groups": 194,
+      "elapsed_sec": 9.67
+    },
+    {
+      "image": "6859.jpg",
+      "gt": 24,
+      "top1": 4,
+      "oracle": 14,
+      "num_candidates": 611,
+      "num_groups": 46,
+      "elapsed_sec": 1.82
+    },
+    {
+      "image": "7668.jpg",
+      "gt": 23,
+      "top1": 2,
+      "oracle": 16,
+      "num_candidates": 1171,
+      "num_groups": 147,
+      "elapsed_sec": 4.05
+    },
+    {
+      "image": "7605.jpg",
+      "gt": 20,
+      "top1": 4,
+      "oracle": 21,
+      "num_candidates": 457,
+      "num_groups": 57,
+      "elapsed_sec": 1.57
+    },
+    {
+      "image": "7424.jpg",
+      "gt": 145,
+      "top1": 2,
+      "oracle": 55,
+      "num_candidates": 3131,
+      "num_groups": 362,
+      "elapsed_sec": 19.06
+    },
+    {
+      "image": "6732.jpg",
+      "gt": 39,
+      "top1": 2,
+      "oracle": 20,
+      "num_candidates": 2114,
+      "num_groups": 220,
+      "elapsed_sec": 8.93
+    },
+    {
+      "image": "7128.jpg",
+      "gt": 49,
+      "top1": 2,
+      "oracle": 17,
+      "num_candidates": 768,
+      "num_groups": 75,
+      "elapsed_sec": 3.02
+    },
+    {
+      "image": "7417.jpg",
+      "gt": 43,
+      "top1": 2,
+      "oracle": 44,
+      "num_candidates": 5012,
+      "num_groups": 427,
+      "elapsed_sec": 35.16
+    },
+    {
+      "image": "7273.jpg",
+      "gt": 32,
+      "top1": 2,
+      "oracle": 40,
+      "num_candidates": 2978,
+      "num_groups": 259,
+      "elapsed_sec": 13.76
+    },
+    {
+      "image": "7555.jpg",
+      "gt": 31,
+      "top1": 3,
+      "oracle": 32,
+      "num_candidates": 2036,
+      "num_groups": 175,
+      "elapsed_sec": 7.34
+    },
+    {
+      "image": "7564.jpg",
+      "gt": 52,
+      "top1": 2,
+      "oracle": 22,
+      "num_candidates": 1983,
+      "num_groups": 179,
+      "elapsed_sec": 7.47
+    },
+    {
+      "image": "6711.jpg",
+      "gt": 72,
+      "top1": 2,
+      "oracle": 38,
+      "num_candidates": 2053,
+      "num_groups": 225,
+      "elapsed_sec": 10.07
+    },
+    {
+      "image": "6803.jpg",
+      "gt": 48,
+      "top1": 3,
+      "oracle": 53,
+      "num_candidates": 2726,
+      "num_groups": 203,
+      "elapsed_sec": 13.83
+    },
+    {
+      "image": "7384.jpg",
+      "gt": 16,
+      "top1": 3,
+      "oracle": 17,
+      "num_candidates": 2482,
+      "num_groups": 246,
+      "elapsed_sec": 11.95
+    },
+    {
+      "image": "7080.jpg",
+      "gt": 25,
+      "top1": 2,
+      "oracle": 20,
+      "num_candidates": 2368,
+      "num_groups": 164,
+      "elapsed_sec": 9.04
+    },
+    {
+      "image": "6736.jpg",
+      "gt": 98,
+      "top1": 2,
+      "oracle": 87,
+      "num_candidates": 7503,
+      "num_groups": 497,
+      "elapsed_sec": 73.01
+    },
+    {
+      "image": "7581.jpg",
+      "gt": 30,
+      "top1": 2,
+      "oracle": 25,
+      "num_candidates": 2305,
+      "num_groups": 239,
+      "elapsed_sec": 12.07
+    },
+    {
+      "image": "7098.jpg",
+      "gt": 49,
+      "top1": 4,
+      "oracle": 70,
+      "num_candidates": 2162,
+      "num_groups": 204,
+      "elapsed_sec": 10.91
+    },
+    {
+      "image": "7097.jpg",
+      "gt": 47,
+      "top1": 2,
+      "oracle": 45,
+      "num_candidates": 2746,
+      "num_groups": 188,
+      "elapsed_sec": 10.38
+    },
+    {
+      "image": "6857.jpg",
+      "gt": 93,
+      "top1": 2,
+      "oracle": 31,
+      "num_candidates": 1553,
+      "num_groups": 114,
+      "elapsed_sec": 6.77
+    },
+    {
+      "image": "6810.jpg",
+      "gt": 40,
+      "top1": 7,
+      "oracle": 7,
+      "num_candidates": 673,
+      "num_groups": 51,
+      "elapsed_sec": 1.68
+    },
+    {
+      "image": "7043.jpg",
+      "gt": 95,
+      "top1": 2,
+      "oracle": 41,
+      "num_candidates": 2760,
+      "num_groups": 305,
+      "elapsed_sec": 15.8
+    },
+    {
+      "image": "7201.jpg",
+      "gt": 211,
+      "top1": 3,
+      "oracle": 65,
+      "num_candidates": 2553,
+      "num_groups": 268,
+      "elapsed_sec": 15.65
+    },
+    {
+      "image": "7079.jpg",
+      "gt": 59,
+      "top1": 2,
+      "oracle": 32,
+      "num_candidates": 1891,
+      "num_groups": 194,
+      "elapsed_sec": 8.38
+    },
+    {
+      "image": "6898.jpg",
+      "gt": 221,
+      "top1": 2,
+      "oracle": 60,
+      "num_candidates": 3581,
+      "num_groups": 387,
+      "elapsed_sec": 22.78
+    },
+    {
+      "image": "7219.jpg",
+      "gt": 51,
+      "top1": 9,
+      "oracle": 34,
+      "num_candidates": 2126,
+      "num_groups": 172,
+      "elapsed_sec": 7.9
+    },
+    {
+      "image": "7426.jpg",
+      "gt": 253,
+      "top1": 3,
+      "oracle": 50,
+      "num_candidates": 3408,
+      "num_groups": 330,
+      "elapsed_sec": 22.1
+    },
+    {
+      "image": "6785.jpg",
+      "gt": 45,
+      "top1": 2,
+      "oracle": 28,
+      "num_candidates": 1272,
+      "num_groups": 127,
+      "elapsed_sec": 4.48
+    },
+    {
+      "image": "7676.jpg",
+      "gt": 29,
+      "top1": 2,
+      "oracle": 25,
+      "num_candidates": 2779,
+      "num_groups": 272,
+      "elapsed_sec": 15.65
+    },
+    {
+      "image": "6839.jpg",
+      "gt": 58,
+      "top1": 3,
+      "oracle": 42,
+      "num_candidates": 5533,
+      "num_groups": 445,
+      "elapsed_sec": 55.44
+    },
+    {
+      "image": "7042.jpg",
+      "gt": 198,
+      "top1": 2,
+      "oracle": 178,
+      "num_candidates": 6570,
+      "num_groups": 462,
+      "elapsed_sec": 54.28
+    },
+    {
+      "image": "6750.jpg",
+      "gt": 109,
+      "top1": 2,
+      "oracle": 168,
+      "num_candidates": 1408,
+      "num_groups": 174,
+      "elapsed_sec": 6.48
+    },
+    {
+      "image": "7622.jpg",
+      "gt": 166,
+      "top1": 2,
+      "oracle": 222,
+      "num_candidates": 2906,
+      "num_groups": 224,
+      "elapsed_sec": 14.62
+    },
+    {
+      "image": "7639.jpg",
+      "gt": 20,
+      "top1": 2,
+      "oracle": 20,
+      "num_candidates": 5614,
+      "num_groups": 678,
+      "elapsed_sec": 56.79
+    },
+    {
+      "image": "7312.jpg",
+      "gt": 21,
+      "top1": 2,
+      "oracle": 24,
+      "num_candidates": 3523,
+      "num_groups": 349,
+      "elapsed_sec": 23.97
+    },
+    {
+      "image": "7090.jpg",
+      "gt": 31,
+      "top1": 2,
+      "oracle": 41,
+      "num_candidates": 591,
+      "num_groups": 61,
+      "elapsed_sec": 2.05
+    },
+    {
+      "image": "7588.jpg",
+      "gt": 39,
+      "top1": 2,
+      "oracle": 38,
+      "num_candidates": 3508,
+      "num_groups": 339,
+      "elapsed_sec": 24.32
+    },
+    {
+      "image": "7295.jpg",
+      "gt": 63,
+      "top1": 2,
+      "oracle": 48,
+      "num_candidates": 6157,
+      "num_groups": 567,
+      "elapsed_sec": 59.44
+    },
+    {
+      "image": "7480.jpg",
+      "gt": 22,
+      "top1": 2,
+      "oracle": 22,
+      "num_candidates": 8902,
+      "num_groups": 788,
+      "elapsed_sec": 111.81
+    },
+    {
+      "image": "7474.jpg",
+      "gt": 36,
+      "top1": 2,
+      "oracle": 35,
+      "num_candidates": 6061,
+      "num_groups": 533,
+      "elapsed_sec": 52.46
+    },
+    {
+      "image": "7535.jpg",
+      "gt": 107,
+      "top1": 2,
+      "oracle": 65,
+      "num_candidates": 4843,
+      "num_groups": 619,
+      "elapsed_sec": 49.82
+    },
+    {
+      "image": "7700.jpg",
+      "gt": 30,
+      "top1": 2,
+      "oracle": 16,
+      "num_candidates": 672,
+      "num_groups": 55,
+      "elapsed_sec": 2.3
+    },
+    {
+      "image": "7486.jpg",
+      "gt": 100,
+      "top1": 2,
+      "oracle": 70,
+      "num_candidates": 1612,
+      "num_groups": 142,
+      "elapsed_sec": 6.38
+    },
+    {
+      "image": "7713.jpg",
+      "gt": 19,
+      "top1": 32,
+      "oracle": 22,
+      "num_candidates": 1181,
+      "num_groups": 102,
+      "elapsed_sec": 3.93
+    },
+    {
+      "image": "7520.jpg",
+      "gt": 19,
+      "top1": 2,
+      "oracle": 23,
+      "num_candidates": 3337,
+      "num_groups": 314,
+      "elapsed_sec": 21.69
+    },
+    {
+      "image": "6904.jpg",
+      "gt": 13,
+      "top1": 2,
+      "oracle": 11,
+      "num_candidates": 2021,
+      "num_groups": 168,
+      "elapsed_sec": 8.89
+    },
+    {
+      "image": "7023.jpg",
+      "gt": 78,
+      "top1": 2,
+      "oracle": 112,
+      "num_candidates": 1538,
+      "num_groups": 165,
+      "elapsed_sec": 7.66
+    },
+    {
+      "image": "7206.jpg",
+      "gt": 83,
+      "top1": 2,
+      "oracle": 82,
+      "num_candidates": 1383,
+      "num_groups": 227,
+      "elapsed_sec": 8.67
+    },
+    {
+      "image": "7386.jpg",
+      "gt": 64,
+      "top1": 2,
+      "oracle": 28,
+      "num_candidates": 2587,
+      "num_groups": 175,
+      "elapsed_sec": 9.8
+    },
+    {
+      "image": "7359.jpg",
+      "gt": 42,
+      "top1": 2,
+      "oracle": 42,
+      "num_candidates": 6919,
+      "num_groups": 448,
+      "elapsed_sec": 60.62
+    },
+    {
+      "image": "7381.jpg",
+      "gt": 72,
+      "top1": 3,
+      "oracle": 20,
+      "num_candidates": 1029,
+      "num_groups": 113,
+      "elapsed_sec": 3.98
+    },
+    {
+      "image": "6962.jpg",
+      "gt": 29,
+      "top1": 2,
+      "oracle": 28,
+      "num_candidates": 838,
+      "num_groups": 97,
+      "elapsed_sec": 2.5
+    },
+    {
+      "image": "7521.jpg",
+      "gt": 25,
+      "top1": 4,
+      "oracle": 10,
+      "num_candidates": 1299,
+      "num_groups": 149,
+      "elapsed_sec": 5.34
+    },
+    {
+      "image": "7171.jpg",
+      "gt": 13,
+      "top1": 2,
+      "oracle": 13,
+      "num_candidates": 2131,
+      "num_groups": 217,
+      "elapsed_sec": 7.96
+    },
+    {
+      "image": "7131.jpg",
+      "gt": 123,
+      "top1": 3,
+      "oracle": 29,
+      "num_candidates": 1478,
+      "num_groups": 185,
+      "elapsed_sec": 6.49
+    },
+    {
+      "image": "7176.jpg",
+      "gt": 39,
+      "top1": 2,
+      "oracle": 24,
+      "num_candidates": 616,
+      "num_groups": 63,
+      "elapsed_sec": 1.94
+    },
+    {
+      "image": "6954.jpg",
+      "gt": 78,
+      "top1": 4,
+      "oracle": 32,
+      "num_candidates": 1919,
+      "num_groups": 210,
+      "elapsed_sec": 8.9
+    },
+    {
+      "image": "7173.jpg",
+      "gt": 48,
+      "top1": 2,
+      "oracle": 35,
+      "num_candidates": 862,
+      "num_groups": 69,
+      "elapsed_sec": 2.57
+    },
+    {
+      "image": "7452.jpg",
+      "gt": 85,
+      "top1": 4,
+      "oracle": 48,
+      "num_candidates": 776,
+      "num_groups": 113,
+      "elapsed_sec": 2.91
+    },
+    {
+      "image": "7710.jpg",
+      "gt": 34,
+      "top1": 2,
+      "oracle": 28,
+      "num_candidates": 5759,
+      "num_groups": 456,
+      "elapsed_sec": 50.22
+    },
+    {
+      "image": "7387.jpg",
+      "gt": 66,
+      "top1": 2,
+      "oracle": 34,
+      "num_candidates": 1619,
+      "num_groups": 120,
+      "elapsed_sec": 5.56
+    },
+    {
+      "image": "7490.jpg",
+      "gt": 114,
+      "top1": 2,
+      "oracle": 61,
+      "num_candidates": 1217,
+      "num_groups": 126,
+      "elapsed_sec": 4.01
+    },
+    {
+      "image": "6918.jpg",
+      "gt": 87,
+      "top1": 2,
+      "oracle": 16,
+      "num_candidates": 1214,
+      "num_groups": 88,
+      "elapsed_sec": 3.44
+    },
+    {
+      "image": "6901.jpg",
+      "gt": 38,
+      "top1": 4,
+      "oracle": 38,
+      "num_candidates": 3359,
+      "num_groups": 304,
+      "elapsed_sec": 20.56
+    }
+  ]
+}

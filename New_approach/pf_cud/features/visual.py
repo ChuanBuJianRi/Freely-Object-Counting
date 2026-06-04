@@ -34,7 +34,7 @@ class _VisualBackbone:
 
     device: str
     transform: transforms.Compose
-    batch_size: int = 64
+    batch_size: int = 128
 
     @torch.no_grad()
     def _forward(self, x: torch.Tensor) -> torch.Tensor:  # pragma: no cover
@@ -50,13 +50,44 @@ class _VisualBackbone:
 
     @torch.no_grad()
     def attach(self, image_rgb: np.ndarray, candidates: List[Candidate]) -> None:
-        tensors = [
-            self.transform(crop_candidate(image_rgb, c.mask, c.bbox))
-            for c in candidates
-        ]
-        for start in range(0, len(tensors), self.batch_size):
-            batch = torch.stack(tensors[start : start + self.batch_size]).to(self.device)
-            feats = self._forward(batch).detach().cpu().numpy()
+        if not candidates:
+            return
+        # Build all crops on CPU (PIL crop is cheap; the slow part used to be the
+        # per-crop CPU Resize/Normalize). We move the whole batch of uint8 crops
+        # to the GPU and do Resize/CenterCrop/Normalize there, which is much
+        # faster and keeps the GPU busy. Numerically equivalent to the previous
+        # torchvision transform pipeline (bilinear resize + imagenet normalize).
+        import torch.nn.functional as F
+        from torchvision.transforms.functional import resize as tv_resize
+
+        device = self.device
+        mean = torch.tensor(_IMAGENET_MEAN, device=device).view(1, 3, 1, 1)
+        std = torch.tensor(_IMAGENET_STD, device=device).view(1, 3, 1, 1)
+        size = 224
+
+        crops = [crop_candidate(image_rgb, c.mask, c.bbox) for c in candidates]
+
+        for start in range(0, len(crops), self.batch_size):
+            chunk = crops[start : start + self.batch_size]
+            batch = []
+            for img in chunk:
+                arr = np.asarray(img, dtype=np.uint8)
+                t = torch.from_numpy(arr).to(device).permute(2, 0, 1).float().div_(255.0)
+                # Resize shorter side to ``size`` then center-crop to size x size.
+                t = tv_resize(t, [size], antialias=True)
+                _, hh, ww = t.shape
+                top = max(0, (hh - size) // 2)
+                left = max(0, (ww - size) // 2)
+                t = t[:, top : top + size, left : left + size]
+                if t.shape[1] != size or t.shape[2] != size:
+                    t = F.interpolate(
+                        t.unsqueeze(0), size=(size, size), mode="bilinear",
+                        align_corners=False, antialias=True,
+                    ).squeeze(0)
+                batch.append(t)
+            x = torch.stack(batch, dim=0)
+            x = (x - mean) / std
+            feats = self._forward(x).detach().cpu().numpy()
             feats = feats.reshape(feats.shape[0], -1)
             for k, cand in enumerate(candidates[start : start + self.batch_size]):
                 cand.features["visual"] = safe_normalize(feats[k])

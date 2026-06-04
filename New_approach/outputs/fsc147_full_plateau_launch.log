@@ -1,0 +1,5 @@
+launched shard offset=0 on physical GPU 4 (pid 3669994)
+launched shard offset=1 on physical GPU 5 (pid 3669995)
+launched shard offset=2 on physical GPU 6 (pid 3669996)
+launched shard offset=3 on physical GPU 7 (pid 3669997)
+all shards finished
