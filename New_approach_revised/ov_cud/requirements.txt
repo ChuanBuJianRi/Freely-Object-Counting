@@ -1,0 +1,12 @@
+# Core (always required)
+numpy>=1.24
+pillow>=9.0
+
+# Training + learned/real backends (optional for offline inference & smoke tests)
+torch>=2.0
+torchvision>=0.15
+
+# Real backends (optional; offline fallbacks used when absent)
+open-clip-torch>=2.20      # CLIP image/text encoder (Stage 4)
+# SAM2: install from https://github.com/facebookresearch/sam2 (Stage 1)
+# DINOv2 is pulled via torch.hub at runtime (Stage 3)
