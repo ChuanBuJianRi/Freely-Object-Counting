@@ -1,0 +1,25 @@
+{
+  "config": {
+    "spacing": 10,
+    "points_per_batch": 1000,
+    "crop_n_layers": 1,
+    "backbone": "sam2.1-hiera-large"
+  },
+  "micro_new": 1.0,
+  "micro_old": 0.9504950495049505,
+  "rows": [
+    {
+      "file": "4884.jpg",
+      "gt_count": 101,
+      "img_hw": [
+        384,
+        384
+      ],
+      "new_n_cand": 293,
+      "new_recall": 1.0,
+      "old_n_cand": 137,
+      "old_recall": 0.9505,
+      "gen_sec": 132.9
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "config": {
+    "spacing": 10,
+    "points_per_batch": 1000,
+    "crop_n_layers": 1,
+    "backbone": "sam2.1-hiera-large"
+  },
+  "micro_new": 0.9820359281437125,
+  "micro_old": 0.7624750499001997,
+  "rows": [
+    {
+      "file": "691.jpg",
+      "gt_count": 109,
+      "img_hw": [
+        384,
+        408
+      ],
+      "new_n_cand": 224,
+      "new_recall": 0.8349,
+      "old_n_cand": 96,
+      "old_recall": 0.6514,
+      "gen_sec": 126.0
+    },
+    {
+      "file": "4958.jpg",
+      "gt_count": 118,
+      "img_hw": [
+        384,
+        578
+      ],
+      "new_n_cand": 257,
+      "new_recall": 1.0,
+      "old_n_cand": 147,
+      "old_recall": 0.9915,
+      "gen_sec": 117.6
+    },
+    {
+      "file": "3312.jpg",
+      "gt_count": 136,
+      "img_hw": [
+        384,
+        408
+      ],
+      "new_n_cand": 129,
+      "new_recall": 1.0,
+      "old_n_cand": 74,
+      "old_recall": 0.5,
+      "gen_sec": 109.8
+    },
+    {
+      "file": "2273.jpg",
+      "gt_count": 165,
+      "img_hw": [
+        384,
+        408
+      ],
+      "new_n_cand": 303,
+      "new_recall": 1.0,
+      "old_n_cand": 165,
+      "old_recall": 0.9697,
+      "gen_sec": 117.6
+    },
+    {
+      "file": "6647.jpg",
+      "gt_count": 199,
+      "img_hw": [
+        384,
+        408
+      ],
+      "new_n_cand": 329,
+      "new_recall": 1.0,
+      "old_n_cand": 192,
+      "old_recall": 0.8191,
+      "gen_sec": 122.8
+    },
+    {
+      "file": "4062.jpg",
+      "gt_count": 275,
+      "img_hw": [
+        384,
+        512
+      ],
+      "new_n_cand": 395,
+      "new_recall": 1.0,
+      "old_n_cand": 192,
+      "old_recall": 0.6727,
+      "gen_sec": 111.6
+    }
+  ]
+}

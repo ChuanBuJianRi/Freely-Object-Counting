@@ -1,0 +1,20 @@
+# Large dataset files
+dataset/
+
+# Cache
+cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+
+# Environment
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db

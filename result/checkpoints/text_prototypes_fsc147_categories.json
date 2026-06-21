@@ -1,0 +1,597 @@
+{
+  "model": "ViT-B-32",
+  "pretrained": "laion2b_s34b_b79k",
+  "dataset": "fsc147",
+  "proj_dim": 512,
+  "num_classes": 147,
+  "categories": [
+    {
+      "contiguous_id": 0,
+      "name": "alcohol bottles"
+    },
+    {
+      "contiguous_id": 1,
+      "name": "ants"
+    },
+    {
+      "contiguous_id": 2,
+      "name": "apples"
+    },
+    {
+      "contiguous_id": 3,
+      "name": "baguette rolls"
+    },
+    {
+      "contiguous_id": 4,
+      "name": "balls"
+    },
+    {
+      "contiguous_id": 5,
+      "name": "bananas"
+    },
+    {
+      "contiguous_id": 6,
+      "name": "beads"
+    },
+    {
+      "contiguous_id": 7,
+      "name": "bees"
+    },
+    {
+      "contiguous_id": 8,
+      "name": "birds"
+    },
+    {
+      "contiguous_id": 9,
+      "name": "birthday candles"
+    },
+    {
+      "contiguous_id": 10,
+      "name": "biscuits"
+    },
+    {
+      "contiguous_id": 11,
+      "name": "boats"
+    },
+    {
+      "contiguous_id": 12,
+      "name": "books"
+    },
+    {
+      "contiguous_id": 13,
+      "name": "bottle caps"
+    },
+    {
+      "contiguous_id": 14,
+      "name": "bottles"
+    },
+    {
+      "contiguous_id": 15,
+      "name": "bowls"
+    },
+    {
+      "contiguous_id": 16,
+      "name": "boxes"
+    },
+    {
+      "contiguous_id": 17,
+      "name": "bread rolls"
+    },
+    {
+      "contiguous_id": 18,
+      "name": "bricks"
+    },
+    {
+      "contiguous_id": 19,
+      "name": "buffaloes"
+    },
+    {
+      "contiguous_id": 20,
+      "name": "bullets"
+    },
+    {
+      "contiguous_id": 21,
+      "name": "buns"
+    },
+    {
+      "contiguous_id": 22,
+      "name": "calamari rings"
+    },
+    {
+      "contiguous_id": 23,
+      "name": "camels"
+    },
+    {
+      "contiguous_id": 24,
+      "name": "candles"
+    },
+    {
+      "contiguous_id": 25,
+      "name": "candy pieces"
+    },
+    {
+      "contiguous_id": 26,
+      "name": "cans"
+    },
+    {
+      "contiguous_id": 27,
+      "name": "caps"
+    },
+    {
+      "contiguous_id": 28,
+      "name": "carrom board pieces"
+    },
+    {
+      "contiguous_id": 29,
+      "name": "cars"
+    },
+    {
+      "contiguous_id": 30,
+      "name": "cartridges"
+    },
+    {
+      "contiguous_id": 31,
+      "name": "cashew nuts"
+    },
+    {
+      "contiguous_id": 32,
+      "name": "cassettes"
+    },
+    {
+      "contiguous_id": 33,
+      "name": "cement bags"
+    },
+    {
+      "contiguous_id": 34,
+      "name": "cereals"
+    },
+    {
+      "contiguous_id": 35,
+      "name": "chairs"
+    },
+    {
+      "contiguous_id": 36,
+      "name": "chewing gum pieces"
+    },
+    {
+      "contiguous_id": 37,
+      "name": "chicken wings"
+    },
+    {
+      "contiguous_id": 38,
+      "name": "chopstick"
+    },
+    {
+      "contiguous_id": 39,
+      "name": "clams"
+    },
+    {
+      "contiguous_id": 40,
+      "name": "coffee beans"
+    },
+    {
+      "contiguous_id": 41,
+      "name": "coins"
+    },
+    {
+      "contiguous_id": 42,
+      "name": "comic books"
+    },
+    {
+      "contiguous_id": 43,
+      "name": "cotton balls"
+    },
+    {
+      "contiguous_id": 44,
+      "name": "cows"
+    },
+    {
+      "contiguous_id": 45,
+      "name": "crab cakes"
+    },
+    {
+      "contiguous_id": 46,
+      "name": "cranes"
+    },
+    {
+      "contiguous_id": 47,
+      "name": "crayons"
+    },
+    {
+      "contiguous_id": 48,
+      "name": "croissants"
+    },
+    {
+      "contiguous_id": 49,
+      "name": "crows"
+    },
+    {
+      "contiguous_id": 50,
+      "name": "cupcake tray"
+    },
+    {
+      "contiguous_id": 51,
+      "name": "cupcakes"
+    },
+    {
+      "contiguous_id": 52,
+      "name": "cups"
+    },
+    {
+      "contiguous_id": 53,
+      "name": "deers"
+    },
+    {
+      "contiguous_id": 54,
+      "name": "donuts tray"
+    },
+    {
+      "contiguous_id": 55,
+      "name": "eggs"
+    },
+    {
+      "contiguous_id": 56,
+      "name": "elephants"
+    },
+    {
+      "contiguous_id": 57,
+      "name": "finger foods"
+    },
+    {
+      "contiguous_id": 58,
+      "name": "fishes"
+    },
+    {
+      "contiguous_id": 59,
+      "name": "flamingos"
+    },
+    {
+      "contiguous_id": 60,
+      "name": "flower pots"
+    },
+    {
+      "contiguous_id": 61,
+      "name": "flowers"
+    },
+    {
+      "contiguous_id": 62,
+      "name": "fresh cut"
+    },
+    {
+      "contiguous_id": 63,
+      "name": "geese"
+    },
+    {
+      "contiguous_id": 64,
+      "name": "gemstones"
+    },
+    {
+      "contiguous_id": 65,
+      "name": "go game"
+    },
+    {
+      "contiguous_id": 66,
+      "name": "goats"
+    },
+    {
+      "contiguous_id": 67,
+      "name": "goldfish snack"
+    },
+    {
+      "contiguous_id": 68,
+      "name": "grapes"
+    },
+    {
+      "contiguous_id": 69,
+      "name": "green peas"
+    },
+    {
+      "contiguous_id": 70,
+      "name": "horses"
+    },
+    {
+      "contiguous_id": 71,
+      "name": "hot air balloons"
+    },
+    {
+      "contiguous_id": 72,
+      "name": "ice cream"
+    },
+    {
+      "contiguous_id": 73,
+      "name": "instant noodles"
+    },
+    {
+      "contiguous_id": 74,
+      "name": "jade stones"
+    },
+    {
+      "contiguous_id": 75,
+      "name": "jeans"
+    },
+    {
+      "contiguous_id": 76,
+      "name": "keyboard keys"
+    },
+    {
+      "contiguous_id": 77,
+      "name": "kidney beans"
+    },
+    {
+      "contiguous_id": 78,
+      "name": "kitchen towels"
+    },
+    {
+      "contiguous_id": 79,
+      "name": "kiwis"
+    },
+    {
+      "contiguous_id": 80,
+      "name": "legos"
+    },
+    {
+      "contiguous_id": 81,
+      "name": "lighters"
+    },
+    {
+      "contiguous_id": 82,
+      "name": "lipstick"
+    },
+    {
+      "contiguous_id": 83,
+      "name": "m&m pieces"
+    },
+    {
+      "contiguous_id": 84,
+      "name": "macarons"
+    },
+    {
+      "contiguous_id": 85,
+      "name": "marbles"
+    },
+    {
+      "contiguous_id": 86,
+      "name": "markers"
+    },
+    {
+      "contiguous_id": 87,
+      "name": "matches"
+    },
+    {
+      "contiguous_id": 88,
+      "name": "meat skewers"
+    },
+    {
+      "contiguous_id": 89,
+      "name": "milk cartons"
+    },
+    {
+      "contiguous_id": 90,
+      "name": "mini blinds"
+    },
+    {
+      "contiguous_id": 91,
+      "name": "mosaic tiles"
+    },
+    {
+      "contiguous_id": 92,
+      "name": "naan bread"
+    },
+    {
+      "contiguous_id": 93,
+      "name": "nail polish"
+    },
+    {
+      "contiguous_id": 94,
+      "name": "nails"
+    },
+    {
+      "contiguous_id": 95,
+      "name": "nuts"
+    },
+    {
+      "contiguous_id": 96,
+      "name": "onion rings"
+    },
+    {
+      "contiguous_id": 97,
+      "name": "oranges"
+    },
+    {
+      "contiguous_id": 98,
+      "name": "oyster shells"
+    },
+    {
+      "contiguous_id": 99,
+      "name": "oysters"
+    },
+    {
+      "contiguous_id": 100,
+      "name": "peaches"
+    },
+    {
+      "contiguous_id": 101,
+      "name": "pearls"
+    },
+    {
+      "contiguous_id": 102,
+      "name": "pencils"
+    },
+    {
+      "contiguous_id": 103,
+      "name": "penguins"
+    },
+    {
+      "contiguous_id": 104,
+      "name": "pens"
+    },
+    {
+      "contiguous_id": 105,
+      "name": "people"
+    },
+    {
+      "contiguous_id": 106,
+      "name": "peppers"
+    },
+    {
+      "contiguous_id": 107,
+      "name": "pigeons"
+    },
+    {
+      "contiguous_id": 108,
+      "name": "pills"
+    },
+    {
+      "contiguous_id": 109,
+      "name": "plates"
+    },
+    {
+      "contiguous_id": 110,
+      "name": "polka dot tiles"
+    },
+    {
+      "contiguous_id": 111,
+      "name": "polka dots"
+    },
+    {
+      "contiguous_id": 112,
+      "name": "potato chips"
+    },
+    {
+      "contiguous_id": 113,
+      "name": "potatoes"
+    },
+    {
+      "contiguous_id": 114,
+      "name": "prawn crackers"
+    },
+    {
+      "contiguous_id": 115,
+      "name": "red beans"
+    },
+    {
+      "contiguous_id": 116,
+      "name": "rice bags"
+    },
+    {
+      "contiguous_id": 117,
+      "name": "roof tiles"
+    },
+    {
+      "contiguous_id": 118,
+      "name": "sauce bottles"
+    },
+    {
+      "contiguous_id": 119,
+      "name": "sausages"
+    },
+    {
+      "contiguous_id": 120,
+      "name": "screws"
+    },
+    {
+      "contiguous_id": 121,
+      "name": "sea shells"
+    },
+    {
+      "contiguous_id": 122,
+      "name": "seagulls"
+    },
+    {
+      "contiguous_id": 123,
+      "name": "shallots"
+    },
+    {
+      "contiguous_id": 124,
+      "name": "sheep"
+    },
+    {
+      "contiguous_id": 125,
+      "name": "shirts"
+    },
+    {
+      "contiguous_id": 126,
+      "name": "shoes"
+    },
+    {
+      "contiguous_id": 127,
+      "name": "skateboard"
+    },
+    {
+      "contiguous_id": 128,
+      "name": "skis"
+    },
+    {
+      "contiguous_id": 129,
+      "name": "spoon"
+    },
+    {
+      "contiguous_id": 130,
+      "name": "spring rolls"
+    },
+    {
+      "contiguous_id": 131,
+      "name": "stairs"
+    },
+    {
+      "contiguous_id": 132,
+      "name": "stamps"
+    },
+    {
+      "contiguous_id": 133,
+      "name": "stapler pins"
+    },
+    {
+      "contiguous_id": 134,
+      "name": "sticky notes"
+    },
+    {
+      "contiguous_id": 135,
+      "name": "strawberries"
+    },
+    {
+      "contiguous_id": 136,
+      "name": "straws"
+    },
+    {
+      "contiguous_id": 137,
+      "name": "sunglasses"
+    },
+    {
+      "contiguous_id": 138,
+      "name": "supermarket shelf"
+    },
+    {
+      "contiguous_id": 139,
+      "name": "swans"
+    },
+    {
+      "contiguous_id": 140,
+      "name": "toilet paper rolls"
+    },
+    {
+      "contiguous_id": 141,
+      "name": "tomatoes"
+    },
+    {
+      "contiguous_id": 142,
+      "name": "tree logs"
+    },
+    {
+      "contiguous_id": 143,
+      "name": "watches"
+    },
+    {
+      "contiguous_id": 144,
+      "name": "watermelon"
+    },
+    {
+      "contiguous_id": 145,
+      "name": "windows"
+    },
+    {
+      "contiguous_id": 146,
+      "name": "zebras"
+    }
+  ]
+}

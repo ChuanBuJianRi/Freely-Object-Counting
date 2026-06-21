@@ -1,0 +1,20 @@
+
+==== training head_type = hybrid ====
+[hybrid] epoch 1/40  lr=1.00e-03  L_cls=1.0561  L_count=0.3090  L_align=1.4927  L_total=1.3599  eval_top1=0.8276  eval_countable_acc=1.0000  eval_n_valid=12056.0000  *best*
+[hybrid] epoch 2/40  lr=1.00e-03  L_cls=0.7244  L_count=0.0736  L_align=0.8842  L_total=0.8496  eval_top1=0.8332  eval_countable_acc=1.0000  eval_n_valid=12056.0000  *best*
+[hybrid] epoch 3/40  lr=9.98e-04  L_cls=0.6253  L_count=0.0340  L_align=0.6588  L_total=0.7082  eval_top1=0.8259  eval_countable_acc=1.0000  eval_n_valid=12056.0000
+[hybrid] epoch 4/40  lr=9.93e-04  L_cls=0.5755  L_count=0.0220  L_align=0.5549  L_total=0.6420  eval_top1=0.8242  eval_countable_acc=0.9999  eval_n_valid=12056.0000
+[hybrid] epoch 5/40  lr=9.85e-04  L_cls=0.5465  L_count=0.0161  L_align=0.4896  L_total=0.6035  eval_top1=0.8238  eval_countable_acc=0.9999  eval_n_valid=12056.0000
+[hybrid] epoch 6/40  lr=9.73e-04  L_cls=0.5270  L_count=0.0126  L_align=0.4441  L_total=0.5777  eval_top1=0.8246  eval_countable_acc=1.0000  eval_n_valid=12056.0000
+[hybrid] epoch 7/40  lr=9.58e-04  L_cls=0.5127  L_count=0.0103  L_align=0.4067  L_total=0.5585  eval_top1=0.8400  eval_countable_acc=1.0000  eval_n_valid=12056.0000  *best*
+[hybrid] epoch 8/40  lr=9.40e-04  L_cls=0.5048  L_count=0.0085  L_align=0.3833  L_total=0.5474  eval_top1=0.8283  eval_countable_acc=1.0000  eval_n_valid=12056.0000
+[hybrid] epoch 9/40  lr=9.19e-04  L_cls=0.4980  L_count=0.0073  L_align=0.3607  L_total=0.5377  eval_top1=0.8271  eval_countable_acc=1.0000  eval_n_valid=12056.0000
+[hybrid] epoch 10/40  lr=8.95e-04  L_cls=0.4935  L_count=0.0063  L_align=0.3448  L_total=0.5312  eval_top1=0.8171  eval_countable_acc=1.0000  eval_n_valid=12056.0000
+[hybrid] epoch 11/40  lr=8.68e-04  L_cls=0.4882  L_count=0.0055  L_align=0.3266  L_total=0.5236  eval_top1=0.8260  eval_countable_acc=1.0000  eval_n_valid=12056.0000
+[hybrid] epoch 12/40  lr=8.39e-04  L_cls=0.4845  L_count=0.0048  L_align=0.3145  L_total=0.5184  eval_top1=0.8234  eval_countable_acc=1.0000  eval_n_valid=12056.0000
+[hybrid] epoch 13/40  lr=8.07e-04  L_cls=0.4814  L_count=0.0043  L_align=0.3031  L_total=0.5138  eval_top1=0.8287  eval_countable_acc=1.0000  eval_n_valid=12056.0000
+[hybrid] early stop at epoch 13 (no improve 6 epochs, best eval_top1=0.8400)
+[hybrid] saved checkpoint -> /home/czp/official_code/result/checkpoints/category_hybrid.pt (best eval_top1=0.8400)
+
+==== summary ====
+hybrid    L_total=0.5138  best_eval_top1=0.8400
