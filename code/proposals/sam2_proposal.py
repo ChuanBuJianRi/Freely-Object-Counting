@@ -14,12 +14,9 @@ from typing import Any, Dict, List, Optional, Tuple
 import numpy as np
 
 from ..config import (
-    MAX_AREA_RATIO,
-    MIN_AREA_RATIO,
-    MIN_BOX_SIZE,
-    NEAR_DUP_IOU,
     SAM2_MODEL,
     SAM2_POINTS_PER_BATCH,
+    Sam2Config,
 )
 from ..candidates.geometry import mask_iou
 
@@ -48,26 +45,39 @@ class SAM2Proposer:
         model_name: str = SAM2_MODEL,
         device: str = "cpu",
         points_per_batch: int = SAM2_POINTS_PER_BATCH,
+        config: Optional[Sam2Config] = None,
     ) -> None:
         from transformers import pipeline
 
-        dev = -1 if device == "cpu" else 0
-        self.generator = pipeline("mask-generation", model=model_name, device=dev)
-        self.points_per_batch = points_per_batch
+        # config 优先；否则用显式参数构造一份默认配置以保持向后兼容
+        self.config = config or Sam2Config(
+            model_name=model_name,
+            device=device,
+            points_per_batch=points_per_batch,
+        )
+        cfg = self.config
+
+        dev = -1 if cfg.device == "cpu" else 0
+        self.generator = pipeline("mask-generation", model=cfg.model_name, device=dev)
+        self.points_per_batch = cfg.points_per_batch
 
     def generate(
         self,
         image: np.ndarray,
-        max_candidates: int = 64,
+        max_candidates: int = 0,
     ) -> List[Candidate]:
-        """对单张图像生成候选。image: H x W x 3 uint8。"""
+        """对单张图像生成候选。image: H x W x 3 uint8。
+
+        max_candidates <= 0 表示无上限（OCCAM-M 配方，对齐 config.max_candidates_per_image=0）。
+        """
         from PIL import Image
 
+        cfg = self.config
         h, w = image.shape[:2]
         img_area = float(h * w)
         pil = Image.fromarray(image).convert("RGB")
 
-        out = self.generator(pil, points_per_batch=self.points_per_batch)
+        out = self.generator(pil, **cfg.amg_kwargs())
         masks = out["masks"]
         scores = out.get("scores", None)
         if scores is not None:
@@ -82,13 +92,13 @@ class SAM2Proposer:
             if area <= 0:
                 continue
             ar = area / img_area
-            if ar < MIN_AREA_RATIO or ar > MAX_AREA_RATIO:
+            if ar < cfg.min_area_ratio or ar > cfg.max_area_ratio:
                 continue
             box = _mask_to_bbox(m)
             if box is None:
                 continue
             x1, y1, x2, y2 = box
-            if (x2 - x1) < MIN_BOX_SIZE or (y2 - y1) < MIN_BOX_SIZE:
+            if (x2 - x1) < cfg.min_box_size or (y2 - y1) < cfg.min_box_size:
                 continue
             raw.append(Candidate(mask=m, bbox=box, area=area, source_score=s))
 
@@ -99,12 +109,15 @@ class SAM2Proposer:
             dup = False
             for k in kept:
                 # bbox 快速预筛后再算 mask IoU
-                if _box_iou(c.bbox, k.bbox) > 0.5 and mask_iou(c.mask, k.mask) > NEAR_DUP_IOU:
+                if (
+                    _box_iou(c.bbox, k.bbox) > cfg.dedup_box_iou_prescreen
+                    and mask_iou(c.mask, k.mask) > cfg.near_dup_iou
+                ):
                     dup = True
                     break
             if not dup:
                 kept.append(c)
-            if len(kept) >= max_candidates:
+            if max_candidates > 0 and len(kept) >= max_candidates:
                 break
         return kept
 

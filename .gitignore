@@ -1,6 +1,15 @@
 # Large dataset files
 dataset/
 
+# Model weights (too large for GitHub)
+models/
+
+# Logs
+*.log
+
+# GitHub Pages site (separate repo)
+page/
+
 # Cache
 cache/
 

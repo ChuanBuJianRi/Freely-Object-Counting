@@ -5,8 +5,8 @@
 诊断 1 发现旧缓存（transformers pipeline + sam2.1-hiera-tiny）在 GT 100+ 区间
 dot recall 仅 ~0.68。本脚本用 OCCAM 论文配方重新生成候选，验证能否提升：
 
-    - backbone : sam2.1-hiera-large
-    - 种子点    : 10px spacing 的自定义 point_grids（对齐 OCCAM Table 1）
+    - backbone : sam2.1-hiera-small
+    - 种子点    : 8px spacing 的自定义 point_grids（对齐 OCCAM Table 1）
     - AMG 阈值  : pred_iou=0.7 / stability=0.8 / stability_offset=0.0 /
                   mask_threshold=0.0 / box_nms=0.7 / multimask=True / use_m2m=False
     - tiling    : crop_n_layers=1（图像分块再分割，利于密集小目标）
@@ -30,8 +30,8 @@ import numpy as np
 import torch
 from PIL import Image
 
-SAM2_CONFIG = "configs/sam2.1/sam2.1_hiera_l.yaml"
-SAM2_CKPT = "/home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM/checkpoints/sam2.1_hiera_large.pt"
+SAM2_CONFIG = "configs/sam2.1/sam2.1_hiera_s.yaml"
+SAM2_CKPT = "/home/czp/ws_yiyang/FreeCounting/ws_yiyang/OCCAM/checkpoints/sam2.1_hiera_small.pt"
 ANN_PATH = "/home/czp/official_code/dataset/FSC147/annotation_FSC147_384.json"
 IMG_DIR = "/home/czp/official_code/dataset/FSC147/images_384_VarV2"
 OLD_CACHE = "/home/czp/ws_yiyang/ovcud_cache/fsc147_test"
@@ -40,15 +40,15 @@ OLD_CACHE = "/home/czp/ws_yiyang/ovcud_cache/fsc147_test"
 def build_occam_amg(device: str, spacing: int, points_per_batch: int, crop_n_layers: int):
     """构造 OCCAM-M 风格的 AMG。
 
-    用 10px spacing 的归一化 point_grids 替代 points_per_side 均匀网格，
-    精确对齐 OCCAM Table 1 的 "Seed-point Spacing = 10px"。
+    用 8px spacing 的归一化 point_grids 替代 points_per_side 均匀网格，
+    精确对齐 OCCAM Table 1 的 "Seed-point Spacing = 8px"。
     """
     from sam2.build_sam import build_sam2
     from sam2.automatic_mask_generator import SAM2AutomaticMaskGenerator
 
     model = build_sam2(SAM2_CONFIG, SAM2_CKPT, device=device)
 
-    # 归一化网格：10px spacing 假定在标准 384 短边附近；这里用相对坐标，
+    # 归一化网格：8px spacing 假定在标准 384 短边附近；这里用相对坐标，
     # AMG 会按每张图实际尺寸缩放回像素。以 384 为参考边长换算 step。
     ref = 384.0
     step = spacing / ref
@@ -119,14 +119,14 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--images", nargs="+", required=True, help="FSC147 文件名列表，如 4884.jpg")
     ap.add_argument("--device", default="cuda")
-    ap.add_argument("--spacing", type=int, default=10, help="种子点间距(px, 参考384边)")
+    ap.add_argument("--spacing", type=int, default=8, help="种子点间距(px, 参考384边)")
     ap.add_argument("--points-per-batch", type=int, default=1000)
     ap.add_argument("--crop-n-layers", type=int, default=1, help="tiling 层数(0=整图)")
     ap.add_argument("--out", default="/home/czp/official_code/result/logs/occam_dot_recall.json")
     args = ap.parse_args()
 
     ann = json.load(open(ANN_PATH))
-    print(f"[init] building OCCAM-M AMG (hiera-large) on {args.device} ...")
+    print(f"[init] building OCCAM-M AMG (hiera-small) on {args.device} ...")
     t0 = time.time()
     amg = build_occam_amg(args.device, args.spacing, args.points_per_batch, args.crop_n_layers)
     print(f"[init] AMG ready in {time.time() - t0:.1f}s")
@@ -193,7 +193,7 @@ def main() -> None:
                 "spacing": args.spacing,
                 "points_per_batch": args.points_per_batch,
                 "crop_n_layers": args.crop_n_layers,
-                "backbone": "sam2.1-hiera-large",
+                "backbone": "sam2.1-hiera-small",
             },
             "micro_new": agg_new[0] / agg_new[1] if agg_new[1] else None,
             "micro_old": agg_old[0] / agg_old[1] if agg_old[1] else None,

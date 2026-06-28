@@ -1,0 +1,9 @@
+{
+  "alpha": 0.6285797357559204,
+  "n_valid": 10733,
+  "top1_full": 0.0,
+  "top1_open_only": 0.0,
+  "top1_closed_only": 0.0,
+  "top5_open_only": 0.29227615764464737,
+  "open_mean_gt_rank": 17.29516444610081
+}

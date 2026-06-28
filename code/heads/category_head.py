@@ -301,9 +301,9 @@ class AuxiliaryHeads(nn.Module):
 @dataclass
 class CategoryHeadConfig:
     head_type: str = "hybrid"        # "cosine" | "linear" | "margin" | "hybrid"
-    in_dim: int = 768
-    proj_dim: int = 512
-    num_classes: int = 80            # linear/hybrid 的闭集类别数
+    in_dim: int = 1152               # = REGION_DIM = DINOV2_DIM(384) * NUM_CROP_VIEWS(3)
+    proj_dim: int = 512              # = PROJ_DIM（对齐 CLIP projection_dim）
+    num_classes: int = 80            # linear/hybrid 的闭集类别数（COCO=80）
     extra: Optional[dict] = None     # 透传给具体 head 的额外参数
 
 

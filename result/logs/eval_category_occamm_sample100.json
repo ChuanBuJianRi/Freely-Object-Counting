@@ -1,0 +1,10 @@
+{
+  "n_images": 100,
+  "n_valid_cands": 10733,
+  "top1": 0.0,
+  "top5": 0.008851206559209913,
+  "purity_weighted_top1": 0.0,
+  "high_purity(>0.7)_n": 7309,
+  "high_purity(>0.7)_top1": 0.0,
+  "train_eval_top1_ref": 0.8399966821499668
+}

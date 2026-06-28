@@ -2,11 +2,11 @@
 
 支持四种分类头逐一尝试（对应 2_training_plan.md §2.1）：
 
-    python -m ov_cud.training.train_category --head_type cosine
-    python -m ov_cud.training.train_category --head_type linear
-    python -m ov_cud.training.train_category --head_type margin
-    python -m ov_cud.training.train_category --head_type hybrid
-    python -m ov_cud.training.train_category --head_type all      # 依次跑全部
+    python -m frame_1.training.train_category --head_type cosine
+    python -m frame_1.training.train_category --head_type linear
+    python -m frame_1.training.train_category --head_type margin
+    python -m frame_1.training.train_category --head_type hybrid
+    python -m frame_1.training.train_category --head_type all      # 依次跑全部
 
 数据接口：CachedCandidateDataset 读取离线预计算缓存（DINOv2 特征 + 候选-GT 匹配标签）。
 不带 --data_dir 时使用合成数据做 smoke test，验证四种 head 都能前向/反向跑通。
@@ -25,6 +25,7 @@ from typing import Optional
 import torch
 from torch.utils.data import DataLoader, Dataset
 
+from ..config import PROJ_DIM, REGION_DIM
 from ..heads.category_head import (
     AuxiliaryHeads,
     CosineMarginHead,
@@ -35,6 +36,16 @@ from ..heads.category_head import (
 from .losses import CategoryLossConfig, category_loss
 
 HEAD_TYPES = ["cosine", "linear", "margin", "hybrid"]
+
+# 与候选缓存同目录但非候选样本的文件（不应被 glob 当成 per-image 缓存）
+_NON_CANDIDATE_PT = {"text_prototypes.pt"}
+
+
+def _list_cache_files(data_dir: str) -> list[Path]:
+    """列出候选缓存 .pt，排除文本原型等非候选文件。"""
+    return sorted(
+        f for f in Path(data_dir).glob("*.pt") if f.name not in _NON_CANDIDATE_PT
+    )
 
 
 # --------------------------------------------------------------------------- #
@@ -56,7 +67,7 @@ class CachedCandidateDataset(Dataset):
         if files is not None:
             self.files = list(files)
         else:
-            self.files = sorted(Path(data_dir).glob("*.pt"))
+            self.files = _list_cache_files(data_dir)
         if not self.files:
             raise FileNotFoundError(f"no .pt cache found under {data_dir}")
         self._index: list[tuple[int, int]] = []
@@ -70,7 +81,7 @@ class CachedCandidateDataset(Dataset):
         data_dir: str, val_ratio: float = 0.1, seed: int = 0
     ) -> tuple["CachedCandidateDataset", "CachedCandidateDataset"]:
         """按「图」划分 train/val，避免同图候选同时落入两侧造成泄漏。"""
-        files = sorted(Path(data_dir).glob("*.pt"))
+        files = _list_cache_files(data_dir)
         if not files:
             raise FileNotFoundError(f"no .pt cache found under {data_dir}")
         g = torch.Generator().manual_seed(seed)
@@ -81,6 +92,39 @@ class CachedCandidateDataset(Dataset):
         return (
             CachedCandidateDataset(data_dir, files=train_files),
             CachedCandidateDataset(data_dir, files=val_files),
+        )
+
+    @staticmethod
+    def split_by_class(
+        data_dir: str, val_ratio: float = 0.2, seed: int = 0
+    ) -> tuple["CachedCandidateDataset", "CachedCandidateDataset", list[str]]:
+        """按「类别」划分：留出一部分类别（held-out 未见类）只进验证集。
+
+        这是衡量/优化开放词表「跨类泛化」的正确划分——验证类完全不参与训练，
+        模拟测试集的未见类设定，避免用已见类 top1 选出对未见类无效的模型。
+        返回 (train_ds, heldout_val_ds, heldout_class_names)。
+        """
+        files = _list_cache_files(data_dir)
+        if not files:
+            raise FileNotFoundError(f"no .pt cache found under {data_dir}")
+        file_cls: dict[Path, str] = {}
+        classes: set[str] = set()
+        for f in files:
+            d = torch.load(f, map_location="cpu")
+            cn = d.get("class_name", "__unknown__")
+            file_cls[f] = cn
+            classes.add(cn)
+        cls_list = sorted(classes)
+        g = torch.Generator().manual_seed(seed)
+        perm = torch.randperm(len(cls_list), generator=g).tolist()
+        n_val = max(1, int(len(cls_list) * val_ratio))
+        heldout = {cls_list[i] for i in perm[:n_val]}
+        train_files = [f for f in files if file_cls[f] not in heldout]
+        val_files = [f for f in files if file_cls[f] in heldout]
+        return (
+            CachedCandidateDataset(data_dir, files=train_files),
+            CachedCandidateDataset(data_dir, files=val_files),
+            sorted(heldout),
         )
 
     def _load(self, fi: int) -> dict:
@@ -393,9 +437,12 @@ def main() -> None:
                    choices=HEAD_TYPES + ["all"])
     p.add_argument("--data_dir", default=None, help="离线缓存目录；缺省用合成数据")
     p.add_argument("--text_prototypes", default=None, help="文本原型 .pt；缺省随机")
-    p.add_argument("--in_dim", type=int, default=768)
-    p.add_argument("--proj_dim", type=int, default=512)
-    p.add_argument("--num_classes", type=int, default=20)
+    p.add_argument("--in_dim", type=int, default=REGION_DIM,
+                   help="融合区域特征维度，默认 = REGION_DIM(1152)")
+    p.add_argument("--proj_dim", type=int, default=PROJ_DIM,
+                   help="对齐空间维度，默认 = PROJ_DIM(512)")
+    p.add_argument("--num_classes", type=int, default=80,
+                   help="闭集类别数，COCO=80（合成 smoke test 也用此值）")
     p.add_argument("--epochs", type=int, default=3)
     p.add_argument("--batch_size", type=int, default=256)
     p.add_argument("--lr", type=float, default=1e-3)
@@ -404,9 +451,11 @@ def main() -> None:
 
     # ---- 验证 / 早停 / 保存 ----
     p.add_argument("--val_ratio", type=float, default=0.1,
-                   help="按图划分验证集比例；0 表示不划分（无验证评测）")
+                   help="划分验证集比例；0 表示不划分（无验证评测）")
     p.add_argument("--val_dir", default=None,
                    help="独立验证缓存目录；指定后忽略 --val_ratio")
+    p.add_argument("--val_by_class", action="store_true",
+                   help="按类别留出 held-out 未见类做验证（衡量开放词表跨类泛化）")
     p.add_argument("--patience", type=int, default=0,
                    help=">0 时启用早停（连续 N 个 epoch 验证 top1 未提升）")
     p.add_argument("--save_dir", default=None,
@@ -438,6 +487,11 @@ def main() -> None:
         if args.val_dir:
             dataset: Dataset = CachedCandidateDataset(args.data_dir)
             val_dataset = CachedCandidateDataset(args.val_dir)
+        elif args.val_by_class and args.val_ratio > 0:
+            dataset, val_dataset, heldout = CachedCandidateDataset.split_by_class(
+                args.data_dir, val_ratio=args.val_ratio, seed=args.seed
+            )
+            print(f"[info] 按类划分：held-out 未见类 {len(heldout)} 个 -> {heldout}")
         elif args.val_ratio > 0:
             dataset, val_dataset = CachedCandidateDataset.split_by_image(
                 args.data_dir, val_ratio=args.val_ratio, seed=args.seed
