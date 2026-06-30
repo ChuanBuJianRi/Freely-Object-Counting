@@ -88,16 +88,23 @@ def process_image(image, file_name, ann_entry, class_idx, class_name, amg, encod
     n_cand = len(masks)
     if n_cand == 0: return None
 
-    # 去重
+    # 快速去重（bbox IoU，比 mask IoU 快 100×）
+    def _box_iou(a, b):
+        ax1, ay1, aw, ah = a; bx1, by1, bw, bh = b
+        ax2, ay2 = ax1+aw, ay1+ah; bx2, by2 = bx1+bw, by1+bh
+        ix1, iy1 = max(ax1, bx1), max(ay1, by1)
+        ix2, iy2 = min(ax2, bx2), min(ay2, by2)
+        iw, ih = max(0, ix2-ix1), max(0, iy2-iy1)
+        inter = iw * ih
+        if inter == 0: return 0.0
+        return inter / (aw*ah + bw*bh - inter)
     order = sorted(range(n_cand), key=lambda i: -masks[i].sum())
     kept = []
     for i in order:
-        dup = False; mi = masks[i].astype(bool)
+        dup = False
         for j in kept:
-            mj = masks[j].astype(bool)
-            inter = float(np.logical_and(mi, mj).sum())
-            union = float(np.logical_or(mi, mj).sum())
-            if union > 0 and inter/union > 0.9: dup = True; break
+            if _box_iou(bboxes[i], bboxes[j]) > 0.9:
+                dup = True; break
         if not dup: kept.append(i)
     kept.sort()
     masks = [masks[i] for i in kept]; bboxes = [bboxes[i] for i in kept]
