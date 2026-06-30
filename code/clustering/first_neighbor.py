@@ -150,8 +150,113 @@ def category_aware_clustering(
     return groups, A_group
 
 
+def spatial_sub_clustering(
+    group_indices: List[int],
+    bbox: np.ndarray,              # [N, 4] XYWH
+    image_area: float,
+    max_group_size: int = 30,
+    spatial_threshold: float = 0.15,  # 相对图像对角线的距离阈值
+) -> List[List[int]]:
+    """对大 group 做空间 sub-clustering，拆分为空间上更紧凑的子组。
+
+    原理：空间距离远的候选不太可能是同一实例，预先拆分可以：
+        1. 减少去重阶段的 Union-Find 链式效应
+        2. 降低 pairwise 计算量
+        3. 提高 representative selection 质量
+
+    Args:
+        group_indices: group 内的候选索引
+        bbox: [N, 4] XYWH 格式
+        image_area: 图像面积 (h*w)
+        max_group_size: 超过此大小的 group 才拆分
+        spatial_threshold: bbox 中心距离阈值（相对图像对角线）
+
+    Returns:
+        sub_groups: list of sub-group index lists
+    """
+    n = len(group_indices)
+    if n <= max_group_size:
+        return [list(group_indices)]
+
+    # 计算 bbox 中心
+    centers = np.zeros((n, 2), dtype=np.float32)
+    for i, idx in enumerate(group_indices):
+        x, y, w, h = bbox[idx]
+        centers[i] = [x + w / 2, y + h / 2]
+
+    # 相对距离阈值（图像对角线 × spatial_threshold）
+    diag = np.sqrt(image_area)
+    threshold = diag * spatial_threshold
+
+    # 构建空间邻接矩阵
+    adj = np.zeros((n, n), dtype=bool)
+    for i in range(n):
+        for j in range(i + 1, n):
+            dist = np.sqrt(((centers[i] - centers[j]) ** 2).sum())
+            if dist < threshold:
+                adj[i, j] = True
+                adj[j, i] = True
+
+    # Connected components
+    visited = np.zeros(n, dtype=bool)
+    sub_groups = []
+    for i in range(n):
+        if visited[i]:
+            continue
+        comp = []
+        stack = [i]
+        visited[i] = True
+        while stack:
+            v = stack.pop()
+            comp.append(group_indices[v])
+            neighbors = np.where(adj[v] & ~visited)[0]
+            for nb in neighbors:
+                visited[nb] = True
+                stack.append(nb)
+        sub_groups.append(comp)
+
+    return sub_groups
+
+
+def category_aware_clustering_with_spatial(
+    category_probs: np.ndarray,
+    A_sem: np.ndarray,
+    bbox: np.ndarray,
+    image_area: float,
+    tau_affinity: float = 0.3,
+    max_group_size: int = 30,
+    spatial_threshold: float = 0.15,
+    use_bucketing: bool = True,
+) -> List[List[int]]:
+    """带空间 sub-clustering 的完整聚类 pipeline。"""
+    N = category_probs.shape[0]
+    if N == 0:
+        return []
+
+    # Step 1: Category-aware first-neighbor clustering
+    cat_compat = category_probs @ category_probs.T
+    sem_prob = 1.0 / (1.0 + np.exp(-A_sem))
+    A_group = cat_compat * sem_prob
+
+    top_class = category_probs.argmax(axis=1) if use_bucketing else None
+    coarse_groups = first_neighbor_clustering(A_group, tau_affinity, top_class)
+
+    # Step 2: Spatial sub-clustering for large groups
+    refined_groups = []
+    for group in coarse_groups:
+        if len(group) > max_group_size:
+            sub = spatial_sub_clustering(group, bbox, image_area, max_group_size, spatial_threshold)
+            refined_groups.extend(sub)
+        else:
+            refined_groups.append(group)
+
+    return refined_groups
+
+
 __all__ = [
     "build_group_affinity",
     "first_neighbor_clustering",
     "category_aware_clustering",
+    "spatial_sub_clustering",
+    "category_aware_clustering_with_spatial",
 ]

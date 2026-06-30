@@ -34,8 +34,13 @@ import torch
 from pycocotools import mask as mask_utils
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from code.clustering.first_neighbor import category_aware_clustering
-from code.counting.deduplicate import build_same_instance_components
+from code.clustering.first_neighbor import (
+    category_aware_clustering, spatial_sub_clustering,
+    category_aware_clustering_with_spatial,
+)
+from code.counting.deduplicate import (
+    build_same_instance_components, build_same_instance_components_adaptive,
+)
 from code.counting.representative import select_representatives
 
 DEFAULT_ANN = "/home/czp/official_code/dataset/FSC147/annotation_FSC147_384.json"
@@ -311,20 +316,31 @@ def count_image(
                 A_sem[j, i] = A_sem[i, j]
         A_part = np.zeros((n_cand, n_cand), dtype=np.float32)
 
-    # Step 3: Clustering
+    # Step 3: Clustering (with spatial sub-clustering for large groups)
+    image_area = float(h * w)
+    max_group_size = 30  # 超过此大小做空间拆分
+
     if oracle_category:
-        # 直接用 GT 类别分组（跳过聚类）
+        # 直接用 GT 类别分组，但对大组做空间拆分
         valid = np.asarray(d["valid"]) > 0
         matched_class = np.asarray(d["matched_class"])
+        raw_groups = []
         class_to_indices = defaultdict(list)
         for i in range(n_cand):
             if valid[i] and matched_class[i] >= 0:
                 class_to_indices[int(matched_class[i])].append(i)
-        groups = list(class_to_indices.values())
+        for cls, indices in class_to_indices.items():
+            if len(indices) > max_group_size:
+                sub = spatial_sub_clustering(indices, bbox_np, image_area, max_group_size)
+                raw_groups.extend(sub)
+            else:
+                raw_groups.append(indices)
+        groups = raw_groups
     else:
-        groups, _ = category_aware_clustering(
-            category_probs, A_sem,
+        groups = category_aware_clustering_with_spatial(
+            category_probs, A_sem, bbox_np, image_area,
             tau_affinity=tau_affinity,
+            max_group_size=max_group_size,
             use_bucketing=True,
         )
 
@@ -368,8 +384,12 @@ def count_image(
                 total_reps += 1
                 continue
 
-            components = build_same_instance_components(group, A_inst, tau_inst=tau_inst)
-            image_area = float(h * w)
+            # 自适应去重：大组用贪心+更高阈值
+            if len(group) > 20:
+                components = build_same_instance_components_adaptive(
+                    group, A_inst, base_tau=tau_inst, use_greedy=True, max_comp_size=5)
+            else:
+                components = build_same_instance_components(group, A_inst, tau_inst=tau_inst)
             reps = select_representatives(
                 components, A_part, category_probs, bbox_np, image_area,
                 min_category_conf=0.05,
