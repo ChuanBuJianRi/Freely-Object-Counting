@@ -77,7 +77,7 @@ class CosineCategoryHead(nn.Module):
 # 数据集
 # --------------------------------------------------------------------------- #
 class CachedDataset(Dataset):
-    def __init__(self, data_dir: str, files: Optional[list] = None):
+    def __init__(self, data_dir: str, files: Optional[list] = None, min_purity: float = 0.0):
         if files is not None:
             self.files = list(files)
         else:
@@ -85,10 +85,14 @@ class CachedDataset(Dataset):
         if not self.files:
             raise FileNotFoundError(f"no .pt files in {data_dir}")
         self._index = []
-        for fi, f in enumerate(self.files):
-            n = int(torch.load(f, map_location="cpu")["z"].shape[0])
-            self._index.extend((fi, i) for i in range(n))
         self._cache = {}
+        for fi, f in enumerate(self.files):
+            d = torch.load(f, map_location="cpu")
+            n = int(d["z"].shape[0])
+            purity = d.get("purity", torch.ones(n))
+            for i in range(n):
+                if float(purity[i]) >= min_purity:
+                    self._index.append((fi, i))
 
     @staticmethod
     def split_by_class(data_dir: str, val_ratio: float = 0.15, seed: int = 42):
@@ -139,16 +143,19 @@ def collate(batch):
 # --------------------------------------------------------------------------- #
 # 损失
 # --------------------------------------------------------------------------- #
-def compute_loss(logits, targets, sample_weight, class_weight=None, label_smoothing=0.1):
-    """加权 CE + label smoothing。"""
+def compute_loss(logits, targets, sample_weight, class_weight=None, label_smoothing=0.1, focal_gamma=0.0):
+    """加权 CE + label smoothing + 可选 focal loss。"""
     nC = logits.size(1)
-    # Label smoothing
     smooth_targets = torch.zeros_like(logits)
     smooth_targets.fill_(label_smoothing / (nC - 1))
     smooth_targets.scatter_(1, targets.unsqueeze(1), 1.0 - label_smoothing)
 
     log_p = F.log_softmax(logits, dim=-1)
     ce = -(smooth_targets * log_p).sum(dim=-1)
+
+    if focal_gamma > 0:
+        pt = torch.exp(-ce)
+        ce = ((1 - pt) ** focal_gamma) * ce
 
     if class_weight is not None:
         ce = ce * class_weight[targets]
@@ -197,6 +204,8 @@ def main():
     ap.add_argument("--num_layers", type=int, default=2)
     ap.add_argument("--temperature", type=float, default=0.07)
     ap.add_argument("--label_smoothing", type=float, default=0.1)
+    ap.add_argument("--min_purity", type=float, default=0.0, help="过滤 purity 低于此值的候选")
+    ap.add_argument("--focal_gamma", type=float, default=0.0, help=">0 时使用 focal loss (gamma)")
     ap.add_argument("--epochs", type=int, default=30)
     ap.add_argument("--batch_size", type=int, default=512)
     ap.add_argument("--lr", type=float, default=1e-3)
@@ -220,8 +229,8 @@ def main():
     n_val = max(1, int(len(all_files) * args.val_ratio))
     val_files = [all_files[i] for i in perm[:n_val]]
     train_files = [all_files[i] for i in perm[n_val:]]
-    train_ds = CachedDataset(args.data_dir, files=train_files)
-    val_ds = CachedDataset(args.data_dir, files=val_files)
+    train_ds = CachedDataset(args.data_dir, files=train_files, min_purity=args.min_purity)
+    val_ds = CachedDataset(args.data_dir, files=val_files, min_purity=args.min_purity)
     heldout = []
     print(f"[data] train: {len(train_ds)} candidates from {len(train_files)} images")
     print(f"[data] val:   {len(val_ds)} candidates from {len(val_files)} images")
@@ -282,7 +291,7 @@ def main():
             w = (batch["purity"] * batch["valid"]).to(device)
 
             logits = head(z, tp)
-            loss = compute_loss(logits, labels, w, label_smoothing=args.label_smoothing)
+            loss = compute_loss(logits, labels, w, label_smoothing=args.label_smoothing, focal_gamma=args.focal_gamma)
 
             opt.zero_grad()
             loss.backward()
