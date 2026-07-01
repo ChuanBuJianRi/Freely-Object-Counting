@@ -157,7 +157,7 @@ def count_image_carpk(
             phi_ij = build_pairwise_features(zi, zj, pi, pj, bi, bj, geom=geom_ij)
             phi_ji = build_pairwise_features(zj, zi, pj, pi, bj, bi, geom=geom_ji)
             with torch.no_grad():
-                out = relation_head(torch.cat([phi_ij, phi_ji], dim=0))
+                out = relation_head(torch.cat([phi_ij.to(device), phi_ji.to(device)], dim=0))
                 P = len(ii)
                 inst_logits = 0.5 * (out["inst"][:P] + out["inst"][P:]).cpu().numpy()
             A_inst = np.zeros((n_cand, n_cand), dtype=np.float32)

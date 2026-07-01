@@ -205,7 +205,7 @@ def process_image(image, file_name, ann_points, class_idx, class_name, amg, enco
             return 0.0
         return inter / (aw * ah + bw * bh - inter)
 
-    order = sorted(range(n_cand), key=lambda i: -masks[i].sum())
+    order = sorted(range(n_cand), key=lambda i: masks[i].sum(), reverse=True)
     kept = []
     for i in order:
         dup = False
@@ -274,20 +274,44 @@ def main():
                     help="跳过已存在的缓存文件")
     ap.add_argument("--pts-per-side", type=int, default=32,
                     help="SAM2 pts_per_side (CARPK 密集场景建议 32)")
+    ap.add_argument("--image-set", default="", help="ImageSet 文件路径 (如 test.txt)，只处理指定图片")
     args = ap.parse_args()
 
     os.makedirs(args.out_dir, exist_ok=True)
 
     # 收集图片文件
     img_exts = {".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"}
-    img_files = sorted([
-        f for f in os.listdir(args.img_dir)
-        if os.path.splitext(f)[1] in img_exts
-    ])
+
+    # 如果指定了 image_set，只处理其中的图片
+    if args.image_set and os.path.exists(args.image_set):
+        with open(args.image_set) as f:
+            wanted_ids = {line.strip() for line in f if line.strip()}
+        # 尝试匹配：base_name 可能是 "20161225_TPZ_00071" 而文件是 "20161225_TPZ_00071.png"
+        all_imgs = {os.path.splitext(f)[0]: f for f in os.listdir(args.img_dir)
+                    if os.path.splitext(f)[1] in img_exts}
+        img_files = []
+        missing = []
+        for wid in wanted_ids:
+            if wid in all_imgs:
+                img_files.append(all_imgs[wid])
+            else:
+                missing.append(wid)
+        if missing:
+            print(f"[warn] {len(missing)} IDs in image_set not found in images dir")
+            if len(missing) <= 10:
+                print(f"  Missing: {missing}")
+        img_files.sort()
+        print(f"[init] {len(img_files)} images from image_set (out of {len(wanted_ids)} IDs)")
+    else:
+        img_files = sorted([
+            f for f in os.listdir(args.img_dir)
+            if os.path.splitext(f)[1] in img_exts
+        ])
+        print(f"[init] {len(img_files)} images in {args.img_dir}")
+
     if args.limit > 0:
         img_files = img_files[:args.limit]
 
-    print(f"[init] {len(img_files)} images in {args.img_dir}")
     print(f"[init] Annotations from {args.ann_dir}")
 
     # 固定参数：CARPK 只有 cars 一类
